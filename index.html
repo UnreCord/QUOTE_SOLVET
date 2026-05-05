@@ -18,11 +18,7 @@
       --rojo: #ef4444;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Lato', sans-serif;
@@ -34,750 +30,154 @@
 
     /* ── MODAL VENDEDOR ── */
     .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(3px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(3px);
+      display: flex; justify-content: center; align-items: center;
       z-index: 9999;
     }
-
     .modal-box {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 400px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      background: #fff; padding: 30px; border-radius: 12px; width: 90%; max-width: 400px;
+      text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
-
-    .modal-box h3 {
-      color: var(--verde);
-      margin-bottom: 10px;
-      font-weight: 900;
-    }
-
-    .modal-box p {
-      color: var(--texto-claro);
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
+    .modal-box h3 { color: var(--verde); margin-bottom: 10px; font-weight: 900; }
+    .modal-box p { color: var(--texto-claro); font-size: 14px; margin-bottom: 20px; }
     .modal-box select {
-      width: 100%;
-      padding: 12px;
-      border: 2px solid var(--borde);
-      border-radius: 6px;
-      font-family: 'Lato';
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      outline: none;
+      width: 100%; padding: 12px; border: 2px solid var(--borde); border-radius: 6px;
+      font-family: 'Lato'; font-size: 15px; font-weight: 700; margin-bottom: 20px; outline: none;
     }
-
-    .modal-box select:focus {
-      border-color: var(--verde);
-    }
-
+    .modal-box select:focus { border-color: var(--verde); }
     .btn-ingresar {
-      background: var(--verde);
-      color: #fff;
-      border: none;
-      padding: 12px 20px;
-      width: 100%;
-      border-radius: 6px;
-      font-weight: 900;
-      font-size: 16px;
-      cursor: pointer;
+      background: var(--verde); color: #fff; border: none; padding: 12px 20px; width: 100%;
+      border-radius: 6px; font-weight: 900; font-size: 16px; cursor: pointer;
     }
 
     /* ── HOJA A4 ── */
     .hoja {
-      max-width: 860px;
-      margin: 0 auto;
-      background: var(--blanco);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      border-top: 8px solid var(--verde);
+      max-width: 860px; margin: 0 auto; background: var(--blanco);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); border-top: 8px solid var(--verde);
     }
 
     /* ── CABECERA ── */
-    .cabecera {
-      padding: 30px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      border-bottom: 1px solid var(--borde);
-    }
-
-    .cabecera-izq {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .cabecera-logo {
-      width: 140px;
-      height: auto;
-      object-fit: contain;
-    }
-
-    .empresa-info h1 {
-      font-size: 18px;
-      color: var(--verde);
-      font-weight: 900;
-      margin-bottom: 4px;
-    }
-
-    .empresa-info p {
-      font-size: 11px;
-      color: var(--texto-claro);
-      line-height: 1.4;
-    }
-
-    .cotizacion-box {
-      text-align: right;
-    }
-
-    .cotizacion-box h2 {
-      font-size: 14px;
-      text-transform: uppercase;
-      color: var(--texto-claro);
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .cotizacion-box .numero {
-      font-size: 22px;
-      font-weight: 900;
-      color: var(--verde);
-      margin-top: 4px;
-      letter-spacing: 1px;
-    }
+    .cabecera { padding: 30px 40px; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--borde); }
+    .cabecera-izq { display: flex; gap: 20px; align-items: center; }
+    .cabecera-logo { width: 140px; height: auto; object-fit: contain; }
+    .empresa-info h1 { font-size: 18px; color: var(--verde); font-weight: 900; margin-bottom: 4px; }
+    .empresa-info p { font-size: 11px; color: var(--texto-claro); line-height: 1.4; }
+    .cotizacion-box { text-align: right; }
+    .cotizacion-box h2 { font-size: 14px; text-transform: uppercase; color: var(--texto-claro); font-weight: 700; letter-spacing: 1px; }
+    .cotizacion-box .numero { font-size: 22px; font-weight: 900; color: var(--verde); margin-top: 4px; letter-spacing: 1px; }
 
     /* ── DATOS META ── */
-    .meta {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      padding: 15px 40px;
-      gap: 15px;
-      border-bottom: 1px solid var(--borde);
-    }
-
-    .meta-campo {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-
-    .meta-campo.full {
-      grid-column: span 2;
-    }
-
-    .meta-label {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--texto-claro);
-      text-transform: uppercase;
-      margin-bottom: 5px;
-    }
-
-    .meta-input {
-      border: 1px solid transparent;
-      border-bottom: 1px solid var(--borde);
-      font-family: 'Lato', sans-serif;
-      font-size: 14px;
-      color: var(--texto);
-      font-weight: 700;
-      padding: 4px 0;
-      outline: none;
-      background: transparent;
-      transition: 0.2s;
-      width: 100%;
-    }
-
-    .meta-input:focus {
-      border-bottom-color: var(--verde);
-    }
+    .meta { display: grid; grid-template-columns: repeat(3, 1fr); padding: 15px 40px; gap: 15px; border-bottom: 1px solid var(--borde); }
+    .meta-campo { display: flex; flex-direction: column; position: relative; }
+    .meta-campo.full { grid-column: span 2; }
+    .meta-label { font-size: 11px; font-weight: 700; color: var(--texto-claro); text-transform: uppercase; margin-bottom: 5px; }
+    .meta-input { border: 1px solid transparent; border-bottom: 1px solid var(--borde); font-family: 'Lato', sans-serif; font-size: 14px; color: var(--texto); font-weight: 700; padding: 4px 0; outline: none; background: transparent; transition: 0.2s; width: 100%; }
+    .meta-input:focus { border-bottom-color: var(--verde); }
 
     /* ── TABLA PRODUCTOS ── */
-    .tabla-wrap {
-      padding: 20px 40px;
-    }
+    .tabla-wrap { padding: 20px 40px; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th { background: var(--gris-fondo); color: var(--texto-claro); font-size: 11px; text-transform: uppercase; padding: 12px; text-align: center; border-bottom: 2px solid var(--verde); }
+    thead th:first-child { text-align: left; }
+    tbody tr { border-bottom: 1px solid var(--borde); }
+    td { padding: 12px 10px; vertical-align: middle; }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+    .td-desc-input { width: 100%; border: 1px solid var(--borde); border-radius: 4px; padding: 8px; font-size: 13px; font-family: 'Lato'; resize: none; overflow: hidden; outline: none; transition: border 0.2s; }
+    .td-desc-input:focus { border-color: var(--verde); }
+    .stepper { display: flex; align-items: center; justify-content: center; border: 1px solid var(--borde); border-radius: 4px; overflow: hidden; width: 90px; margin: 0 auto; }
+    .btn-step { background: var(--gris-fondo); border: none; width: 30px; height: 30px; font-size: 16px; font-weight: bold; color: var(--verde); cursor: pointer; }
+    .input-cant { width: 30px; border: none; text-align: center; font-weight: bold; background: transparent; padding: 0; outline: none; }
+    .input-prefix { display: flex; align-items: center; justify-content: center; width: 80px; margin: 0 auto; }
+    .input-prefix span { color: var(--texto-claro); font-size: 13px; font-weight: bold; }
+    .input-pu { border: none; border-bottom: 1px dashed var(--borde); text-align: right; width: 60px; font-weight: bold; font-family: 'Lato'; outline: none; background: transparent; padding: 2px; }
+    .input-pu:focus { border-bottom-color: var(--verde); }
+    .td-total { text-align: right; font-weight: 900; color: var(--verde); font-size: 15px; }
+    .btn-eliminar { background: transparent; color: #a0aec0; border: none; font-size: 18px; cursor: pointer; }
+    .btn-eliminar:hover { color: var(--rojo); }
 
-    thead th {
-      background: var(--gris-fondo);
-      color: var(--texto-claro);
-      font-size: 11px;
-      text-transform: uppercase;
-      padding: 12px;
-      text-align: center;
-      border-bottom: 2px solid var(--verde);
-    }
+    .autocomplete { position: relative; width: 100%; }
+    .autocomplete-list { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border: 1px solid var(--borde); border-radius: 4px; z-index: 100; max-height: 200px; overflow-y: auto; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-top: 4px; }
+    .autocomplete-item { padding: 12px; border-bottom: 1px solid var(--gris-fondo); font-size: 12px; cursor: pointer; }
+    .autocomplete-item:hover { background: var(--gris-fondo); }
+    .autocomplete-item strong { display: block; color: var(--verde); margin-bottom: 2px; font-size: 13px; }
 
-    thead th:first-child {
-      text-align: left;
-    }
-
-    tbody tr {
-      border-bottom: 1px solid var(--borde);
-    }
-
-    td {
-      padding: 12px 10px;
-      vertical-align: middle;
-    }
-
-    .td-desc-input {
-      width: 100%;
-      border: 1px solid var(--borde);
-      border-radius: 4px;
-      padding: 8px;
-      font-size: 13px;
-      font-family: 'Lato';
-      resize: none;
-      overflow: hidden;
-      outline: none;
-      transition: border 0.2s;
-    }
-
-    .td-desc-input:focus {
-      border-color: var(--verde);
-    }
-
-    .stepper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--borde);
-      border-radius: 4px;
-      overflow: hidden;
-      width: 90px;
-      margin: 0 auto;
-    }
-
-    .btn-step {
-      background: var(--gris-fondo);
-      border: none;
-      width: 30px;
-      height: 30px;
-      font-size: 16px;
-      font-weight: bold;
-      color: var(--verde);
-      cursor: pointer;
-    }
-
-    .input-cant {
-      width: 30px;
-      border: none;
-      text-align: center;
-      font-weight: bold;
-      background: transparent;
-      padding: 0;
-      outline: none;
-    }
-
-    .input-prefix {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 80px;
-      margin: 0 auto;
-    }
-
-    .input-prefix span {
-      color: var(--texto-claro);
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .input-pu {
-      border: none;
-      border-bottom: 1px dashed var(--borde);
-      text-align: right;
-      width: 60px;
-      font-weight: bold;
-      font-family: 'Lato';
-      outline: none;
-      background: transparent;
-      padding: 2px;
-    }
-
-    .input-pu:focus {
-      border-bottom-color: var(--verde);
-    }
-
-    .td-total {
-      text-align: right;
-      font-weight: 900;
-      color: var(--verde);
-      font-size: 15px;
-    }
-
-    .btn-eliminar {
-      background: transparent;
-      color: #a0aec0;
-      border: none;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    .btn-eliminar:hover {
-      color: var(--rojo);
-    }
-
-    .autocomplete {
-      position: relative;
-      width: 100%;
-    }
-
-    .autocomplete-list {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: #fff;
-      border: 1px solid var(--borde);
-      border-radius: 4px;
-      z-index: 100;
-      max-height: 200px;
-      overflow-y: auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-top: 4px;
-    }
-
-    .autocomplete-item {
-      padding: 12px;
-      border-bottom: 1px solid var(--gris-fondo);
-      font-size: 12px;
-      cursor: pointer;
-    }
-
-    .autocomplete-item:hover {
-      background: var(--gris-fondo);
-    }
-
-    .autocomplete-item strong {
-      display: block;
-      color: var(--verde);
-      margin-bottom: 2px;
-      font-size: 13px;
-    }
-
-    .btn-agregar-inline {
-      background: var(--gris-fondo);
-      border: 1px dashed var(--borde);
-      color: var(--verde);
-      font-weight: 700;
-      font-family: 'Lato';
-      padding: 12px;
-      width: 100%;
-      text-align: center;
-      cursor: pointer;
-      transition: 0.2s;
-      border-radius: 4px;
-      margin-top: 10px;
-    }
-
-    .btn-agregar-inline:hover {
-      background: var(--verde);
-      color: #fff;
-      border-color: var(--verde);
-    }
+    .btn-agregar-inline { background: var(--gris-fondo); border: 1px dashed var(--borde); color: var(--verde); font-weight: 700; font-family: 'Lato'; padding: 12px; width: 100%; text-align: center; cursor: pointer; transition: 0.2s; border-radius: 4px; margin-top: 10px; }
+    .btn-agregar-inline:hover { background: var(--verde); color: #fff; border-color: var(--verde); }
 
     /* ── TOTALES ── */
-    .totales-bloque {
-      display: flex;
-      justify-content: flex-end;
-      padding: 20px 40px;
-      background: var(--gris-fondo);
-      border-top: 1px solid var(--borde);
-      border-bottom: 1px solid var(--borde);
-    }
-
-    .totales-tabla {
-      width: 280px;
-    }
-
-    .totales-fila {
-      display: flex;
-      justify-content: space-between;
-      padding: 6px 0;
-      font-size: 14px;
-    }
-
-    .t-label {
-      color: var(--texto-claro);
-      font-weight: 700;
-    }
-
-    .t-valor {
-      font-weight: 900;
-    }
-
-    .tc-input {
-      border: 1px solid var(--borde);
-      border-radius: 4px;
-      width: 60px;
-      text-align: right;
-      padding: 2px;
-      outline: none;
-      font-family: 'Lato';
-      font-weight: bold;
-      background: #fff;
-    }
-
-    .total-final {
-      background: var(--verde);
-      color: #fff;
-      padding: 12px 15px;
-      border-radius: 6px;
-      margin: 10px 0;
-      align-items: center;
-    }
-
-    .total-final .t-label {
-      color: #fff;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .total-final .t-valor {
-      font-size: 22px;
-      color: var(--amarillo);
-    }
+    .totales-bloque { display: flex; justify-content: flex-end; padding: 20px 40px; background: var(--gris-fondo); border-top: 1px solid var(--borde); border-bottom: 1px solid var(--borde); }
+    .totales-tabla { width: 280px; }
+    .totales-fila { display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px; }
+    .t-label { color: var(--texto-claro); font-weight: 700; }
+    .t-valor { font-weight: 900; }
+    .tc-input { border: 1px solid var(--borde); border-radius: 4px; width: 60px; text-align: right; padding: 2px; outline: none; font-family: 'Lato'; font-weight: bold; background: #fff; }
+    .total-final { background: var(--verde); color: #fff; padding: 12px 15px; border-radius: 6px; margin: 10px 0; align-items: center; }
+    .total-final .t-label { color: #fff; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+    .total-final .t-valor { font-size: 22px; color: var(--amarillo); }
 
     /* ── CUENTAS BANCARIAS Y CONDICIONES ── */
-    .info-final {
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 30px;
-      padding: 30px 40px;
-    }
+    .info-final { display: grid; grid-template-columns: 1fr 1.3fr; gap: 30px; padding: 30px 40px; }
+    .seccion-titulo { font-size: 12px; color: var(--verde); text-transform: uppercase; font-weight: 900; margin-bottom: 12px; letter-spacing: 0.5px; border-bottom: 1px solid var(--borde); padding-bottom: 5px; }
+    
+    .condiciones ul { padding-left: 15px; font-size: 12px; color: var(--texto-claro); line-height: 1.6; margin-bottom: 15px; }
+    
+    .seccion-comentarios { margin-top: 15px; }
+    .comentarios-input { width: 100%; border: 1px dashed var(--borde); padding: 10px; font-family: 'Lato'; font-size: 12px; background: transparent; outline: none; resize: vertical; min-height: 60px; }
+    .comentarios-input:focus { border-color: var(--verde); }
 
-    .seccion-titulo {
-      font-size: 12px;
-      color: var(--verde);
-      text-transform: uppercase;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: 0.5px;
-      border-bottom: 1px solid var(--borde);
-      padding-bottom: 5px;
-    }
-
-    .condiciones ul {
-      padding-left: 15px;
-      font-size: 12px;
-      color: var(--texto-claro);
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-
-    .seccion-comentarios {
-      margin-top: 15px;
-    }
-
-    .comentarios-input {
-      width: 100%;
-      border: 1px dashed var(--borde);
-      padding: 10px;
-      font-family: 'Lato';
-      font-size: 12px;
-      background: transparent;
-      outline: none;
-      resize: vertical;
-      min-height: 60px;
-    }
-
-    .comentarios-input:focus {
-      border-color: var(--verde);
-    }
-
-    .bancos-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .banco-caja {
-      border: 1px solid var(--borde);
-      border-left: 4px solid var(--amarillo);
-      border-radius: 4px;
-      padding: 12px;
-      background: var(--gris-fondo);
-    }
-
-    .banco-caja.dolares {
-      border-left-color: var(--verde);
-    }
-
-    .banco-caja h4 {
-      font-size: 12px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      color: var(--texto);
-      font-weight: 900;
-    }
-
+    .bancos-grid { display: flex; flex-direction: column; gap: 10px; }
+    .banco-caja { border: 1px solid var(--borde); border-left: 4px solid var(--amarillo); border-radius: 4px; padding: 12px; background: var(--gris-fondo); }
+    .banco-caja.dolares { border-left-color: var(--verde); }
+    .banco-caja h4 { font-size: 12px; text-transform: uppercase; margin-bottom: 10px; color: var(--texto); font-weight: 900;}
+    
     /* Grid de Bancos */
-    .banco-item {
-      display: grid;
-      grid-template-columns: 85px 1fr 1.2fr;
-      gap: 10px;
-      font-size: 11px;
-      padding: 6px 0;
-      border-bottom: 1px solid #edf2f7;
-      align-items: center;
-    }
-
-    .banco-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .banco-item strong {
-      color: var(--texto);
-      font-size: 11.5px;
-    }
-
-    .banco-item span {
-      color: var(--texto-claro);
-      font-family: monospace;
-      font-size: 12px;
-    }
+    .banco-item { display: grid; grid-template-columns: 85px 1fr 1.2fr; gap: 10px; font-size: 11px; padding: 6px 0; border-bottom: 1px solid #edf2f7; align-items: center;}
+    .banco-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .banco-item strong { color: var(--texto); font-size: 11.5px;}
+    .banco-item span { color: var(--texto-claro); font-family: monospace; font-size: 12px;}
 
     /* ── BOTONES FLOTANTES ── */
-    .barra-controles {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: #fff;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-      display: flex;
-      padding: 10px;
-      z-index: 1000;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .btn {
-      padding: 14px 24px;
-      border: none;
-      border-radius: 6px;
-      font-weight: 900;
-      font-family: 'Lato';
-      font-size: 14px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .btn-pdf {
-      background: var(--verde);
-      color: #fff;
-      flex: 1;
-      max-width: 300px;
-    }
-
-    .btn-pdf:hover {
-      background: #005c27;
-    }
-
-    .btn-limpiar {
-      background: var(--gris-fondo);
-      color: var(--texto-claro);
-      border: 1px solid var(--borde);
-    }
+    .barra-controles { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); display: flex; padding: 10px; z-index: 1000; justify-content: center; gap: 10px; }
+    .btn { padding: 14px 24px; border: none; border-radius: 6px; font-weight: 900; font-family: 'Lato'; font-size: 14px; cursor: pointer; transition: 0.2s; }
+    .btn-pdf { background: var(--verde); color: #fff; flex: 1; max-width: 300px; }
+    .btn-pdf:hover { background: #005c27; }
+    .btn-limpiar { background: var(--gris-fondo); color: var(--texto-claro); border: 1px solid var(--borde); }
 
     /* ── MÓVIL ── */
     @media (max-width: 650px) {
-      .cabecera {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-        align-items: center;
-        text-align: center;
-      }
-
-      .cabecera-izq {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .cotizacion-box {
-        text-align: center;
-        width: 100%;
-        border-top: 1px dashed var(--borde);
-        padding-top: 15px;
-      }
-
-      .meta {
-        grid-template-columns: 1fr;
-        padding: 15px 20px;
-      }
-
-      .meta-campo.full {
-        grid-column: span 1;
-      }
-
-      .tabla-wrap {
-        padding: 15px 20px;
-      }
-
-      table,
-      thead,
-      tbody,
-      th,
-      td,
-      tr {
-        display: block;
-      }
-
-      thead {
-        display: none;
-      }
-
-      tbody tr {
-        margin-bottom: 20px;
-        border: 1px solid var(--borde);
-        border-radius: 8px;
-        padding: 15px;
-        background: #fff;
-        position: relative;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
-      }
-
-      td {
-        padding: 8px 0;
-        border: none;
-      }
-
-      .btn-eliminar {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: #fff;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        border: 1px solid var(--borde);
-      }
-
-      .td-cant,
-      .td-pu,
-      .td-total {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .td-cant::before {
-        content: "Cant:";
-        font-weight: 700;
-        color: var(--texto-claro);
-        font-size: 12px;
-      }
-
-      .td-pu::before {
-        content: "P.U. (USD):";
-        font-weight: 700;
-        color: var(--texto-claro);
-        font-size: 12px;
-      }
-
-      .td-total::before {
-        content: "Importe (USD):";
-        font-weight: 700;
-        color: var(--texto-claro);
-        font-size: 12px;
-      }
-
-      .totales-bloque {
-        padding: 20px;
-        justify-content: center;
-      }
-
-      .totales-tabla {
-        width: 100%;
-      }
-
-      .info-final {
-        grid-template-columns: 1fr;
-        padding: 20px;
-        gap: 20px;
-      }
-
-      .banco-item {
-        grid-template-columns: 1fr;
-        gap: 4px;
-        padding: 10px 0;
-      }
+      .cabecera { flex-direction: column; gap: 20px; padding: 20px; align-items: center; text-align: center; }
+      .cabecera-izq { flex-direction: column; text-align: center; }
+      .cotizacion-box { text-align: center; width: 100%; border-top: 1px dashed var(--borde); padding-top: 15px; }
+      .meta { grid-template-columns: 1fr; padding: 15px 20px; }
+      .meta-campo.full { grid-column: span 1; }
+      .tabla-wrap { padding: 15px 20px; }
+      table, thead, tbody, th, td, tr { display: block; }
+      thead { display: none; }
+      tbody tr { margin-bottom: 20px; border: 1px solid var(--borde); border-radius: 8px; padding: 15px; background: #fff; position: relative; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02); }
+      td { padding: 8px 0; border: none; }
+      .btn-eliminar { position: absolute; top: 10px; right: 10px; background: #fff; border-radius: 50%; width: 30px; height: 30px; border: 1px solid var(--borde); }
+      .td-cant, .td-pu, .td-total { display: flex; justify-content: space-between; align-items: center; }
+      .td-cant::before { content: "Cant:"; font-weight: 700; color: var(--texto-claro); font-size: 12px; }
+      .td-pu::before { content: "P.U. (USD):"; font-weight: 700; color: var(--texto-claro); font-size: 12px; }
+      .td-total::before { content: "Importe (USD):"; font-weight: 700; color: var(--texto-claro); font-size: 12px; }
+      .totales-bloque { padding: 20px; justify-content: center; }
+      .totales-tabla { width: 100%; }
+      .info-final { grid-template-columns: 1fr; padding: 20px; gap: 20px; }
+      .banco-item { grid-template-columns: 1fr; gap: 4px; padding: 10px 0; }
     }
 
     /* ── IMPRESIÓN ISO A4 ── */
     @media print {
-      @page {
-        size: A4 portrait;
-        margin: 15mm;
-      }
-
-      body {
-        background: #fff;
-        padding: 0;
-      }
-
-      .hoja {
-        box-shadow: none;
-        border-top: 6px solid var(--verde);
-      }
-
-      .barra-controles,
-      .btn-agregar-inline,
-      .btn-eliminar,
-      .modal-overlay {
-        display: none !important;
-      }
-
-      .meta-input,
-      .tc-input,
-      .comentarios-input,
-      .td-desc-input,
-      .input-cant,
-      .input-pu {
-        border: none !important;
-        background: transparent !important;
-        resize: none;
-        padding: 0;
-      }
-
-      .stepper {
-        border: none;
-        width: auto;
-      }
-
-      .btn-step {
-        display: none;
-      }
-
-      .autocomplete-list {
-        display: none !important;
-      }
-
-      .banco-item {
-        grid-template-columns: 85px 1.2fr 1.2fr;
-      }
+      @page { size: A4 portrait; margin: 15mm; }
+      body { background: #fff; padding: 0; }
+      .hoja { box-shadow: none; border-top: 6px solid var(--verde); }
+      .barra-controles, .btn-agregar-inline, .btn-eliminar, .modal-overlay { display: none !important; }
+      .meta-input, .tc-input, .comentarios-input, .td-desc-input, .input-cant, .input-pu { border: none !important; background: transparent !important; resize: none; padding: 0; }
+      .stepper { border: none; width: auto; }
+      .btn-step { display: none; }
+      .autocomplete-list { display: none !important; }
+      .banco-item { grid-template-columns: 85px 1.2fr 1.2fr; }
     }
   </style>
 </head>
@@ -794,7 +194,6 @@
         <option value="Alexis Chavez">Alexis Chavez</option>
         <option value="Leonel Perez">Leonel Perez</option>
         <option value="Eduardo Pastrana">Eduardo Pastrana</option>
-        <option value="Eduardo Pastrana">Roberto Rondon</option>
         <option value="Walter Fernandez">Walter Fernandez</option>
       </select>
       <button class="btn-ingresar" onclick="guardarVendedor()">Ingresar</button>
@@ -841,8 +240,8 @@
         <input class="meta-input" type="date" id="fecha-expiracion" readonly style="color:var(--texto-claro)">
       </div>
       <div class="meta-campo">
-        <span class="meta-label">Vendedor</span>
-        <input class="meta-input" type="text" id="vendedor-input" readonly style="color:var(--verde)">
+        <span class="meta-label">Vendedor (Clic para cambiar)</span>
+        <input class="meta-input" type="text" id="vendedor-input" readonly style="color:var(--verde); cursor:pointer;" onclick="document.getElementById('vendor-modal').style.display='flex'">
       </div>
     </div>
 
@@ -864,10 +263,8 @@
 
     <div class="totales-bloque">
       <div class="totales-tabla">
-        <div class="totales-fila"><span class="t-label">Subtotal USD</span><span class="t-valor" id="subtotal">$
-            0.00</span></div>
-        <div class="totales-fila"><span class="t-label">IGV (18%)</span><span class="t-valor" id="igv">$ 0.00</span>
-        </div>
+        <div class="totales-fila"><span class="t-label">Subtotal USD</span><span class="t-valor" id="subtotal">$ 0.00</span></div>
+        <div class="totales-fila"><span class="t-label">IGV (18%)</span><span class="t-valor" id="igv">$ 0.00</span></div>
         <div class="totales-fila total-final">
           <span class="t-label">Total USD</span>
           <span class="t-valor" id="total-usd">$ 0.00</span>
@@ -896,14 +293,13 @@
         </div>
         <div class="seccion-comentarios" id="bloque-comentarios">
           <div class="seccion-titulo">Comentarios</div>
-          <textarea class="comentarios-input" id="comentarios"
-            placeholder="Agregar notas u observaciones adicionales para el cliente..."></textarea>
+          <textarea class="comentarios-input" id="comentarios" placeholder="Agregar notas u observaciones adicionales para el cliente..."></textarea>
         </div>
       </div>
 
       <div class="bancos-grid">
         <div class="seccion-titulo" style="border:none;margin:0;">Cuentas Bancarias Autorizadas</div>
-
+        
         <!-- SOLES -->
         <div class="banco-caja">
           <h4>Cuentas en Soles (S/)</h4>
@@ -948,22 +344,35 @@
 
   <script>
     // ==============================================================
-    // PEGAR AQUÍ TUS DATOS COMPRIMIDOS
+    // PEGA AQUÍ LOS DATOS (¡Asegúrate de dejarlos entre las comillas "")
     // ==============================================================
-    const rawDataProductos = `MINAZEL PLUS "PATENT CO" (BIG BAG X 1000 KG.)|2.82^Quicktip flexitube 95 ml  reforzado MINITUBE (caja x 2100 uds.)|0.2^MYCORAID "PATENT CO" (BIG BAG X 1000 KG.)|5.24^HEMOGLOBINA DE PORCINO (MAXI SACO)|1.89^Quicktip flexitube 60 ml  reforzado MINITUBE (caja x 2200 uds.)|0.19^MYCORAID "PATENT CO" (SACO X 25 KG.)|5.24^PROT-AEL "TVT NUTRITION" (SACO X 25 KG.)|1.76^BIOCHOLINE DS "INDIAN HERBS" (SACO X 25 KG.)|8.18^MINAZEL PLUS"PATENT CO" (SACO X 25 KG.)|2.88^CATETER PARA INSEMINACION ARTIFICIAL PROFIT SAFE BLUE SOFTGILT "MINITUBE" (BOLSA X 100 UDS.)|0.66^FLAVOMYCIN 80 "HUVEPHARMA" (SACO X 25 KG)|12.94^LIVOLIV 250 POWDER "INDIAN HERBS" (SACO X 25KG.)|7.74^HEMOGLOBINA  BOVINO (SACO X 25 KG.)|1.92^PAJILLAS AZULES PARA PAVO "IMV" (PAQUETE X XXUD.)|0.03^SUNNY BINDER"CHEMICAL LTD." (SACO X 20KG.)|2.09^FOKKAMIX 9 "NUKAMEL" (SACO X 25 KG.)|1.46^TUBO DE TERMOSELLADO DE SEMEN PORCINO 95 ML. "MINITUBE" (UD.)|0.2^HERBAL C POWDER "INDIAN HERBS" (SACO X 25KG.)|14.0^CATETER PARA INSEMINACION ARTIFICIAL SAFEBLUE  TRANSCERVICAL MINITUBE  (PAQUETE X 25 UDS)|1.47^ANTOX SE "VETERQUIMICA" (SACO X 25KG)|3.53^DYSGUARD-S"PATENT CO."  (SACO X 20KG.)|12.94^TONALIM LIQUIDO "VETERQUIMICA" (BIDON X 20 LT)|2.6^B - TRAXIM 2C MN-220 "PANCOSMA" (SACO X 25 KG.)|9.59^HEMOGLOBINA  DE PORCINO (SACO X 25 KG.)|2.5^PLASMA PORCINO (SACO X 20KG.)|6.65^FOKKAMIX 10 "NUKAMEL" (SACO X 25 KG)|1.76^LACTOSA (SACO X 25 KG.)|1.82^FORMICID RM EXTRA LIQUIDO "VETERQUIMICA" (CILINDRO X 200LT)|3.02^RUNEON  LACHANCE  BOLSA X 20 KG|17.6^ALBAC 15% GRANUL "HUVEPHARMA" (SACO X 25 KG)|3.98^FORMICID DRY "VETERQUIMICA" (SACO X 25 KG)|2.12^VETERSAL ANIONICO "VETERQUIMICA" (SACO X 25KG)|2.2^B - TRAXIM 2C ZN-260 "PANCOSMA"  (SACO X 25 KG.)|8.93^MINAZEL "PATENT CO" (SACO X 25 KG.)|1.3^AGUA DESTILADA ESTERIL "MARETHFARM" (FRASCO X 100 ML.)|1.13^SALOCIN 12% "HUVEPHARMA" (SACO X 25 KG)|3.53^TIGANIL 100 "VETERQUIMICA" (ENVASE X 10 KG)|8.0^COASTAL GREEN "BH TERRA" (BOLSA X 5 KG.)|8.93^DETERGENTE VQ-510 "VETERQUIMICA" (BIDON X 20LT)|4.2^FLAVOMYCIN 40 "HUVEPHARMA" (SACO X 25 KG)|6.47^MEVIPOW "SOMVITAL"(BIDON X 5 KG.)|12.5^B - TRAXIM 2C FE-220 "PANCOSMA" (SACO X 25 KG.)|8.65^ASCOGEN "CHEMOFORMA" (SACO X 25 KG)|38.53^FEEDOMEL "NUKAMEL" (SACO X 25 KG)|1.62^SALOCIN 24% "HUVEPHARMA" (SACO X 25 KG)|6.82^CATETER PARA INSEMINACION ARTIFICIAL SAFE BLUE FOAMTIP MINITUBE (CAJA X 100 UDS.)|0.64^CATETER PARA INSEMINACION ARTIFICIAL FOAMTIP MINITUBE (PAQUETE X 25 UDS.)|0.41^TAPA PARA  TUBO DE MUESTRA DE SEMEN (UD.)|0.14^TUBO DE MUESTRA PARA  SEMEN "IMV"|0.32^Biocholine "INDIAN HERBS" (saco x 25 kg.)|5.25^CATETER PARA INSEMINACION ARTIFICIAL PROFIT SOFTGILT "MINITUBE" (PAQUETE X 25 UDS.)|0.36^BETAGUT L "SOMVITAL" (GARRAFA X 25 KG.)|4.47^ANTOX SE LIQUIDO "VETERQUIMICA" (CILINDRO X 200LT)|7.9^DRYCELL "PATENT CO" (SACO X 10 KG.)|1.88^PROTACID RX - P "HIGIENIZO" (BIDON X 25 KG.)|4.87^PROTACID SOY "HIGIENIZO" (SACO X 25 KG.)|2.5^TUBO DE TERMOSELLADO "MAGAPOR" (UD.)|0.1^PANBONIS 10 "HERBONIS" (SACO X 20 KG.)|38.41^INVIVO PB "INVIVO BIOSCIENCES" (BALDE X 25 KG.)|8.0^PLASMA BOVINO (SACO X 20 KG.)|6.65^YODIGEN 30 Y PLUS "VETERQUIMICA" (BIDON X 20 LT)|11.0^MENTOR α "SOMVITAL" (BOTELLA X 1 LT.)|34.09^FUGIOL DRY "VETERQUIMICA" ( SACO X 25KG)|3.98^NUTRITOP HUMIC HF 80 "MBL" (SACO X 25 KG)|9.19^PANBONIS 20 "HERBONIS" (SACO X 20 KG.)|74.95^INGELVAC CIRCOFLEX X 50 DS. "BOEHRINGER INGELHEIM" (UND.)|100.0^SUCRAM 5S HYDRO PANCOSMA SACO 25 KG|25.88^DUFLOSAN 500 "VETERQUIMICA" (ENVASE X 10 KG)|30.0^INGELVAC MYCOFLEX X 50 DS. "BOEHRINGER INGELHEIM" (UND.)|32.94^BETAGUT L "SOMVITAL" (GARRAFA X 5 KG.)|5.06^B - TRAXIM 2C CU-240 "PANCOSMA" (SACO X 25 KG.)|12.15^DUPLALIM "VETERQUIMICA" (BIDON X 20LT)|5.65^PISO PLASTICO RUBIN PARA LECHON 400 X 600 MM. "MIK" (UD.)|11.46^B - TRAXIM SE 11 "PANCOSMA" (SACO X 20 KG.)|50.86^MARCADOR DE GANADO C/REGULADOR VERDE "LA-CO" (UD.)|3.17^HOSTAZYM X 15000 "HUVEPHARMA" (SACO X 20 KG)|15.29^CATETER PARA INSEMINACION ARTIFICIAL SOFTGILT AZUL CON CABO Y TAPA "MINITUBE" (PAQUETE X 25UDS.)|0.29^OPTIPHOS PLUS 10000 "HUVEPHARMA" (SACO X 20 KG)|16.47^DIXCLOR "SOMVITAL" (BOLSA X 500 GR.)|52.22^INDUCTOR H-3 "MBL" (IBC X 1000 LT)|34.75^TAPON DE 9 MM. "MIK" (UD.)|0.08^YODIGEN 30 Y PLUS "VETERQUIMICA" (FRASCO X 1 LT.)|14.5^DUPLAFER "VETERQUIMICA" (FRASCO X 100 CC)|8.44^MARCADOR DE GANADO C/REGULADOR  AZUL "LA-CO" (UD.)|3.17^MARCADOR DE GANADO C/REGULADOR ROJO "LA-CO" (UD.)|3.17^Diluyente Androstar Plus MINITUBE (sobre x 47 g.)|6.8^Diluyente de Semen Porcino BTS MINITUBE (sobre x 50 g.)|4.68^JABON LIQUIDO NEUTRO CON GLUCON DE CLORH (BIDON X 5 LT)|5.02^ACT ORGANIC CHOLINE "NURTURE TECHNOLOGY" (SACO X 25 KG)|2.15^ARANDELA 8.4MM P/ M8, CD MIK101944 "MIK" (UD.)|1.2^SET DE TORNILLO M8  8 X 50 (ARANDELA, TORNILLO Y TUERCA) "MIK" (UD.)|0.57^CATETER PARA INSEMINACION ARTIFICAL SOFTGILT MINITUBE (PAQUETE X 25 UD.)|0.38^Diluyente Androstar Premium MINITUBE  (sobre x 45 g.)|9.8^CORASIL FORTE "MBL" (BDN X 20 LT)|6.92^REACTIVOS DPD1 "SOMVITAL" (BLISTER X 10 UND.)|0.67^TORNILLO AUTO-ROSCANTE 4.8X16 DIN7504|0.7^TANICID "SOMVITAL" (GARRAFA X 5 LT.)|27.03^BEBEDERO ORANGE CRYSTAL SPRING|27.0^PISO PLASTICO RUBIN PARA LECHON 500 X 600 MM. "MIK" (UD.)|14.75^Diluyente Androstar Premium MINITUBE (sobre x 225 g.)|38.99^ELEMENTO  DE CONEXION "VVM TECH TRADE" (UD.)|1.53^CABLE VVM 3.0 MM V2A 7X19 MM. ALTA FLEXIBILIDAD "VVM TECH TRADE" (METROS)|2.14^PUNTA PARA PIPETA ELECTRONICA HASTA 2000 ÂµL, SUELTO, 1000/BOLSA 12050/0554 "MINITUBE" (UD.)|0.58^VANNAGEN "CHEMOFORMA" (SACO X 25 KG.)|35.78^ASCOGEN "CHEMOFORMA" ( BOLSA X 5 KG)|38.0^DIXCLOR "SOMVITAL" (CUBO X 20 KG.)|86.0^CATETER DE INSEMINACION PORCINA DEEPGOLDENPIG  "IMV" (UD.)|0.9^PISO PLASTICO CHESS PARA LECHONES 600 X 600 MM. "MIK" (UD.)|22.71^PROTECTORES PARA PLETINAS DUO "MIK" (UD.)|1.1^PISO PLASTICO SWING PARA MARRANA 400 X 600 MM. "MIK" (UD.)|16.68^TAPA DE PERFIL OVAL (70 X 35) "MIK"(UD.)|1.39^PEPTASAN "INDIAN HERBS" (SACO X 25 KG.)|6.5^TORNILLO DE SUJECION P/ SOSTENIMIENTO, MIK101459 "MIK" (UD.)|1.9^INDUCTOR H-3 "MBL" (BIDON X 10 LT)|27.4^ARVITAL SE "SOMVITAL" (GARRAFA X 5 KG.)|17.15^Diluyente Androstar Plus MINITUBE (sobre x 470 g.)|54.0^PERNO HEXAGONAL M8X50 ACERO INOXIDABLE "MIK" (UD.)|1.59^TUERCA AUTOBLOCANTE M8, DIN 985, CD MIK102029 "MIK" (UD.)|1.3^INACTIVADOR DUPLALIM "VETERQUIMICA" (FRASCO X 1 KG)|10.05^INUXA-HP "INDIAN HERBS" (SACO X 25 KG.)|6.01^INUXA-VC "INDIAN HERBS" (SACO X 25 KG.)|10.7^INUXA-B4 "INDIAN HERBS" (SACO X 25 KG.)|4.76^FOOTPLATE SS 40X77X250MM  MIK (UD.)|1.88^AGUJA TRANSOFIX "B. BRAUN" (UND)|0.98^Diluyente de Semen Porcino MIII MINITUBE (sobre x 60 g.)|3.96^ANCLAJE STS "MIK" (UD)|2.728^VITALSORB PURE "GOOD NUTRITION" (SACO X 20 KG.)|6.64^AZOVETRIL "VETERQUIMICA" (FRASCO X 1 LT)|17.4^ARANDELA M8X25MM ACERO INOXIDABLE  MIK UD|0.19^SET SOPORTE PARA TUBO DE PVC "MIK" (UD.)|5.5^PANBONIS ONE "HERBONIS" (SACO X 25 KG.)|5.0^CHUPON LECHON TROJAN 97  1/2 " (UD.)|7.5^CHUPON GORRINO AQUAGLOBE (UD.)|12.5^NORMOPIREX "SOMVITAL" (GARRAFA X 5 LT.)|23.51^DUO TRACK "MIK" (UD.)|4.08^GANCHO J "MIK" (UD.)|4.22^TAPA DE DISPENSADOR DE ALIMENTOS "VVM TECH TRADE" (UD.)|5.78^COLECTOR DESECHABLE 10 ML. "IMV" (PAQUETE X 25UDS.)|2.1^XL GOLDENPING  "IMV" (UD.)|0.28^PERNO M12X65 CON TUERCA Y ARANDELA (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|0.17^ALFA GUARD VILPRO "GOOD NUTRITION" (SACO X 20 KG.)|5.4^PLETINA DE FIBRA DE VIDRIO DUO XL  2.40 MT.  "MIK"  (UD.)|38.2^PERFIL OVAL EN METROS (70 X 35) "MIK" (METROS)|22.61^ENTERISOL ILEITIS X 50 DS. "BOEHRINGER INGELHEIM" (UND.)|78.82^PISO PLASTICO TRAPPER PARA ENGORDE 800 X 600 MM. "MIK" (UD.)|28.36^TUBO CAPILAR DESECHABLE "MINITUBE" (PQT X 100 UND.)|0.05^ANCLAJE CRD "MIK" (UD)|2.4958^QUIFLUMIL 10% "VETERQUIMICA" (FRASCO X 1 LT)|11.85^BRAZO DEL SISTEMA DE AJUSTE PARA COMEDERO CRYSTAL SPRING "CRYSTAL SPRING" (UD.)|1.15^BORDE PARA PLACA TERMICA LADO IZQUIERDO "MIK" (UD.)|5.8^BORDE PARA PLACA TERMICA  LADO DERECHO "MIK" (UD.)|5.8^BORDE "MIK" (UD.)|1.1^DUO PEDESTAL (UD.)|1.204723^FORMICID RM EXTRA LIQUIDO "VETERQUIMICA" (BIDON X 20LT)|2.63^LEVIAR "ALIVIRA" (BOLSA X 1 KG.)|40.98^PIN DE AJUSTE PARA COMEDERO CRYSTAL SPRING "CRYSTAL SPRING" (UD.)|0.28^COMEDERO DE LECHON REDONDO DE PLASTICO "MIK" (UD.)|12.9^RESORTE PARA  SISTEMA DE AJUSTE PARA COMEDERO CRYSTAL SPRING "CRYSTAL SPRING" (UD.)|0.85^ALFA GUARD PROTECT "GOOD NUTRITION" (SACO X 20 KG.)|7.53^NOVICOX "VETERQUIMICA" (FRASCO X 250 CC)|14.5^CADENA TRANSPORTADORA PARA SISTEMA 60MM, ACERO ESPECIAL DISCO 44 MM|8.62^LINEA DE AGUA PARA TRES CHUPONES -INCLUYE CHUPONES "WEIHAI GAOSAI" (UD.)|21.8^ANCLAJE "MIK" (UD.)|5.63^COMEDERO HEMBRA (MATERNIDAD), MOD. S2, SECO HUMEDO DE 15", ACERO INOXIDABLE CON BEBEDERO "CRYSTAL SPRING"(UD.)|401.75^DETERGENTE VQ-3500 "VETERQUIMICA" (BIDON X 20LT)|2.78^TUBO GALVANIZADO VVM 60 X 1.25 MM 6MT. DE LARGO "VVM TECH TRADE" (UD.)|6.33^PERFIL DE PUERTA DERECHO 500X35 MIK|17.25^PERFIL DE PUERTA IZQUIERDO 500X35  "MIK" (UD.)|17.25^JERINGA AUTOMATICA 2 ML "JCM" (UNIDAD)|57.65^SOPORTE DE PARED DE ACERO INOX. PARA DUO "MIK" (UD.)|5.95^VETERSAL PRE-PARTO "VETERQUIMICA" (SACO X 25KG)|1.29^TRANSUIN 10% "ALIVIRA" (SACO X 25 KG.)|40.59^ETIQUETAS PARA MINI BSP BLANCAS PARA IMPRESORA TERMICA MINITUBE (ROLLO X 2000 UDS.)|15.5^DIVISION PLASTICA PVC 2.40 MT. 500 X 35 "MIK" (UD.)|55.98^BOLSA DE COLECCION DE SEMEN CON FLITRO CAP 5.5 LT.  MINITUBE (PAQUETE X 100 UD.)|150.0^OVODYL PARA PAVO, DILUTOR CON ANTIBIOTICO "IMV" (UD.)|25.11^Gel lubricante esteril no espermicida x 100 ml MINITUBE (ud.)|8.72^GENTA VQ 10% "VETERQUIMICA" (FRASCO X 100 CC)|9.0^TUBO DE SILICONA PARA EFLOW 12510/0103 "MINITUBE" (UD.)|2.95^POSTE INTERMEDIO 500 X 35 "MIK"(UD.)|23.8^PISO PLASTICO PRARIE PARA GESTACION  400 X 400 MM. "MIK" (UD.)|12.2^CHUPON RECRIA DIAL - A -FLOW  3/8" (UD.)|7.3^ABRAZADERA PARA CABLE DE 3.0 MM. "VVM TECH TRADE" (UD.)|1.28^TORNILLO DE ALIMENTACION 75 MM, MATERIAL 12X4 MM "MIK" (UD.)|9.73^Guante Higienico Desechable MINITUBE (paquete x 100 uds.)|12.0^GUANTES DE COLECCCION DE VINYL MINITUBE (CAJA X 100 UDS.)|24.0^SALIDA PARA TRANSPORTADOR DE CADENA DE 60 MM. "VVM TECH TRADE" (UD.)|5.45^DIVISION PLASTICA PVC 1.8 MT. 500 X 35 "MIK" (UD.)|53.51^PERFIL U  750 X 35 "MIK" (UD.)|13.9^PISO PLASTICO SWING 600 X 100 MM. "MIK" (UD.)|8.2^PISO GULLY BLOCK SWING 400 X 600 MM. "MIK" (UD.)|54.47^ANCLAJE SW "MIK" (UD)|1.7^COMBITIP® PARA MULTIPETTE® 500 µL - 50 ML, 25 PUNTAS POR CAJA 12427/5066 "MINITUBE" (UD.)|3.71^COMEDERO ENGORDE, SECO-HUMEDO, ACERO INOX, TRES BOCAS POR LADO, F1-348 "CRYSTAL SPRING"(UD.)|1345.9^PEGATINA ESCALA 9L P/ VD9, MIK102415 "MIK" (UD.)|3.18^JERINGA AUTOMATICA 1 ML "JCM" (UNIDAD)|62.2^TUBO TELESCOPICO TRANSPARENTE 70/75 MM PARA ALIMENTO SECO "MIK" (UD.)|12.93^FERAPPEASE SWINE "FERA DIAGNOSTICS" (BOTELLA X 4 LT.)|78.0^MARCADOR DE GANADO SIN REGULADOR  AZUL "LA-CO" (UD.)|0.96^COMEDERO PVC CON BORDE ACERO "WEIHAI GAOSAI" (UD.)|37.0^BOLSA DE COLECCION DE SEMEN CON FILTRO CAP. 3.5 LT  MINITUBE  (PAQUETE X 100 UD.)|80.0^PANEL ARREADOR DE CERDOS (94*76*3 CM)|32.0^KIT REGULADORES DE PRESION PARA COMEDEROS CON SISTEMA WATER SPACE "CRYSTAL SPRING" (UD.)|122.0^BARRA ROSCADA 8 MM (UD.)|4.39^CADENA TRANSPORTADORA MONRO 60 MM "MIK" (CAJA X 50MT.)|8.95^PLETINA DE FIERRO 3/16" 60 CM. X 5 CM. (UD.)|1.0^PANELES DE GESTACION CON ACCESORIOS "WEIHAI GAOSAI" (UD.)|162.0^PERFIL DE ESQUINA 500 X 35 "MIK"(UD.)|21.5^PUNTA PARA PIPETA ELECTRONICA MINITUBE  1000 ÎœL (PAQUETE X 250 UDS.)|25.0^DIVISION PLASTICA PVC 2.50 MT. 500 X 35 "MIK" (UD.)|74.32^POSTE ESQUINA 500 X 35 "MIK" (UD.)|16.4^TOALLITAS DE LIMPIEZA LIBRE DE PELUSA KIMWIPES "KIMBERLY CLARK" (CAJA X 280 UDS.)|4.09^CAMARA DE RECUENTO DE 20 ÎœM MINITUBE (CAJA X 25 UDS.)|180.0^RESORTE PARA NIPLE  1/2"  (UD.)|1.4^PAPEL ABSORBENTE BROILERROLL "INTEC"(ROLLO)|22.0^PISO PLASTICO SWING TITAN PARA MARRANA 600 X 800 MM. "MIK" (UD.)|30.45^CONECTOR DE TUBO GALVANIZADO, PARA TUBO TRANSPORTADOR DE 60 MM  "MIK" (UD.)|5.34^ANCOR PED "SOMVITAL" (SACO X 5 KG.)|16.6^POLEA 90MM, ACERO/NYLON, 7MM, 180KG, MIK101179 "MIK" (UD.)|8.2^MARCADOR DE GANADO SIN REGULADOR  ROJO "LA-CO" (UD.)|0.96^PERFIL T 500 X 35 "MIK" (UD.)|42.0^PLETINA DE FIBRA DE VIDRIO 15 CM. ALTO X  60 CM "MIK"  (UD.)|6.88^FILTRO DE AGUA "RUSCO" (UD.)|117.35^TUBO TELESCOPICO TRANSPARENTE 80 / 85 MM X 1 MT DE LARGO "VVM TECH TRADE" (UD.)|12.33^TUBO GALVANIZADO VVM 80 X 1.5 MM. 6 MT. DE LARGO "VVM TECH TRADE" (UD.)|8.34^PERFIL U  500 X 35  "MIK" (UD.)|13.46^ALFA GUARD VILPRO "GOOD NUTRITION" (SACO X 5 KG.)|5.55^ANCLAJE PISO GRANDE "MIK" (UD.)|15.45^MARCADOR DE GANADO SIN REGULADOR  VERDE "LA-CO" (UD.)|0.96^COMEDERO HEMBRA COMFORT SOW 6.8KG., ACERO INOX. S4-15 "CRYSTAL SPRING" (UD.)|355.0^PLETINA DE FIBRA DE VIDRIO DUO 3.20 MT. "MIK"  (UD.)|36.42^Punta para pipeta MINITUBE 10 μl (paquete x 500 uds.)|50.0^CUBIERTA TRANSPARENTE VVM  60 MM. "VVM TECH TRADE" (UD.)|24.48^DUFLOSAN 50% "VETERQUIMICA" (ENVASE X 1 KG)|100.0^NOVICOX "VETERQUIMICA" (FRASCO X 1 LT)|36.0^PORTAOBJETOS 22 X 22  MM. (PAQUETE X 50 UDS.)|3.35^FRASCO ACORDEON  100 ML. "IMV" (UD.)|1.26^ABRAZADERA GALVANIZADA U-BOLT 80 MM. "VVM TECH TRADE" (UD.)|2.57^COBERTURA DE PVC 3.71 X 0.97 M "ONDULINE " (UD.)|25.15^TUBO PARA SOPORTE DE PLETINA 2.00 MT. "MIK" (UD.)|17.5^ABRAZADERA DE MANGUERA W4, 70-90 MM "MIK" (UD.)|1.27^POSTE DE PARED 500 X 35 "MIK" (UD.)|13.32^ANCLAJES PARA CONCRETO (JAULA VERRACO) "WEIHAI GAOSAI" (UD.)|1.15^RESORTE PARA NIPLE  3/8" (UD.)|1.4^PLETINA DE FIERRO 3/16" 121 CM. X 5 CM. (UD.)|2.17^MANIJA DE VALVULA WATER SPACE "CRYSTAL SPRING" (UD.)|6.7^TORNILLO M8  8X65  TORX ACERO INOX. "MIK"(UD.)|2.75^POSTE DE PARED 1100 X 35 (RANURADO) "MIK" (UD.)|20.14^ABRAZADERA DE CABLE 7.8 X 370 MM  (PRECINTO) "VVM TECH TRADE" (UD.)|0.72^ETIQUETAS PARA IDA/IDEE/IDENT 30 X 50 MM. "MINITUBE" (ROLLO X 1000UDS.)|33.5^TORNILLO DE SUJECION PARA CABLE COLGANTE "MIK" (UD.)|0.7^CODO PVC 75 MM 30Â° "MIK" (UD.)|3.5^INTERRUPTOR DE SEGURIDAD DE ROTURA DE CADENA|36.12^INTERRUPTOR DE SEGURIDAD DE TAPA DE LA ESTAC. TRANSP|25.3^VETERBLOCK SUPER MAGNESIO "VETERQUIMICA" (CAJA X 10KG)|2.1^TIGANIL 450 "VETERQUIMICA" (CAJA 10 X 810 GR)|389.5^AI BUDDIES - FOR BOTTLES & TUBES "QC SUPPLY" (UND.)|64.9^FOGGERSAN FORTE "SOMVITAL" (SPRAY X 100 ML.)|10.9^ABRAZADERA P/ CABLE 4MM, MIK101174 "MIK" (UD.)|2.2^MUELLE DE RETORNO P/ GATILLO DOSIFICADOR, MIK102464 "MIK" (UD.)|726.16^PIPETA DESCARTABLE DE PLASTICO 5 ML "IMV" ( CJA X 500 UND )|86.0^DISPENSADOR DE ALIMENTOS CAPACIDAD 9 LITROS "VVM TECH TRADE" (UD.)|23.55^COMEDERO MOD. WF2-348,  SECO HUMEDO, DESTETE VENTA, ACERO INOXIDABLE, DOBLE LADO, TRES ESPACIOS/LADO, 16" POR BOCA, PARA 90 A 100 CERDOS DE 4 A 130 KG "CRYSTAL SPRING"(UD.)|1420.75^BOTAS PLASTICAS DESCARTABLES (PAQUETE X 25 PARES)|25.3^CONTACTOR  DE ENCENDIDO 24 -A "MIK" (UD.)|25.6^COMEDERO DESTETE VENTA, 2 BOCAS, DOBLE LADO. 15" POR BOCA, SECO HUMEDO, WF2-230 "CRYSTAL SPRING" (UD.)|1420.75^CUBRE OBJETOS (CAJA X 100 UDS.)|3.9^PERFIL T 750 X 35 "MIK" (UD.)|42.0^REGULADOR DE ALTURA DE CHUPONES 02 SALIDAS (UD.)|25.9^PISO PLASTICO CHESS PARA RECRIA   800 X 600 MM. "MIK" (UD.)|25.53^SET PERFIL DE PUERTA 1100 X 35 (RANURADO) "MIK"(UD.)|37.0^ESQUINA DE TRANSF 90°, P/ TUBO 60MM, CD MIK101126 "MIK" (UD.)|63.0^CHUPON RECRIA FLUJO CENTRAL MONOFLO 1/2  " (UD.)|15.45^CAJA PROTECTORA  PARA MODULOS TR-D "MIK"|135.881667^BOMBA DOSIFICADORA MODELO TPG-603 SEKO "SOMVITAL" (UND.)|302.0^JUEGO DE LETRAS DE A  - Z PARA TATUAR "STONE" (UD.)|151.0^CATETER PARA INSEMINACION ARTIFICAL SOFTGILT MINITUBE (CAJA X 100 UD.)|36.64^FOTOMETRO 1.0 POOL LAB "SOMVITAL" (UND.)|241.8^RUEDA MOTRIZ P CADENA, 71,5MM, 38MM, MIK102592 "MIK" (UD.)|112.5^BOLSA DE COLECCION DE SEMEN CON FILTRO CAP. 3.5LT. C/DOSIFICADOR "MINITUBE" (PAQUETE X 100UDS.)|86.0^HERRAMIENTA PARA CRD STS SW (UD.)|1.96^DITRAL ONE "VETERQUIMICA" (FRASCO X 100 ML)|9.54^CONEXION GALVANIZADA 60 MM X 200 MM "VVM TECH TRADE" (UD.)|4.27^TERMO DE COLECCION DE SEMEN AZUL 1 LT. "MINITUBE" (UD.)|31.5^PUNTA PARA PIPETA VOL : 10/20 UL "MINITUBE" (CAJA X 96UDS.)|20.0^TORNILLOS J (UD.)|0.62^SET DE REPUESTOS CABLE CALEFACTOR PARA THERMO E 400/500/600 x 1200 mm "MIK" UND.|79.83^PIPETA DE VIDRIO 1 ML. (UD.)|3.35^CONTOMETRO MANUAL (UD.)|8.5^POSTE INTERMEDIO 1100 X 35 (RANURADO) "MIK" (UD.)|27.0^LINEA DE AGUA DE TRES CHUPONES (UD.)|11.0^PERFIL DELTA 1000 X 35 "MIK" (UD.)|44.25^CERVIX ARTIFICIAL MINITUBE (PAQUETE X 50 UDS.)|138.0^JUEGO DE NUMEROS 0 - 9 PARA TATUADOR 3/8" (UD.)|48.0^SENSOR 230 V "VVM TECH TRADE (UD.)|92.14^TACOS PARA TORNILLOS (UD.)|0.2^GANCHOS PARA TECHO GALVANIZADOS "VVM TECH TRADE" (UD.)|1.75^PISO PARA BROILER 914 X 609 "MIK" (UD)|53.6125^PUNTA PARA PIPETA ELECTRONICA MINITUBE  1000 ÎœL (PAQUETE X 1000 UDS.)|41.0^LANZA ESPUMA LS10 "VETERQUIMICA" (UNIDAD)|133.0^TUBO TRANSPARENTE DE BAJADA 0.75 MM. X  1 MT. DE LARGO "VVM TECH TRADE" (UD.)|3.52^PUNTA PARA PIPETA ELECTRONICA VOL: 1000/1200 UL  "MINITUBE" (CAJA X 96UDS.)|14.5^PLACA TERMICA SIN SENSOR 500 X 1200 "MIK" (UD.)|238.0^KIT DE EQUIPAMIENTO PARA PLACA TERMICA 1-15 "MIK" (UD.)|1.17^CHUPON 1/2"  "WEIHAI" (UD.)|4.5^MEDIDOR  DE CONDUCTIVIDAD Y TEMPERATURA RESISTENTE AL AGUA COM-100  "HM DIGITAL" (UD.)|94.0^TUBO FLEX AUGER 75 X 3.25 MM "VVM TECH TRADE" (UD.)|20.94^BOLSA PARA TANQUE DE CALENTAMIENTO CAP. 100 LT. "MINITUBE" (PAQUETE  X 25UDS.)|234.96^RUEDA DE DEFLEXION PARA TENSION, MIK101269 "MIK" (UD.)|50.2^CHUPON GORRINO EDSTROM 1/2 " (UD.)|7.03^CHUPON RECRIA FLUJO CENTRAL L-70 LIXIT 1/2" (UD.)|9.5^AGUJAS  PARA ENVASADORA MRA - PAVO "IMV" (UD.)|32.3^REMOVEDOR DE ARETES "ALLFLEX" (UD.)|7.2^MOTOR REDUCTOR VVM 1.5 KW "VVM TECH TRADE" (UD.)|441.0^BLOQUE CON FILTRO Y TAPADERA "IMV" (UD.)|99.0^CAMARA NEUBAUER CON ESPEJO (UD.)|116.54^BZ-20 "VETERQUIMICA" (ENVASE X 1 LT)|29.6^ETIQUETAS PARA IMPRESORA IMALE, BLANCAS 18001/0210 "MINITUBE" (UD.)|19.11^PLACA TERMICA SIN SENSOR 400 X 600 MM. "MIK" (UD.)|170.6^CONEXION DE ABASTO PARA VALVULA  WATER SPACE "CRYSTAL SPRING"  (UD.)|10.0^JUEGO DE REPUESTOS PARA SELLADORA MANUAL DE 3 TUBOS "MINITUBE" (13228/0001) (UD.)|75.77^OJAL DE REFUERZO DE ACERO INOX PARA CABLE 4 MM "VVM TECH TRADE" (UD.)|1.89^CABLE CON ENCHUFE TIPO B Y C 13 "MINITUBE" (UD.)|19.9^ADAPTADOR PARA CABLE DE ALIMENTACION AL ENCHUFE TIPO B 250V/10A  "MINITUBE" (UD.)|17.62^CLIMA KIT, CONTROLADOR 14160/9001 PARA REFRIGERADOR, 230V "MINITUBE" (UD.)|420.65^ESQUINA DE TRANSF 45°, P/ TUBO 60MM, CD MIK101128 "MIK" (UD.)|74.5^WINCHE H1200 B, 550KG, MIK101183 "MIK" (UD.)|77.8^CONSOLA P/ WINCHE, MIK101184 "MIK" (UD.)|10.0^POLEA MARCO GALVANIZ P/ CABLES DE HASTA 5MM, MIK101177 "MIK" (UD.)|11.2^PLACA DE OJAL DE 2 AGUJEROS, GALVANIZADA, MIK101182 "MIK" (UD.)|14.7^PROTECTOR DE REGISTRADOR LOGTAG (UD.)|11.5^REGISTRADOR DE TEMPERATURA HUMEDAD Y LUMINOSIDAD HO80 (UD.)|98.0^ALFOMBRA  DE JEBE 26 X 26 (UD.)|46.95^ALFOMBRA  DE JEBE 26 X 42 (UD.)|48.93^BAGUETA DE VIDRIO (UD.)|0.38^JERINGA SOCOREX X 0.50 ML. "INTERVET" (UD.)|127.83^MINI VENTILADOR 12V 5 CM X 5 CM (UD.)|6.5^BALANZA DIGITAL  SR-20 "AWS" 20 KG (UD.)|22.0^BALANZA DE 5 KG. "SOEHNLE" (UD.)|51.0^COCHETTE PARA ENVASADO DE SEMEN ROLLO X 500 "IMV" (ROLLOS)|135.0^SOPORTE  DE SENSOR "VVM TECH TRADE" (UD.)|8.58^BOLSA DE DILUCION CAP.10 LT.  MINITUBE (PAQUETE X 100 UDS.)|75.74^78/278 MODULO DE RESPALDO 4 AH "SKOV" (UD.)|56.11^MOTOR VVM 2.2 KW "VVM TECH TRADE" (UD.)|279.16^CURVA 45 GRADOS FLEX AUGER 75 X 4 MM LARGO RADIO 1.500 MM|16.25^CONTROL DIGITAL DE TEMPERATURA TR-D "MIK" (UD.)|177.0^PEDILUVIO PORTATIL 90X60 "VETERQUIMICA"|90.85^DROYOPEZ "DROGAVET" (LT)|23.9^MOTORREDUCTOR P/ UNID DE TRANSF, 1.50kW B5 4p 3ph 230/460V 60Hz, MIK102592 "MIK" (UD.)|656.0^PISO PLASTICO RUBIN PARA LECHON 200 X 300 MM. "MIK" (UD.)|3.6^CHUPON MARRANA AQUAGLOBE (UD.)|29.8^MATRAZ 150  ML. "DOROSIL" (UD.)|7.5^KIT DE REPUESTO (02 AROS + 01 PIEZA PLASTICA) "DOSMATIC" (UD.)|12.0^CAJA PROTECTORA  PARA MODULOS TR-A "MIK"|61.6^TERMOMETRO AMBIENTAL (UD.)|5.2^ARETE DE IDENTIFICACION PARA CERDOS NÂ° 1 AL 100 "ALLFLEX" (PAQUETE X 25 UDS.)|37.0^ERLENMEYER DE 2 LT. (UD.)|15.93^PERFIL U 1000 X 35 "MIK" (UD.)|16.87^PANEL DE CONTROL EASY VVM TRONIC. - INCLUYE ACCESORIOS "VVM TECH TRADE" (UD.)|595.36^RESORTE VVM DE RETORNO "VVM TECH TRADE" (UD.)|6.95^PLACA DE ELEVACION  VVM CON  OJALES "VVM TECH TRADE" (UD.)|45.885769^MALACATE MANUAL (FUERZA DE ELEVACION 550 KG.) "VVM TECH TRADE" (UD.)|45.7^CONSOLA DE MALACATE "VVM TECH TRADE" (UD.)|12.2^MOTOR REDUCTOR VVM 0.75 KW. 230/400 V. "VVM TECH TRADE" (UD.)|367.0^KIT DE LIMPIEZA PARA MICROSCOPIOS "MINITUBE" (UD.)|60.5^CAJA DE CONTROL PARA MOTOR ESPIRAL "VVM TECH TRADE" (UD.)|123.0^DA 74 C MOTOR CON TABLERO DE CIRCUITO "SKOV" (UD.)|56.11^DOL 67/99 B CELDA DE CARGA "SKOV" (UD.)|56.11^INYECTORES VENTURI "MINITUBE"(UD.)|99.17^USB LOGTAG INTERFASE INCLUYE SOFTWARE (UD.)|102.0^REGISTRADOR DE TEMPERATURA LOGTAG(UD.)|59.5^PISO MARRANA MATERNIDAD 600X800 MM (UD.)|69.519364^ACOPLE DE TUBO FLEXIBLE 75 MM, DE PVC "MIK" (UD.)|4.37^CAMARA EFLOW, CAMARA DE FLUJO CONTINUO PARA ANALISIS DE SEMEN 4112510/0020 "MINITUBE" (UD.)|2376.54^ACCUPOINT ADVANCED SURFACE "NEOGEN" (PAQUETE X 25 UDS.)|95.0^MINI COMEDERO DE TRANSICION PARA LECHONES BPF9 "BAKER FEEDERS" (UD.)|2.05^CHUPON COMEDERO HUMEDO TROJAN 65 1/2 " (UD.)|5.5^CHUPON GORRINO SUEVIA  1/2 " (UD.)|4.54^CLAMP DE ENVASADO "IMV" (UD.)|20.2^PLACA TERMICA CON SENSOR 400 X 600 MM. "MIK" (UD.)|85.5^PIQUETEADOR DE OREJA DE LECHON "STONE" (UD.)|28.0^PERFIL DELTA 1100 MM. 500 X 35 "MIK"(UD.)|48.0^TERMOMETRO AMBIENTAL  GRANDE (UD.)|18.5^MASCARA DESECHABLE (CAJA X 50 UDS.)|13.4^SOPLADOR-ASPIRADOR MOD. 51619  "TORO" (UD.)|175.0^MOTORREDUCTOR_R17 DRS71M4 "VVM TECH TRADE" (UD.)|1656.69^RELAY DE PROTECCION 4 - 6  A  TRES FASES "VVM TECH TRADE" (UD.)|19.8^DA 100 B / 150 B BOMBA 230 V 60 HZ "SKOV" (UD.)|56.11^DA 74 C MOTOR DE ENGRANAJE COMPLETO "SKOV" (UD.)|56.11^DOL 278 A MODULO PRINCIPAL "SKOV" (UD.)|56.11^DOL 16 SENSOR DE LUZ 0-100 / 100 LUX 0-10 V "SKOV" (UD.)|56.11^DOL 90 MEDIDOR DE AGUA 1 IMPULSO / 5 LT. "SKOV" (UD.)|56.11^DOL 94-10 PLATAFORMA DE PESAJE "SKOV" (UD.)|56.11^DOL 99 MOTOR "SKOV" (UD.)|56.11^AMPLIFICADOR DE  PESAJE DE ALIMENTO "SKOV" (UD.)|56.11^DOL 53 X MALETIN DE REPUESTOS "SKOV" (UD.)|56.11^SOPORTE  DE SENSOR TIPO A "VVM TECH TRADE" (UD.)|7.4^DOL 539 CONTROLADOR PARA SISTEMA DE VENTILACION DE AVES "SKOV" (UD.)|1522.0^LENTE DE MICROSCOPIO 10 X 23 MM. M21-1149 "AMERICAN SCOPE INC." (UD.)|16.5^DISPOSITIVO DE BLOQUEO PARA CAJA DE IMPRESION DE MINIBSP "MINITUBE" (UD.)|31.6^LIMITADOR DE UNA VIA M5 "MINITUBE" (UD.)|55.9^ARRANCADOR SUAVE HASTA 3 KW "VVM TECH TRADE" (UD.)|337.88^INTERRUPTOR DE SEGURIDAD (ON /OFF) "VVM TECH TRADE" (UD.)|137.5^TERMOMETRO DIGITAL, PARA NEVERA "MINITUBE" (UD.)|33.37^SOPLADOR /ASPIRADOR INALAMBRICO MARCA "GREENWORKS" G-MAX (UD.)|299.7^CONEXION PARA TUBO FLEX AUGER "VVM TECH TRADE" (UD.)|49.09^TOLVA PARA ESPIRAL 75 MM "VVM TECH TRADE" (UD.)|188.0^PANEL DE CONTROL EASY 2 (INCLUYE ACCESORIOS) "VVM TECH TRADE" (UD.)|1023.19^SET TRANSFERENCIA CON OBTURADOR  "VVM TECH TRADE" (UD.)|63.51^ADAPTADOR DE SILO 440 MM  "VVM TECH TRADE" (UD.)|43.93^PANEL DE CONTROL EASY 3 - 2.2KW - 0.75KW  VVM TECH TRADE UD|1408.53^TRANSFORMADOR 12V/AC 100-240V|179.15^CAMARA DE TRANSPORTE CLIMATIZADA 8L 12V TEMPERATURA AJUSTABLE "MINITUBE" (UD.)|1185.22^ANDROSCOPE EQUIPO PORTATIL PARA ANALISIS DE CONCENTRACION Y MOTILIDAD EN SEMEN "MINITUBE" (UD.)|4634.49^BOLA AGITADORA DE HIERRO FUNDIDO "MIK" (UD.)|23.21^UNIDAD DE CONTROL COMPLETAMENTE REMACHADA "MIK" (UD.)|98.36^TRANSICION DE FLEX AUGER DE 75 A 60 MM "MIK" (UD.)|343.89^DRIVE UNIT 1,5 KW STANDARD "MIK" (UD.)|1502.76^SOPORTE DE PARED EN ACERO INOXIDABLE PARA MOTOR  "MIK" (UD.)|97.4^SENSOR VC12RTM2410M "MIK" (UD.)|83.33^SOPORTE DE SENSOR PARA VISOR "MIK" (UD.)|6.63^ABRAZADERA DE MANGUERA 12 MM, 25-40 MM, PARA SOPORTE SENSOR A/B "MIK" (UD.)|0.86^IMALE LECTOR RFID PARA CROTALES ELECTRONICOS 18001/0000 "MINITUBE" (UD.)|2694.96^IMPRESORA DE ETIQUETAS A USAR CON LECTOR IMALE 18001/0200 "MINITUBE" (UD.)|1881.1^BOLSA PROTECTORA PARA IMPRESORA DE ETIQUETAS 18001/0290 "MINITUBE" (UD.)|251.9^MALETIN DE TRANSPORTE PARA LECTOR IMALE Y ACCESORIOS 18001/0900 "MINITUBE" (UD.)|231.53^TENAZAS PARA COLOCAR ARETE ELECTRONICO 18000/0065 "MINITUBE" (UD.)|166.7^TORRE EFLOW, UNIDAD DE CONTROL PARA SISTEMA EFLOW PARA ANDROVISION® 4112510/0010 "MINITUBE" (UD.)|6449.32^UNIDAD PORTATIL PARA CALENTAR 6 VIALES, 1 PORTAOBJETOS, 12057/6000 "MINITUBE" (UD.)|664.3^DILUYENTE S100 PARA NUCLEOCOUNTER SP-100 "MINITUBE" (UD.)|1080.0^PROFIT KIT CATETERS PCAI "MINITUBE" (PAQUETE X 50 UDS.)|8.81^PROFIT KIT CATETERS TRADICIONALES "MINITUBE" (PAQUETE X 200 UDS.)|8.81^NOBILIS RHINO CV X 5000 DS. "INTERVET" (UD.)|113.35^NOBILIS SG 9R X 1000 DS. "INTERVET" (UD.)|91.06^NOBILIS RT + IB MULTI + ND + EDS X 1000 DS. "INTERVET" (UD.)|215.64^DOXICICLINA (KG.)|78.5^NOBILIS ND C2 X 5000 DS. "INTERVET" (UD.)|25.1^COCCIVAC D X 1000  DS."INTERVET" (UD.)|58.45^COCCIVAC D X 5000 DS. "INTERVET" (UD.)|220.0^NOBILIS IB MA5 X 5000 DS. "INTERVET" (UD.)|14.7^NOBILIS RISMAVAC X1000 DS. "INTERVET" (UD.)|41.75^CAMARA DE CONSERVACION DE SEMEN CON TEMPERATURA PROGRAMABLE 5Â° C -  40Â° C, PARA 250  TUBOS/BOTELLAS|985.0^MICROSCOPIO BINOCULAR 40 X - 1000 X   M10-1108 "AMERICAN SCOPE" (UD.)|440.0^CONMUTADOR DE ALIMENTACION 12V "VVM TECH TRADE" (UD.)|475.0^ESTAC DE TRANS 2.2 KW PARA TRANSPORTADOR DE CADENA DE 60 MM (MOTOR Y MORREDUCTOR ) "VVM TECH TRADE"|1742.0^SET TUBO DE CONEXION PARA FLEX AUGER ,PARA MONTAJE DE MOTOR 19 MM + 22 MM  "VVM TECH TRADE" (UD.)|47.8^FONDO BASE PARA COMEDERO COMFORT SOW SERIE S4 EN ACERO INOXIDABLE|4.372338^AVIGUARD X 2000 DS|62.78^SUCRAM C-150 "PANCOSMA" (BOLSA X 5 KG.)|33.0^LACTOGUR SOMVITAL SACO X 12 KG|29.0^FRA LECIMAX DRY FRAMELCO SACO X 25 KG|29.0^FRA LECIMAX DRY FRAMELCO BIG BAG X 1000 KG|29.0^MEVIBACTER SOMVITAL GARRAFA X 5 LT|29.0^HIDROPEROX SOMVITAL  BIDON 250 KG|29.0^HIDROPEROX SOMVITAL  BIDON 1195 KG|29.0^GRASS SOMVITAL BARRIL 200 KG|29.0^GRASS SOMVITAL ISOTANQUE 1000 KG|29.0^XTRACT ALLIUM XL  PANCOSM (SACO X 25 KG)|5.07^OVOFORTE "VETERQUIMICA" (SACO X 25KG)|3.85^VETERSAL GANADO ESPECIAL "VETERQUIMICA" (BALDE X 1KG)|1.6^PORTAPEDILUVIO PORTATIL 90X60 #PLASTICO "VETERQUIMICA"|48.46^DACLOR "VETERQUIMICA" (BALDE X 15 KG)|25.46^DETERGENTE VQ-3500 "VETERQUIMICA" (BIDON X 60LT)|2.58^DETERGENTE VQ-2000 "VETERQUIMICA" (BIDON X 20LT)|2.42^DETERGENTE VQ-30 "VETERQUIMICA" (BIDON X 20 LT)|6.25^DETERGENTE VQ-510 "VETERQUIMICA" (BIDON X 60LT)|2.87^DUFLOSAN 30 "VETERQUIMICA" (FRASCO X 100 ML)|12.0^IPEVAC INMERSION "VETERQUIMICA" (FRASCO X 1 LT)|153.5^LICIMOCIN 44 "VETERQUIMICA" (SACO X 25 KG)|5.6^NEUMOTONA "VETERQUIMICA" (DOYPACK X 1 KG)|34.0^SINGEN-SQ10 "VETERQUIMICA" (BIDON X 20 LT)|2.8^TERRIVET 80% "VETERQUIMICA" (CAJA X 20 KG)|34.73^YODIGEN DIPPING  7000 "VETERQUIMICA" (BIDON X 20 LT)|2.5^YODIGEN DIPPING  7000 "VETERQUIMICA" (BIDON X 60 LT)|2.42^VETERSAL LECHERIA "VETERQUIMICA" (SACO X 25KG)|1.12^VETERVIT ADE "VETERQUIMICA" (FRASCO X 100 ML)|12.08^TERMOMETRO INFRARROJO PARA MEDIR TÂ° SIN CONTACTO  "MINITUBE" (UD.)|285.33^ARETE DE IDENTIFICACION PARA CERDOS AZUL “ALLFLEX - AM” (CAJA X 25 UDS.)|40.0^TIGANIL 450 "VETERQUIMICA" (BOLSA X 810 GR)|38.9^EGG TESTER ULTIMATE|2530.0^QOMO, BUNDLEBOARD SERIES 75" 4K INTERACTIVE LED SCREEN ANDROID 11|2530.0^PREG-ALERT PRO|2530.0^TERMOMETRO INFRARROJO "FLUKE" (UD.)|149.0^REGISTRADOR DE TEMPERATURA  Y HUMEDAD (UD.)|135.0^PISO PLASTICO TRAPPER PARA ENGORDE 800 X 400 MM. "MIK" (UD.)|15.2^PLETINA  DE FIBRA DE VIDRIO  DUO XL  3.00 MT.  "MIK"  (UD.)|34.17^ARETE DE IDENTIFICACION PARA CERDOS AMARILLO "ALLFLEX" (PAQUETE X 25UD.)|40.0^BALANZA ELECTRONICA DE 25KG. "SALTER" (UD.)|152.0^CHUPON GORRINO TROJAN 75 1/2 " (UD.)|4.79^GUANTE DE COLECCION (PAQUETE X 100 UD.)|12.5^MARCADOR INDELEBLE DE ARETES "ALLFLEX" (UD.)|12.83^TENAZA ARETADORA " ALLFLEX" (UD.)|43.5^TENAZA DE TATUAR 2520 "STONE" (UD.)|97.0^FRASCO CON TAPA PARA DOSIS DE SEMEN "IMV" (UD.)|0.33^GEL LUBRICANTE PARA INSEMINACION ARTIFICIAL NO ESTERIL  "PRIORITY CARE" (GALON X 4LTS.)|17.65^MANGUERA DE LLENADO DE COCHETTE "IMV" (PAQUETE X 5 UDS.)|9.76^TINTA PARA TATUAR NEGRA "STONE" FRASCO X 03 OZ. (UD.)|21.0^PANBONIS AL 15% (BOLSAS X 5KG.)|10.41^VIOLETA DE GENCIANA (TAMBOR X 25 KG.)|18.72^LAPI - RACTO  "LAPISA" (SACO X 10 KG.)|26.5^MINOXEL 8GR. "LAPISA" (FRASCO X 8GR.)|38.18^MINOXEL PLUS "LAPISA" (FRASCO X 100 ML.)|28.5^CLEAN UP ACIDO "ENKEL" (BIDON X 20 KG.)|2.73^PG 600 X 1 DOSIS + SOLVENTE "INTERVET" (CAJA X 5UD.)|55.63^MINOXEL  4GR."LAPISA" (FRASCO X 4GR.)|32.65^DETECTOR DE PREÃ‘EZ PARA CERDOS PREG-TONE II PLUS  "RENCO" (UD.)|387.0^COMEDERO ENGORDE ACERO TRES BOCAS POR LADO SECO-HUMEDO F1-336 "CRYSTAL SPRING"(UD.)|1100.0^BOLSA PARA ENVASADO DE SEMEN DE CERDO "MAGAPOR" (UD.)|0.12^ARETE DE IDENTIFICACION PARA CERDOS ROSADO "ALLFLEX" (PAQUETE X 25 UDS.)|42.11^OVEROL  DESCARTABLE (UD.)|3.2^REGULADOR DE ALTA PRESION DE AGUA, MOD.970, 10-25PSI, 3/4" MPT X 3/4" MPT (UD.)|151.5^ARETE DE IDENTIFICACION PARA CERDOS AZUL "ALLFLEX" (PAQUETE X 25 UDS.)|40.0^LAMINAS PORTA OBJETO (CAJA X 50 UDS.)|3.35^PREMEZCLA RECRIA"DSM" (SACO X 25 KG.)|6.3^PREMEZCLA REPRODUCCION"DSM" (SACO X 25 KG.)|5.95^PREMEZCLA ENGORDE DSM" (SACO X 25 KG.)|3.8^AGUA DESTILADA X 1LT. (BOTELLA)|4.0^CLINAFARM SPRAY 1 LITRO "INTERVET" (UD.)|178.0^INNOVAX ILT - SB X 2000 DS. "INTERVET" (UD.)|125.0^NOBILIS DILUENT CA X 400 ML. PARA 2000 DS. "INTERVET" (UD.)|12.94^NOBILIS COR4+IB+ND+EDS X 1000 DS. "INTERVET" (UD.)|238.79^NOBILIS GUMBORO D78 X 1000 DS. "INTERVET" (UD.)|10.7^NOBILIS MA5 + CLONE 30 X 1000 DS. "INTERVET" (UD.)|11.54^SOLVENS OCULO / NASAL 36 ML. PARA 1000 DS. "INTERVET" (UD.)|2.97^NOBILIS MG 6/85 X 1000 DS. "INTERVET" (UD.)|83.93^NOBILIS CORYZA (SAPONINA) X 1000 DS. "INTERVET" (UD.)|87.96^NOBILIS RHINO CV X 1000 DS. "INTERVET" (UD.)|62.5^CIRCUMVENT PCV 1 X 100 ML. "INTERVET" (UD.)|49.87^PLETINA DE FIBRA DE VIDRIO DUO XL  2.00 MT. "MIK"  (UD.)|32.88^INNOVAX ILT X 2000 DS. "INTERVET" (UD.)|192.45^ENTEROVAX X 1000 DS "INTERVET" (UD.)|26.7^CHUPON COMEDERO HUMEDERO STINGY 1/2" (UD.)|21.0^DIVISION PLASTICA PVC 1.756 MM "MIK" (UD.)|24.31^REGISTRADOR PARA CONECTAR  MICROLIT "FOURIER"(UD.)|165.0^COMEDERO DE LECHON REDONDO DE ACERO INOXIDABLE  25 CM (UD.)|35.9^PLETINA DE FIBRA DE VIDRIO DUO XL  1.60 MT. "MIK"  (UD.)|18.34^COMEDERO RECRIA 5 BOCAS DOBLE LADO N2-536 "CRYSTAL SPRING" (UD.)|945.0^COMEDERO DESTETE VENTA 2 BOCAS DOBLE LADO SECO-HUMEDO WF9-224  "CRYSTAL SPRING"(UD.)|960.0^COMEDERO ENGORDE 2 BOCAS DOBLE LADO SECO-HUMEDO F1-224 "CRYSTAL SPRING"(UD.)|1253.84^M + PAC X 100 ML. "INTERVET" (UD.)|59.55^CATETER ESPIRAL "MAGAPOR" (UD.)|0.35^STERILE DYE FRASCO X 30 ML. "INTERVET" (UD.)|0.35^BOMBA DOSIFICADORA  MOD. CH-900 - AV2 "CHEMILIZER" (UD.)|772.67^COMEDERO RECRIA  3 BOCAS POR LADO 10" WATER SPACE, ACERO INOX. N2-330 "CRYSTAL SPRING" (UD.)|865.0^ARETE DE IDENTIFICACION PARA CERDOS NARANJA "ALLFLEX" (PAQUETE X 25 UDS.)|40.0^DIVISION PLASTICA PVC 6.00 MT. 1000 X 35 "MIK" (UD.)|269.92^SET DE TORNILLO M8  8X55  (ARANDELA, TORNILLO Y TUERCA) "MIK"(UD.)|0.6^COMEDERO RECRIA 3 BOCAS 24" DOBLE LADO " WATER SPACE " N2-324 "CRYSTAL SPRING"(UD.)|825.0^CONFORT DRY ABSORBENTE "INTEC" (SACOS X 20KG.)|2.5^COMEDERO DESTETE 4 BOCAS DOBLE LADO SECO-HUMEDO  WF9-448 "CRYSTAL SPRING" (UD.)|1610.0^MICROSCOPIO MONOCULAR C/ PLATINA MECANIZADA 40 X 1000 LED M-200 (UD.)|288.0^CIRCUMVENT PCV - M  "INTERVET" (UD.)|72.0^DIVISION PLASTICA PVC 3.60 MT. (500 X 35) "MIK" (UD.)|108.11^SUCRAM C-150 "PANCOSMA" (SACO X 25 KG.)|34.0^SET DE PERFIL DE PUERTA 500 X 35 "MIK" (UD.)|24.3^REGULADOR DE BAJA PRESION DE AGUA, MOD.6003, 1.5-13PSI, 1/2" NPT X 3/4" NPT (UD.)|198.0^JAULA MATERNIDAD TUBO GALVANIZADO "WEIHAI GAOSAI" (UD.)|268.0^CATETER PARA INSEMINACION ARTIFICIAL SAFE BLUE SOFTGILT "MINITUBE" (CAJA X 100UDS.)|0.66^DIVISION PLASTICA 1.80 MT. (500 X 35) "MIK" (UD.)|39.98^EASY CULT PARA ANALISIS BACTERIOLOGICO MINITUBE (CAJA X 20 UDS.)|111.0^ESQUINA  DE TRANSFERENCIA 90 DE FIBRA DE VIDRIO REFORZADO CON PLASTICO "VVM TECH TRADE" (UD.)|59.98^TUBO DE SILICONA PARA SMARTDISPENSER 2.8 M "MINITUBE" (UD.)|41.77^ETIQUETAS PARA MINIBSP C/LOGO PIC  IMPRESO ROLLO "MINITUBE"  (ROLLO X 2000UDS.)|25.57^JAULA MATERNIDAD FRONTAL PARA COMEDERO CRYSTAL "WEIHAI GAOSAI" (UD.)|270.0^AJUSTE DE ALTURA  P/LINEA DE AGUA W3 PARA JAULA DE MATERNIDAD "CRYSTAL SPRING"  (UD.)|82.14^PORCILIS GLASSER "INTERVET" (UD.)|18.3^NOBILIS MA5 + CLONE 30 X 2500 DS. "INTERVET" (UD.)|11.35^ZUPREVO X 100 ML INTERVET UD|55.6^TUBOS CONECTORES DE FRASCO "INTERVET" (CAJA X 10UD.)|2.31^XTRACT 6930 "PANCOSMA" (CAJA X 25KG.)|23.53^SISTEMA WATER SPACE (CON ACCESORIOS) "CRYSTAL SPRING"  (UD.)|1.7^ARETE DE IDENTIFICACION PARA CERDOS MAGENTA "ALLFLEX"  (PAQUETE X 25UDS.)|35.6^ARETE DE IDENTIFICACION PARA CERDOS MORADO "ALLFLEX" (PAQUETE X 25UDS.)|35.6^HERBAL E-50 POWDER "INDIAN HERBS" (SACO X 25KG.)|13.5^PLACA TERMICA CON SENSOR 500 X 1200 "MIK" (UD.)|259.0^OPTIMETHIONE"INDIAN HERBS" (SACO X 25KG.)|4.08^OJAL - EMPAQUETADURA PARA CABLE DE LA ESTACION DE LLENADO DE MINI BSP "MINITUBE" (UD.)|1.95^MINI BSP TAMPON DE GOMA  PARA BALANZA "MINITUBE" (UD.)|8.8^BARRA CONECTORA PARA CADENA DE CIERRE PARA MINI BSP "MINITUBE" (UD.)|53.94^MUELLE DE AJUSTE DIM 6885 -A PARA UNIDAD DE TRANSPORTE MINI BSP 5X5X20 MM. "MINITUBE" (UD.)|0.65^TUBO DE LLENADO PARA MINI BSP "MINITUBE" (UD.)|41.41^ESQUINA  DE TRANSFERENCIA 45 Â° DE FIBRA DE VIDRIO REFORZADO CON PLASTICO "VVM TECH TRADE" (UD.)|84.84^TUBO CAPILAR X 100 UND. (UD.)|4.9^REGUMATE PORCINE 1 X 540 ML. "INTERVET" (UD.)|164.5^XTRACT NATURE "PANCOSMA" (CAJA X 25KG.)|30.86^ARNES PARA INSEMINACION ARTIFICIAL (UD.)|44.0^PLETINA  DE FIBRA DE VIDRIO  DUO XL  3.60 MT.  "MIK"  (UD.)|41.0^DIVISION PLASTICA 3.00 MT. (500 X 35) "MIK" (UD.)|44.83^PECOZYME PHYTASE 5000 U/G "CHALLENGE" (SACO X 25 KG.)|4.25^PECOZYME THERMOSTABLE PHYTASE 5000 U/G "CHALLENGE" (SACO X 25 KG.)|8.3^FOOTCONFORT "INTEC" (BALDE X 5 KG.)|17.8^DIVISION PLASTICA 3.00 MT. (1000X 35) "MIK" (UD.)|83.7^NOBILIS RISMAVAC X 2000 DS. "INTERVET" (UD.)|175.7^TUBO MAGNELIS VVM 60 X 1.25 MM  6MT. DE LARGO "VVM TECH TRADE" (UD.)|7.53^DIVISION PLASTICA 3.00 MT. (750 X 35) "MIK" (UD.)|68.47^DIVISION PLASTICA 3.60 MT. (1000 X 35) "MIK" (UD.)|110.73^PORCILIS PCV 50 DS. "INTERVET" (UD.)|92.2^COMEDERO RECRIA BISTRO W100P CON TOLVA DE PLASTICO "MIK" (UD.)|578.0^COMEDERO ENGORDE BISTRO W100F CON TOLVA DE PLASTICO "MIK" (UD.)|578.0^PORCILIS PCV - MHYO  50 DS. "INTERVET" (UD.)|147.8^COMEDERO DESTETE VENTA 3 BOCAS 16", DOBLE LADO WATER SPACE WF8 348 "CRYSTAL SPRING" (UD.)|1485.0^COBERTURA DE PVC 2.49 X 0.97 M "ONDULINE "(UD.)|16.9^PROTACID OX - P "HIGIENIZO"  (BIDON X 25 KG.)|81.74^PROTACID RX - P "HIGIENIZO"  (BIDON X 25 KG.)|75.25^PORCILIS COLI CLOS X 50 ML. "INTERVET" (UD.)|48.0^NOBILIS ND CLONE 30 X 1000 DS. "INTERVET" (UD.)|4.5^NOBILIS GUMBORO D78 X 5000 DS. "INTERVET" (UD.)|36.25^ESTERA DE GOMA PARA MANIQUI 1.5 M X 1M 23MM ESPESOR "MINITUBE" (UD.)|389.55^PERNO M8 X 60 CON TUERCA Y ARANDELA (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|0.435243^CONEXION 25 X 25 X 2.5 PARA TUBO CUADRADO X 6 MT â€œWEIHAI GAOSAIâ€  (UD.)|5.1^PARTE T/TUERCA M 10 (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|4.8^ABRAZADERA M8 PARA TUBO DE COMEDERO (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|1.03^ABRAZADERA M8 PARA TUBO DE AGUA (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|1.5^COMEDERO DESTETE  2 BOCAS 15" DOBLE LADO SECO HUMEDO WF9-230 "CRYSTAL SPRING" (UD.)|960.0^PUERTA FRONTAL (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|26.84^PUERTA POSTERIOR (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|36.265652^TUBO DE AGUA (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|9.008152^PANEL 2.4 M (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|173.425326^COMEDERO (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|126.511414^CODO PARA NIPLE (JAULA DE VERRACOS) â€œWEIHAI GAOSAIâ€  (UD.)|2.578478^TUBO PARA COMEDERO (JAULA DE VERRACOS) â€œWEIHAI GAOSAIâ€  (UD.)|15.604456^COMEDERO DESTETE RECRIA 5 BOCAS POR LADO 14.4" WATER SPACE, ACERO INOX. WF8-572 "CRYSTAL SPRING"|2500.0^PANEL FINAL DE 2.4 M (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|173.4325^INCUBADORA PARA 300 TUBOS MANDO ELECTRONICO TEMPERATURA: +5Â°C A +40Â°C "MINITUBE" (UD.)|6654.31^COMEDERO DESTETE  VENTA 3 BOCAS DOBLE LADO SECO-HUMEDO WF9-348 "CRYSTAL SPRING" (UD.)|1485.0^CONSERVADORA 40 LITROS "MINITUBE" (UD.)|960.0^PIN DE REPUESTO PARA TENAZA ARETADORA "ALLFLEX" (UD.)|5.7^PREMEZCLA ENGORDE CON MINERALES ORGANICOS "DSM" (SACO X 25 KG.)|9.1^PREMEZCLA RECRIA CON MINERALES ORGANICOS "DSM" (SACO X 25 KG.)|12.6^PREMEZCLA REPRODUCCION CON MINERALES ORGANICOS "DSM" (SACO X 25 KG.)|12.9^CAMARA CLIMATIZADA 544L, 700 TUBOS, C/ TC200, 14160/0352 "MINITUBE" (UD.)|7140.55^DIVISION PLASTICA PVC 2.47 MT. 500 X 35 "MIK" (UD.)|34.19^PLACA TERMICA SIN SENSOR 400 X 1200 "MIK" (UD.)|221.72^PLACA TERMICA MIK SIN SENSOR 400X1200|498.928^ANDROVISION:PROGRAMA CASA CON PC|48309.77^MODULO ANDROVISION - MORFOLOGIA Y MORFOMETRIA|18191.97^MODULO PARA ANDROVISION - CONEXION SOFTWARE LABORATORIO|2021.33^MODULO ANDROVISION - CONTROL DE CALIDAD|3638.39^SOFTWARE ANDROVISION - MODULO AUTOMORPH|17325.69^CAMARA A COLOR PARA ANDROVISION - USB 3.0 ALTA VELOCIDAD, ALTA RESOLUCION|12572.69^MICROSCOPIO ZEISS AXIOLAB A1 CON CONSTRASTE DE FASES|13890.59^CABLE CON ENCHUFE ESPECIFICO PAIS TIPO B Y C13 EN EL LUGAR DEL DISPOSITOV,125V/10A (LARGO 1,8M)|9.13^OBJETIVO ZEISS 10X/0.25X - CONTRASTE DE FASE NEGATIVO|5396.97^OBJETIVO DE FASE ACROMATICO PH40X|2041.54^ADAPTADOR DE CAMARA 1,0X PARA ZEISS|452.77^PLATINA CALEFACTADA PARA MICROSCOPIO ZEISS AXIOLAB.A1|2890.5^UNIDAD DE CONTROL HT 200 PARA SISTEMA DE CALEFACCION|3116.89^IDEE STANDARD PROGRAMA DE GESTION PARA LABORATORIO DE SEMEN PORCINO|31128.46^ORDENADOR PARA IDA/IDEE/IDENT CON TARJETA MOXA|5975.03^MONITOR PLANO 24 INCH (58 CM) PARA ANDROVISION|1180.45^SOPORTE DE PARED GALVANIZADO PARA MOTOR VVM 450 X 600 MM|133.49^EMBUDO DE CONEXION DE SILOS DE FIBRA DE VIDRIO CON BORDE VERTICAL|200.0^TOLVA CON BORDE VERTICAL PARA SISTEMA DE TRANSPORTE DE 60 MM|247.0^PORCILIS EPL  25 DS. X 50ML.  "INTERVET" (UD.)|58.3^PISO PLASTICO RUBIN GR  500 X 600 MM. "MIK" (UD.)|36.286156^MINAZEL "PATENT CO" (BIG BAG X 1000 KG.)|1.21^PINZA OBSTETRICA|755.113333^PIPETA 0,5 - 10|1299.58^PIPETA ELECTRONICA 100  - 1 ML|1475.71^SISTEMA DE ALIMENTACION AUTOMATICA 4 "MIK"|10099.8^TUERCA ˜8MM ACERO INOXIDABLE A4 "MIK" (UD.)|0.14^ARANDELA M8X15MM ACERO INOXIDABLE "MIK" (UD.)|0.11^MEVIPOW "SOMVITAL"(BIDON X 1 KG.)|15.74^AVIGUARD X 5000 DS|151.8^INNOVAX ND-ILT X 2000 DS|104.0^FRA C12 DRY "FRAMELCO"(SACO X 20 KG.)|7.3^POSTE DE PARED 1000 X 35 "MIK" (UD.)|20.66^PERFIL DE PUERTA DERECHO 1000X35   "MIK" (UD.)|24.66^ARANDELA R88104MM ACERO INOXIDABLE "MIK" (UD.)|0.16^ANCLAJE PARA PISO PLASTICO M8X50  "MIK" (UD)|1.27^POSTE INTERMEDIO 1000 X 35 "MIK"(UD.)|50.08^PERFIL DE PUERTA IZQUIERDO 1000X35  "MIK" (UD.)|21.14^PERNO M8X16 A2 DIN933 "MIK"|0.32^ANCLAJE BC PARA CONCRETO "MIK" (UD)|12.16^SISTEMA DE ALIMENTACION AUTOMATICA 1 "MIK"|12052.9^SISTEMA DE ALIMENTACION AUTOMATICA 2 "MIK"|26299.51^SISTEMA DE ALIMENTACION AUTOMATICA 3 "MIK"|57705.88^NOBILIS AE + POX X 1000 DOSIS|64.97^PROTACID OX - P "HIGIENIZO"  (BIDON X 25 KG.)|4.7^SUCRAM 5S HYDRO PANCOSMA SACO 15 KG|29.0^NOBILIS REO 2177 X 1000 DS INTERVET|29.12^NOBILIS ND CLONE 30 X 5000 DOSIS|16.82^REGUMATE PORCINE X 1 LITRO|276.85^FRA LECIMAX DRY FRAMELCO SACO X 20 KG|10.55^MEVIBACTER SOMVITAL GARRAFA X 25 LT|3.52^HIDROPEROX SOMVITAL  BIDON 28 KG|2.75^ARETE DE IDENTIFICACION PARA CERDOS ROJO ALLFLEX  PQT X 25 UDS|40.0^ARETE DE IDENTIFICACION PARA CERDOS VERDE ALLFLEX  PQT X 25 UDS|40.0^CALIPER|257.0^PORCILIS ILEITIS 50 DOSIS|81.6^BREEDERVAC IV PLUS X 1000 DOSIS|279.0^GRASS SOMVITAL BIDON 25 KG|3.49^NOBILIS CAV P4  X 1000 DOSIS|167.7^AFTERMAST C SOMVITAL SACO X 20 KG|2.89^BREEDERVAC REO PLUS X 1000 DOSIS|179.8^ESTAC DE TRANS. 1.5KW DE CADENA DE 60 MM MOTOR Y MORREDUCTOR  VVM TECH TRADE|1374.56^TOLVA CON BORDE VERTICAL PARA SISTEMA DE TRANSPORTE DE 60 MM CON TORNILLO DOSIFICADOR|754.61^UNIDAD TRANSPORTADORA PARA TUBO TRANSPORTADOR DE  60 MM  VVM TECH TRADE UD|58.82^CODO HT DN75, INCLINACION 30Â°|3.33^CODO HT DN75 INCLINACION 45|3.33^UNIDAD DE CONTROL HT 10 230 V 50 HZ|753.0^PLATINA TERMICA PARA HT 10 120X120X5MM APERTURA 25MM|560.0^ARNES PARA INSEMINACION ARTIFICIAL MARRANA MINITUBE|118.5^ARNES PARA INSEMINACION ARTIFICIAL CHANCHILLA MINITUBE|118.5^CAMPANA CALEFACTORA ELECTRICA|577.45^MINOXEL L.A. LAPISA  FCO 100 ML|79.9^EM-DROG P   DROGAVET  (SACO x 15 kg.)|6.15^EM-DROG  DROGAVET   FCO X 1 LT|6.15^XTRACT ALLIUM XL  PANCOSMA SACO X 25 KG|81.59^PROTACID RX - P  HIGIENIZO  (IBC X 1090 KG.)|4.87^DIVISION PLASTICA PVC 0.29 MT. 1000 X 35  MIK UD|13.05^DIVISION PLASTICA PVC 1.20 MT. 1000 X 35  MIK UD|53.98^DIVISION PLASTICA PVC 4.05 MT 1000 X 35  MIK  UD|182.19^DIVISION PLASTICA PVC 4.74 MT. 1000 X 35  MIK  UD|213.23^DIVISION PLASTICA PVC 5.00 MT. 1000 X 35  MIK UD|224.94^DIVISION PLASTICA PVC 5.38 MT. 1000 X 35  MIK  UD|242.03^DIVISION PLASTICA PVC 5.70 MT. 1000 X 35  MIK UD|256.42^DIVISION PLASTICA PVC 8.04 MT. 1000 X 35  MIK  UD|361.69^DIVISION PLASTICA PVC 7.72 MT. 1000 X 35 MIK UD|347.3^MANIJA PARA PUERTA  MIK|6.44^TORNILLO M8  8X90  TORX ACERO INOX MIK  UD|1.4^FRA BUTYRIN ULTRA DRY FRAMELCO  SACO X 25 KG|5.05^FRA GUT BALANCE DRY FRAMELCO  SACO x 25 KG|8.4^COLORANTE PARA DILUYENTE DE SEMEN AMARILLO X 20ML "MINITUBE" (UD.)|11.7^COLORANTE PARA DILUYENTE DE SEMEN AZUL X 20ML "MINITUBE" (UD.)|11.7^COLORANTE PARA DILUYENTE DE SEMEN ROJO X 20ML "MINITUBE" (UD.)|11.7^COLORANTE PARA DILUYENTE DE SEMEN VERDE X 20ML "MINITUBE" (UD.)|11.7^HEMOGLOBINA  DE PORCINO  SACO X 20 KG|2.21^PORCILIS PCV ID INTERVET 1 X 20ML|210.0^PORCILIS M HYO ID ONCE INTERVET X 20 ML 100 DS|124.0^PREMEZCLA RECRIA SOLVET ALTA GENETICA (SACO X 25 KG)|6.32^PREMEZCLA CRECIMIENTO SOLVET ALTA GENETICA (SACO X 25 KG)|7.54^PREMEZCLA REPRODUCCION SOLVET ALTA GENETICA (SACO X 25 KG)|11.18^CALIPER "MBL" (FCO X 1 LT)|12.11^CALIPER "MBL" (BIDON X 20 LT)|8.65^VITAPLANT AMINO "MBL" (FCO X 1 LT)|7.0^VITAPLANT AMINO "MBL" (BIDON X 20 LT)|4.59^VITAPLANT KELP "MBL" (FCO X 1 LT)|14.95^VITAPLANT KELP "MBL" (BIDON X 20 LT)|9.71^COBRE GLUCONATO "MBL" (FCO X 1 LT)|23.68^COBRE GLUCONATO "MBL" (BIDON X 20 LT)|16.91^NUTRITOP CALCIO-B "MBL" (FCO X 1 LT)|5.69^NUTRITOP CALCIO-B "MBL" (BIDON X 20 LT)|3.64^NUTRITOP POTASIO 36 "MBL" (FCO X 1 LT)|8.31^NUTRITOP POTASIO 36 "MBL" (BIDON X 20 LT)|5.78^NUTRITOP ZN "MBL" (FCO X 1 LT)|8.54^NUTRITOP ZN "MBL" (BIDON X 20 LT)|4.98^NUTRITOP FE-EDDHAS "MBL" (FCO X 1 LT)|15.78^NUTRITOP FE-EDDHAS "MBL" (BIDON X 20 LT)|11.55^NUTRITOP HF-80 "MBL"|9.85^INDUCTOR H-1 "MBL" (FCO X 1 LT)|37.84^INDUCTOR H-3 "MBL" (FCO X 1 LT)|30.36^BIO-IMPROVER PGP "MBL" (FCO X 1 LT)|26.93^ANTOX SE LIQUIDO "VETERQUIMICA" (BIDON X 20LT)|9.32^BONICOX "VETERQUIMICA" (SACO X 25 KG)|1.74^VETERSAL GANADO ESPECIAL "VETERQUIMICA" (SACO X 25KG)|1.16^BACTOLIM C-15 "VETERQUIMICA" (BIDON X 20KG)|5.7^CLORODOS PLUS "VETERQUIMICA" (BIDON X 20LT)|4.5^DETERGENTE VQ-3500 "VETERQUIMICA" (CILINDRO X 220LT)|2.41^DUPLALIM "VETERQUIMICA" (BIDON X 60 LT)|5.51^DUPLALIM "VETERQUIMICA" (CILINDRO X 220 LT)|5.3^DUPLALIM "VETERQUIMICA" (FRASCO X 1 LT)|7.97^TONADRAX "VETERQUIMICA" (BIDON X 20 LT)|3.64^TREVINNE "VETERQUIMICA" (BIDON X 18 LT)|3.09^YODIGEN 30 Y PLUS "VETERQUIMICA" (BIDON X 60 LT)|8.4^DUFLOSAN 50% "VETERQUIMICA" (CAJA X 20 KG)|100.0^DITRAL 24 "VETERQUIMICA" (FRASCO X 100 CC)|9.75^FLOXINOLONA 20% "VETERQUIMICA" (INYECTABLE 100ML)|9.5^VACUNA FLAVOMUNE "VETERQUIMICA" (FRASCO X 1 LT)|78.5^VACUNA IPE VAC "VETERQUIMICA" (FRASCO X 1 LT)|153.5^AQUA YODO "VETERQUIMICA" (BIDON X 5 LT)|19.2^ACID PORC "VETERQUIMICA" (SACO X 25 KG)|4.32^TERCIDON (FRASCO X 100 CC)|8.0^DIVISION PLASTICA PVC 1.92 MT. 500 X 35 "MIK" (UD.)|57.08^CILINDRO TRANSPARENTE DE DISPENSADOR DE ALIMENTOS 9 LITROS, CON ESTABILIZADOR UV "VVM TECH TRADE" (UD.)|12.72^DIVISION PLASTICA PVC 3.0 MT. 500 X 35 "MIK" (UD.)|89.18^IDAL RISING FLUID|0.22^FLAVOMYCIN 80 "HUVEPHARMA" (SACO X 20 KG)|12.94^SENSOR PARA THERMO E 400/500/600 x 1200mm "MIK" (UD)|15.91^PLACA TERMICA PARA LABORATORIO CON TEMPERATURA AJUSTADA +37°C "MINITUBE" (UD.)|2978.0^CABLE CON ENCHUFE ESPECIFICO PAIS TIPO A Y C7 EN EL LUGAR DEL DISPOSITOV,125V/10A (LARGO 1,8M) "MINITUBE" (UD.)|14.15^COMEDERO ENGORDE 2 BOCAS, DOBLE LADO. 15" POR BOCA, SECO HUMEDO, F1-230 "CRYSTAL SPRING" (UD.)|1290.88^CALIPER PLUS "MBL" (BIDON X 20 LT)|13.27^INDUCTOR H-3 "MBL" (GALONERA X 5 LT)|26.98^MOTOR DE TRANSMISION PARA AGITADOR DEL TANQUE DE DILUYENTE DE 100 Y 200 LITROS "MINITUBE" (UD.)|721.34^CONTROLADOR DE TEMPERATURA PARA TC200 "MINITUBE" (UD.)|285.33^UNIDAD DE CONTROL TC200 PARA INCUBADORA 230/115 V  "MINITUBE" (UD.)|1049.45^MONIMAX "HUVEPHARMA" (SACO X 20 KG)|11.92^CARGADOR EN ACERO INOXIDABLE PARA 6 TUBOS DE SEMEN PORCINO 95 ML "MINITUBE" (UD.)|203.87^CILINDRO PARA MEZCLAR Y DISPENSAR SEMEN PORCINO 5.5L "MINITUBE" (UD.)|339.0^DISPENSADOR MANUAL PARA ENVASAR SEMEN PORCINO  "MINITUBE" (UD.)|5225.95^MEDIDOR DE GRASA DORSAL EN CERDOS "MINITUBE" (UD.)|1362.53^MICROSCOPIO DE CONTRASTE DE FASES MBL 2000 PLATINA CALEFACCIONADA Hti 50 "MINITUBE" (UD.)|5550.27^PIPETA ELECTRONICA 100 ÎœL - 1 ML. "MINITUBE" (UD.)|2099.0^SELLADORA MANUAL DE 6 TUBOS ANCHO DE SELLADO 4MM 220V  "MINITUBE" (UD.)|5427.6^ARETE DE IDENTIFICACION PARA CERDOS AMARILLO “ALLFLEX - AM” (CAJA X 25 UDS.)|40.0^ARETE DE IDENTIFICACION PARA CERDOS NARANJA “ALLFLEX - AM” (CAJA X 25 UDS.)|40.0^ARETE DE IDENTIFICACION PARA CERDOS ROJO “ALLFLEX - AM” (CAJA X 25 UDS.)|40.0^ARETE DE IDENTIFICACION PARA CERDOS VERDE “ALLFLEX - AM” (CAJA X 25 UDS.)|40.0^INDUCTOR-H1 "MBL" (GALONERA X 5 LT)|33.86^PARTNER FLY "MBL" (BIDON X 10 LT)|18.38^BANDEJA S4 COMFORT SOW "CRYSTAL SPRING"(UD.)|89.18^PARTNER FLY "MBL" (GALONERA X 5 LT)|20.92^CALIPER 3.0 "MARK KNAUER" (UND.)|180.71^EXTENSION 30'' PARA CALIPER "MARK KNAUER" (UND.)|94.66^NORMOPIREX "SOMVITAL" (BOTELLA X 1 LT.)|25.86^TANICID "SOMVITAL" (BOTELLA X 1 LT.)|0.01^MENTOR α "SOMVITAL" (BOTELLA X 250ML)|9.37^ARVITAL SE "SOMVITAL" (GARRAFA X 1 KG.)|0.01^DETERGENTE VQ-3500 "VETERQUIMICA" (CILINDRO X 200LT)|2.18^SORBER MAX "MBL" (BIDON X 20 LT)|13.84^BRIO 440 "MBL" (BIDON X 10 LT)|14.6^AVIVO "MBL" (FCO X 1 LT)|22.05^ZELENA "BH TERRA" (FCO X 1 LT.)|57.28^KAPU TERRA "BH TERRA" (FCO X 1 LT.)|14.12^BH WHITER "BH TERRA" (FCO X 1 LT.)|9.07^STRIX GREEN "BH TERRA" (BOLSA X 5 KG.)|15.48^BROTOTEC "BH TERRA" (GALONERA X 5 LT.)|7.92^TRABUCO "BH TERRA" (FCO X 1 LT.)|14.08^CAPTION "BH TERRA" (FCO X 1 LT.)|273.35^CERRADURA DE CADENA PARA CADENA TRANSPORTADORA, PASO DE DISCO 71 MM "MIK" (UD.)|5.8^CYRIL PREMIUM "BH TERRA" (FCO X 1 LT)|20.35^CUBIERTA DE PLASTICO PARA MANIQUI DE VERRACO 11" "MINITUBE" (UD.)|699.5^VITAPLANT ALGAE "MBL" (BIDON X 20 LT)|5.54^VITAPLANT KELP  PLUS "MBL" (BIDON X 20 LT)|9.73^DROYOPEZ "DROGAVET" (GALON X 5 LT)|21.9^OPTIPHOS PLUS 10000 CT "HUVEPHARMA" (SACO X 20 KG)|16.47^TIRAS INDICADORAS DE AMONIO CUATERNARIO LAMOTTE "ARSA" (PAQUETE X 100 UDS.)|14.62^CABANIN CSD "R2 AGRO" (SACO X 25 KG.)|21.18^SULFADROG "DROGAVET" (FRASCO X 1 LT.)|24.45^ARETE ELECTRONICO BRO SIN PARTE MACHO, AMARILLO 18000/0063 "MINITUBE" (UD.)|12.89^CAMARA CLIMATIZADA PARA 300 TUBOS, CONTROLADOR TC 200, TEMPERATURA AJUSTABLE 14160/0300 "MINITUBE" (UD.)|3107.8^KIT DE LIMPIEZA PARA CAMARA EFLOW 12510/0104 "MINITUBE" (UD.)|217.26^TERMINAL DE INTERFASES PARA PRISM10, 12535/0014 "MINITUBE" (UD.)|616.74^COLORANTE PARA DILUYENTE DE SEMEN, ROJO, 100 ML 13900/0720 "MINITUBE" (UD.)|40.38^HISOPO DE MICROFIBRA, LARGO DE 70 MM, 100/BOLSA 12510/0105 "MINITUBE" (UD.)|0.39^LECTOR DE CODIGO DE BARRAS, DISPOSITIVO ESTATICO, 13211/0100 "MINITUBE" (UD.)|561.18^MODULO PARA ANDROVISIONÂ®: CONEXION CON SISTEMA EFLOW 12500/2000 "MINITUBE" (UD.)|8334.38^SCANSTAGE PARA EFLOW, PLATINA AUTOMATICA PARA MICROSCOPIO, 12048/0035 "MINITUBE" (UD.)|9140.03^BASE DE SOPORTE PARA SCANSTAGE ANDROVISION PARA ZEISS AXIOLAB 12048/0005 "MINITUBE" (UD.)|154.83^UNIDAD DE CONTROL HTI 400 12057/0400 "MINITUBE" (UD.)|2029.14^TANQUE DE CALENTAMIENTO PARA DILUYENTE 3 L, CON HTI 50, 13201/0503 "MINITUBE" (UD.)|1944.82^MULTIPETTEÂ® E3 PARA EFLOW, PARA LA DOSIFICACION SECUENCIAL 12427/5065 "MINITUBE" (UD.)|2037.29^SOPORTE PARA 5 X CONTENEDOR DE MUESTRAS EFLOW 12510/0200 "MINITUBE" (UD.)|201.0^PLACA DE CALEFACCION, 245 X 200 MM 12057/0510 "MINITUBE" (UD.)|939.01^PIPETA ELECTRONICA, 200 ÂµL - 2 ML 12050/0517 "MINITUBE" (UD.)|1713.18^PESO EN ACERO INOXIDABLE PARA TUBO DE SILICONA 3X1MM 5013000/0190 "MINITUBE" (UD.)|25.47^PARTE MACHO CON ESPINA LARGA PARA AUTOCROTAL LW 18000/0062 "MINITUBE" (UD.)|0.99^DISPENSADOR MANUAL PARA ENVASAR SEMEN PORCINO 13203/0000 "MINITUBE" (UD.)|3793.07^SELLADORA DE 6 TUBOS HPL 450 ANCHO DE SELLADO 4 MM, 240 V 13225/0000 "MINITUBE" (UD.)|4365.36^CARGADOR EN ACERO INOXIDABLE PARA 6 TUBOS DE SEMEN PORCINO, 95 ML 13204/9006 "MINITUBE" (UD.)|124.25^BOQUILLA PARA SISTEMA MANUAL DE ENVASADO 13203/0012 "MINITUBE" (UD.)|7.42^CILINDRO PARA MEZCLAR Y DISPENSAR SEMEN PORCINO, 3,5 L 13203/0001 "MINITUBE" (UD.)|190.79^ANILLO DE INSERCION PARA CILINDRO 3,5L, 13203/0005 "MINITUBE" (UD.)|70.38^CILINDRO PARA MEZCLAR Y DISPENSAR SEMEN PORCINO, 5,5 L 13210/0030 "MINITUBE" (UD.)|196.53^ANILLO DE INSERCION PARA CILINDRO 5,5 L 13210/0035 "MINITUBE" (UD.)|80.57^RIEL DE ADAPTACION TUBOS 60 ML PARA CARGADOR 13225/0060 "MINITUBE" (UD.)|146.32^IMPRESORA DE ETIQUETAS PARA TUBOS DE SEMEN, 18800/0002 "MINITUBE" (UD.)|2222.5^ETIQUETA AUTOADHESIVA, 30 X 50 MM, BLANCA, ROLLO CON 1000 13210/4829 "MINITUBE" (UD.)|9.23^VIAL EFLOW PARA MUESTRAS DE SEMEN, 100/BOLSA 12510/0100 "MINITUBE" (UD.)|0.89^TAPA PARA CONTENEDOR DE MUESTRAS PARA EFLOW, REUTILIZABLE 12510/0101 "MINITUBE" (UD.)|0.78^TUBO PARA BOMBA DE EFLOW TOWER 12510/0150 "MINITUBE" (UD.)|39.83^PUNTA PARA PIPETA ELECTRONICA HASTA 2000 ÂµL, 60/RACK 12050/0555 "MINITUBE" (UD.)|0.35^AGENTE TENSOACTIVO PARA MEDIO EFLOW, 100 ML 13900/0800 "MINITUBE" (UD.)|33.8^MEDIO EFLOW PARA 3 L (150 GR) 13525/2003 "MINITUBE" (UD.)|6.71^SET DE TUBOS DE SILICONA PARA EFLOW, 12510/0095 "MINITUBE" (UD.)|2.55^SET DE TUBOS PARA EFLOW 12510/0090 "MINITUBE" (UD.)|1.49^BOLSA PARA DILUIR Y DISPENSAR SEMEN PORCINO, 3,5 L, 100/PAQUETE 13203/4001 "MINITUBE" (UD.)|0.7^HISOPO DE MICROFIBRA, LARGO DE 124 MM 100/PAQUETE 12510/0106 "MINITUBE" (UD.)|0.91^ALCOHOL ULTRA PURO 80 %, PARA LIMPIEZA DE CAMARA EFLOW 12510/0108 "MINITUBE" (UD.)|11.42^ERROR CODIGO DUPLICADO - COMBITIP® PARA MULTIPETTE® 500 µL - 50 ML, 25 PUNTAS POR CAJA 12427/5066 "MINITUBE" (UD.)|8.43^JUEGO DE REPUESTOS PARA SELLADORA DE 6 TUBOS 13228/0004 "MINITUBE" (UD.)|71.31^SP1-CASSETTE PARA NUCLEOCOUNTER SP-100 "MINITUBE" (UD.)|7.68^IRON GLYCINATE (SACO X 25 KG)|9.95^ALCOHOL ETILICO ABSOLUTO "SCHARLAU" (FRASCO X 5 LT.)|74.5^PACK PESTIFFA X 50 DS. "BOEHRINGER INGELHEIM" (UND.)|23.53^MICRO TUBO DE REACCION 2.0 ML. CON TAPA, 250/PAQ, 14602/0904 "MINITUBE" (UD.)|0.49^COXIDIN 200 "HUVEPHARMA" (SACO X 20 KG.)|7.24^MAQUINA DE LLENADO SEMIAUTOMATICA MRA AIGLONNE 100 ÎœL, 007157 "IMV" (UD.)|10558.45^KIT DE MOTORIZACION PARA MAQUINA DE LLENADO MRA, 019250 "IMV" (UD.)|4984.0^NUTRITOP FE-EDDHAS "MBL" (BIDON X 5 LT)|11.55^L-CARNITINA "VETERQUIMICA" (SACO X 25 KG.)|52.2^PROT-AEL - M "TVT NUTRITION" (SACO X 25 KG.)|1.78^KINGZYME LIPA 100T (HEAT STABLE LIPASE) "KDN" (SACO X 25 KG.)|62.35^KINGZYME LIPA 100T (HEAT STABLE LIPASE) "KDN" (BOLSA X 1 KG.)|64.0^BIO IMPROVER "MBL" (BIDON X 10 LT)|23.66^VITAPLANT ALGAE "MBL" (BIDON X 20 LT)|1.43^KINGZYME LIPA 100T (HEAT STABLE LIPASE) "KDN" (SACO X 25 KG.)|62.35^BLINDADO 3 "MBL" (FRASCO X 1 LT)|2.93^BLINDADO 5 "MBL" (FRASCO X 1 LT)|2.93`;
+    const rawDataProductos = `MINAZEL PLUS "PATENT CO" (BIG BAG X 1000 KG.)|2.82^Quicktip flexitube 95 ml  reforzado MINITUBE (caja x 2100 uds.)|0.2^MYCORAID "PATENT CO" (BIG BAG X 1000 KG.)|5.24^HEMOGLOBINA DE PORCINO (MAXI SACO)|1.89^Quicktip flexitube 60 ml  reforzado MINITUBE (caja x 2200 uds.)|0.19^MYCORAID "PATENT CO" (SACO X 25 KG.)|5.24^PROT-AEL "TVT NUTRITION" (SACO X 25 KG.)|1.76^BIOCHOLINE DS "INDIAN HERBS" (SACO X 25 KG.)|8.18^MINAZEL PLUS"PATENT CO" (SACO X 25 KG.)|2.88^CATETER PARA INSEMINACION ARTIFICIAL PROFIT SAFE BLUE SOFTGILT "MINITUBE" (BOLSA X 100 UDS.)|0.66^FLAVOMYCIN 80 "HUVEPHARMA" (SACO X 25 KG)|12.94^LIVOLIV 250 POWDER "INDIAN HERBS" (SACO X 25KG.)|7.74^HEMOGLOBINA  BOVINO (SACO X 25 KG.)|1.92^PAJILLAS AZULES PARA PAVO "IMV" (PAQUETE X XXUD.)|0.03^SUNNY BINDER"CHEMICAL LTD." (SACO X 20KG.)|2.09^FOKKAMIX 9 "NUKAMEL" (SACO X 25 KG.)|1.46^TUBO DE TERMOSELLADO DE SEMEN PORCINO 95 ML. "MINITUBE" (UD.)|0.2^HERBAL C POWDER "INDIAN HERBS" (SACO X 25KG.)|14.0^CATETER PARA INSEMINACION ARTIFICIAL SAFEBLUE  TRANSCERVICAL MINITUBE  (PAQUETE X 25 UDS)|1.47^ANTOX SE "VETERQUIMICA" (SACO X 25KG)|3.53^DYSGUARD-S"PATENT CO."  (SACO X 20KG.)|12.94^TONALIM LIQUIDO "VETERQUIMICA" (BIDON X 20 LT)|2.6^B - TRAXIM 2C MN-220 "PANCOSMA" (SACO X 25 KG.)|9.59^HEMOGLOBINA  DE PORCINO (SACO X 25 KG.)|2.5^PLASMA PORCINO (SACO X 20KG.)|6.65^FOKKAMIX 10 "NUKAMEL" (SACO X 25 KG)|1.76^LACTOSA (SACO X 25 KG.)|1.82^FORMICID RM EXTRA LIQUIDO "VETERQUIMICA" (CILINDRO X 200LT)|3.02^RUNEON  LACHANCE  BOLSA X 20 KG|17.6^ALBAC 15% GRANUL "HUVEPHARMA" (SACO X 25 KG)|3.98^FORMICID DRY "VETERQUIMICA" (SACO X 25 KG)|2.12^VETERSAL ANIONICO "VETERQUIMICA" (SACO X 25KG)|2.2^B - TRAXIM 2C ZN-260 "PANCOSMA"  (SACO X 25 KG.)|8.93^MINAZEL "PATENT CO" (SACO X 25 KG.)|1.3^AGUA DESTILADA ESTERIL "MARETHFARM" (FRASCO X 100 ML.)|1.13^SALOCIN 12% "HUVEPHARMA" (SACO X 25 KG)|3.53^TIGANIL 100 "VETERQUIMICA" (ENVASE X 10 KG)|8.0^COASTAL GREEN "BH TERRA" (BOLSA X 5 KG.)|8.93^DETERGENTE VQ-510 "VETERQUIMICA" (BIDON X 20LT)|4.2^FLAVOMYCIN 40 "HUVEPHARMA" (SACO X 25 KG)|6.47^MEVIPOW "SOMVITAL"(BIDON X 5 KG.)|12.5^B - TRAXIM 2C FE-220 "PANCOSMA" (SACO X 25 KG.)|8.65^ASCOGEN "CHEMOFORMA" (SACO X 25 KG)|38.53^FEEDOMEL "NUKAMEL" (SACO X 25 KG)|1.62^SALOCIN 24% "HUVEPHARMA" (SACO X 25 KG)|6.82^CATETER PARA INSEMINACION ARTIFICIAL SAFE BLUE FOAMTIP MINITUBE (CAJA X 100 UDS.)|0.64^CATETER PARA INSEMINACION ARTIFICIAL FOAMTIP MINITUBE (PAQUETE X 25 UDS.)|0.41^TAPA PARA  TUBO DE MUESTRA DE SEMEN (UD.)|0.14^TUBO DE MUESTRA PARA  SEMEN "IMV"|0.32^Biocholine "INDIAN HERBS" (saco x 25 kg.)|5.25^CATETER PARA INSEMINACION ARTIFICIAL PROFIT SOFTGILT "MINITUBE" (PAQUETE X 25 UDS.)|0.36^BETAGUT L "SOMVITAL" (GARRAFA X 25 KG.)|4.47^ANTOX SE LIQUIDO "VETERQUIMICA" (CILINDRO X 200LT)|7.9^DRYCELL "PATENT CO" (SACO X 10 KG.)|1.88^PROTACID RX - P "HIGIENIZO" (BIDON X 25 KG.)|4.87^PROTACID SOY "HIGIENIZO" (SACO X 25 KG.)|2.5^TUBO DE TERMOSELLADO "MAGAPOR" (UD.)|0.1^PANBONIS 10 "HERBONIS" (SACO X 20 KG.)|38.41^INVIVO PB "INVIVO BIOSCIENCES" (BALDE X 25 KG.)|8.0^PLASMA BOVINO (SACO X 20 KG.)|6.65^YODIGEN 30 Y PLUS "VETERQUIMICA" (BIDON X 20 LT)|11.0^MENTOR α "SOMVITAL" (BOTELLA X 1 LT.)|34.09^FUGIOL DRY "VETERQUIMICA" ( SACO X 25KG)|3.98^NUTRITOP HUMIC HF 80 "MBL" (SACO X 25 KG)|9.19^PANBONIS 20 "HERBONIS" (SACO X 20 KG.)|74.95^INGELVAC CIRCOFLEX X 50 DS. "BOEHRINGER INGELHEIM" (UND.)|100.0^SUCRAM 5S HYDRO PANCOSMA SACO 25 KG|25.88^DUFLOSAN 500 "VETERQUIMICA" (ENVASE X 10 KG)|30.0^INGELVAC MYCOFLEX X 50 DS. "BOEHRINGER INGELHEIM" (UND.)|32.94^BETAGUT L "SOMVITAL" (GARRAFA X 5 KG.)|5.06^B - TRAXIM 2C CU-240 "PANCOSMA" (SACO X 25 KG.)|12.15^DUPLALIM "VETERQUIMICA" (BIDON X 20LT)|5.65^PISO PLASTICO RUBIN PARA LECHON 400 X 600 MM. "MIK" (UD.)|11.46^B - TRAXIM SE 11 "PANCOSMA" (SACO X 20 KG.)|50.86^MARCADOR DE GANADO C/REGULADOR VERDE "LA-CO" (UD.)|3.17^HOSTAZYM X 15000 "HUVEPHARMA" (SACO X 20 KG)|15.29^CATETER PARA INSEMINACION ARTIFICIAL SOFTGILT AZUL CON CABO Y TAPA "MINITUBE" (PAQUETE X 25UDS.)|0.29^OPTIPHOS PLUS 10000 "HUVEPHARMA" (SACO X 20 KG)|16.47^DIXCLOR "SOMVITAL" (BOLSA X 500 GR.)|52.22^INDUCTOR H-3 "MBL" (IBC X 1000 LT)|34.75^TAPON DE 9 MM. "MIK" (UD.)|0.08^YODIGEN 30 Y PLUS "VETERQUIMICA" (FRASCO X 1 LT.)|14.5^DUPLAFER "VETERQUIMICA" (FRASCO X 100 CC)|8.44^MARCADOR DE GANADO C/REGULADOR  AZUL "LA-CO" (UD.)|3.17^MARCADOR DE GANADO C/REGULADOR ROJO "LA-CO" (UD.)|3.17^Diluyente Androstar Plus MINITUBE (sobre x 47 g.)|6.8^Diluyente de Semen Porcino BTS MINITUBE (sobre x 50 g.)|4.68^JABON LIQUIDO NEUTRO CON GLUCON DE CLORH (BIDON X 5 LT)|5.02^ACT ORGANIC CHOLINE "NURTURE TECHNOLOGY" (SACO X 25 KG)|2.15^ARANDELA 8.4MM P/ M8, CD MIK101944 "MIK" (UD.)|1.2^SET DE TORNILLO M8  8 X 50 (ARANDELA, TORNILLO Y TUERCA) "MIK" (UD.)|0.57^CATETER PARA INSEMINACION ARTIFICAL SOFTGILT MINITUBE (PAQUETE X 25 UD.)|0.38^Diluyente Androstar Premium MINITUBE  (sobre x 45 g.)|9.8^CORASIL FORTE "MBL" (BDN X 20 LT)|6.92^REACTIVOS DPD1 "SOMVITAL" (BLISTER X 10 UND.)|0.67^TORNILLO AUTO-ROSCANTE 4.8X16 DIN7504|0.7^TANICID "SOMVITAL" (GARRAFA X 5 LT.)|27.03^BEBEDERO ORANGE CRYSTAL SPRING|27.0^PISO PLASTICO RUBIN PARA LECHON 500 X 600 MM. "MIK" (UD.)|14.75^Diluyente Androstar Premium MINITUBE (sobre x 225 g.)|38.99^ELEMENTO  DE CONEXION "VVM TECH TRADE" (UD.)|1.53^CABLE VVM 3.0 MM V2A 7X19 MM. ALTA FLEXIBILIDAD "VVM TECH TRADE" (METROS)|2.14^PUNTA PARA PIPETA ELECTRONICA HASTA 2000 ÂµL, SUELTO, 1000/BOLSA 12050/0554 "MINITUBE" (UD.)|0.58^VANNAGEN "CHEMOFORMA" (SACO X 25 KG.)|35.78^ASCOGEN "CHEMOFORMA" ( BOLSA X 5 KG)|38.0^DIXCLOR "SOMVITAL" (CUBO X 20 KG.)|86.0^CATETER DE INSEMINACION PORCINA DEEPGOLDENPIG  "IMV" (UD.)|0.9^PISO PLASTICO CHESS PARA LECHONES 600 X 600 MM. "MIK" (UD.)|22.71^PROTECTORES PARA PLETINAS DUO "MIK" (UD.)|1.1^PISO PLASTICO SWING PARA MARRANA 400 X 600 MM. "MIK" (UD.)|16.68^TAPA DE PERFIL OVAL (70 X 35) "MIK"(UD.)|1.39^PEPTASAN "INDIAN HERBS" (SACO X 25 KG.)|6.5^TORNILLO DE SUJECION P/ SOSTENIMIENTO, MIK101459 "MIK" (UD.)|1.9^INDUCTOR H-3 "MBL" (BIDON X 10 LT)|27.4^ARVITAL SE "SOMVITAL" (GARRAFA X 5 KG.)|17.15^Diluyente Androstar Plus MINITUBE (sobre x 470 g.)|54.0^PERNO HEXAGONAL M8X50 ACERO INOXIDABLE "MIK" (UD.)|1.59^TUERCA AUTOBLOCANTE M8, DIN 985, CD MIK102029 "MIK" (UD.)|1.3^INACTIVADOR DUPLALIM "VETERQUIMICA" (FRASCO X 1 KG)|10.05^INUXA-HP "INDIAN HERBS" (SACO X 25 KG.)|6.01^INUXA-VC "INDIAN HERBS" (SACO X 25 KG.)|10.7^INUXA-B4 "INDIAN HERBS" (SACO X 25 KG.)|4.76^FOOTPLATE SS 40X77X250MM  MIK (UD.)|1.88^AGUJA TRANSOFIX "B. BRAUN" (UND)|0.98^Diluyente de Semen Porcino MIII MINITUBE (sobre x 60 g.)|3.96^ANCLAJE STS "MIK" (UD)|2.728^VITALSORB PURE "GOOD NUTRITION" (SACO X 20 KG.)|6.64^AZOVETRIL "VETERQUIMICA" (FRASCO X 1 LT)|17.4^ARANDELA M8X25MM ACERO INOXIDABLE  MIK UD|0.19^SET SOPORTE PARA TUBO DE PVC "MIK" (UD.)|5.5^PANBONIS ONE "HERBONIS" (SACO X 25 KG.)|5.0^CHUPON LECHON TROJAN 97  1/2 " (UD.)|7.5^CHUPON GORRINO AQUAGLOBE (UD.)|12.5^NORMOPIREX "SOMVITAL" (GARRAFA X 5 LT.)|23.51^DUO TRACK "MIK" (UD.)|4.08^GANCHO J "MIK" (UD.)|4.22^TAPA DE DISPENSADOR DE ALIMENTOS "VVM TECH TRADE" (UD.)|5.78^COLECTOR DESECHABLE 10 ML. "IMV" (PAQUETE X 25UDS.)|2.1^XL GOLDENPING  "IMV" (UD.)|0.28^PERNO M12X65 CON TUERCA Y ARANDELA (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|0.17^ALFA GUARD VILPRO "GOOD NUTRITION" (SACO X 20 KG.)|5.4^PLETINA DE FIBRA DE VIDRIO DUO XL  2.40 MT.  "MIK"  (UD.)|38.2^PERFIL OVAL EN METROS (70 X 35) "MIK" (METROS)|22.61^ENTERISOL ILEITIS X 50 DS. "BOEHRINGER INGELHEIM" (UND.)|78.82^PISO PLASTICO TRAPPER PARA ENGORDE 800 X 600 MM. "MIK" (UD.)|28.36^TUBO CAPILAR DESECHABLE "MINITUBE" (PQT X 100 UND.)|0.05^ANCLAJE CRD "MIK" (UD)|2.4958^QUIFLUMIL 10% "VETERQUIMICA" (FRASCO X 1 LT)|11.85^BRAZO DEL SISTEMA DE AJUSTE PARA COMEDERO CRYSTAL SPRING "CRYSTAL SPRING" (UD.)|1.15^BORDE PARA PLACA TERMICA LADO IZQUIERDO "MIK" (UD.)|5.8^BORDE PARA PLACA TERMICA  LADO DERECHO "MIK" (UD.)|5.8^BORDE "MIK" (UD.)|1.1^DUO PEDESTAL (UD.)|1.204723^FORMICID RM EXTRA LIQUIDO "VETERQUIMICA" (BIDON X 20LT)|2.63^LEVIAR "ALIVIRA" (BOLSA X 1 KG.)|40.98^PIN DE AJUSTE PARA COMEDERO CRYSTAL SPRING "CRYSTAL SPRING" (UD.)|0.28^COMEDERO DE LECHON REDONDO DE PLASTICO "MIK" (UD.)|12.9^RESORTE PARA  SISTEMA DE AJUSTE PARA COMEDERO CRYSTAL SPRING "CRYSTAL SPRING" (UD.)|0.85^ALFA GUARD PROTECT "GOOD NUTRITION" (SACO X 20 KG.)|7.53^NOVICOX "VETERQUIMICA" (FRASCO X 250 CC)|14.5^CADENA TRANSPORTADORA PARA SISTEMA 60MM, ACERO ESPECIAL DISCO 44 MM|8.62^LINEA DE AGUA PARA TRES CHUPONES -INCLUYE CHUPONES "WEIHAI GAOSAI" (UD.)|21.8^ANCLAJE "MIK" (UD.)|5.63^COMEDERO HEMBRA (MATERNIDAD), MOD. S2, SECO HUMEDO DE 15", ACERO INOXIDABLE CON BEBEDERO "CRYSTAL SPRING"(UD.)|401.75^DETERGENTE VQ-3500 "VETERQUIMICA" (BIDON X 20LT)|2.78^TUBO GALVANIZADO VVM 60 X 1.25 MM 6MT. DE LARGO "VVM TECH TRADE" (UD.)|6.33^PERFIL DE PUERTA DERECHO 500X35 MIK|17.25^PERFIL DE PUERTA IZQUIERDO 500X35  "MIK" (UD.)|17.25^JERINGA AUTOMATICA 2 ML "JCM" (UNIDAD)|57.65^SOPORTE DE PARED DE ACERO INOX. PARA DUO "MIK" (UD.)|5.95^VETERSAL PRE-PARTO "VETERQUIMICA" (SACO X 25KG)|1.29^TRANSUIN 10% "ALIVIRA" (SACO X 25 KG.)|40.59^ETIQUETAS PARA MINI BSP BLANCAS PARA IMPRESORA TERMICA MINITUBE (ROLLO X 2000 UDS.)|15.5^DIVISION PLASTICA PVC 2.40 MT. 500 X 35 "MIK" (UD.)|55.98^BOLSA DE COLECCION DE SEMEN CON FLITRO CAP 5.5 LT.  MINITUBE (PAQUETE X 100 UD.)|150.0^OVODYL PARA PAVO, DILUTOR CON ANTIBIOTICO "IMV" (UD.)|25.11^Gel lubricante esteril no espermicida x 100 ml MINITUBE (ud.)|8.72^GENTA VQ 10% "VETERQUIMICA" (FRASCO X 100 CC)|9.0^TUBO DE SILICONA PARA EFLOW 12510/0103 "MINITUBE" (UD.)|2.95^POSTE INTERMEDIO 500 X 35 "MIK"(UD.)|23.8^PISO PLASTICO PRARIE PARA GESTACION  400 X 400 MM. "MIK" (UD.)|12.2^CHUPON RECRIA DIAL - A -FLOW  3/8" (UD.)|7.3^ABRAZADERA PARA CABLE DE 3.0 MM. "VVM TECH TRADE" (UD.)|1.28^TORNILLO DE ALIMENTACION 75 MM, MATERIAL 12X4 MM "MIK" (UD.)|9.73^Guante Higienico Desechable MINITUBE (paquete x 100 uds.)|12.0^GUANTES DE COLECCCION DE VINYL MINITUBE (CAJA X 100 UDS.)|24.0^SALIDA PARA TRANSPORTADOR DE CADENA DE 60 MM. "VVM TECH TRADE" (UD.)|5.45^DIVISION PLASTICA PVC 1.8 MT. 500 X 35 "MIK" (UD.)|53.51^PERFIL U  750 X 35 "MIK" (UD.)|13.9^PISO PLASTICO SWING 600 X 100 MM. "MIK" (UD.)|8.2^PISO GULLY BLOCK SWING 400 X 600 MM. "MIK" (UD.)|54.47^ANCLAJE SW "MIK" (UD)|1.7^COMBITIP® PARA MULTIPETTE® 500 µL - 50 ML, 25 PUNTAS POR CAJA 12427/5066 "MINITUBE" (UD.)|3.71^COMEDERO ENGORDE, SECO-HUMEDO, ACERO INOX, TRES BOCAS POR LADO, F1-348 "CRYSTAL SPRING"(UD.)|1345.9^PEGATINA ESCALA 9L P/ VD9, MIK102415 "MIK" (UD.)|3.18^JERINGA AUTOMATICA 1 ML "JCM" (UNIDAD)|62.2^TUBO TELESCOPICO TRANSPARENTE 70/75 MM PARA ALIMENTO SECO "MIK" (UD.)|12.93^FERAPPEASE SWINE "FERA DIAGNOSTICS" (BOTELLA X 4 LT.)|78.0^MARCADOR DE GANADO SIN REGULADOR  AZUL "LA-CO" (UD.)|0.96^COMEDERO PVC CON BORDE ACERO "WEIHAI GAOSAI" (UD.)|37.0^BOLSA DE COLECCION DE SEMEN CON FILTRO CAP. 3.5 LT  MINITUBE  (PAQUETE X 100 UD.)|80.0^PANEL ARREADOR DE CERDOS (94*76*3 CM)|32.0^KIT REGULADORES DE PRESION PARA COMEDEROS CON SISTEMA WATER SPACE "CRYSTAL SPRING" (UD.)|122.0^BARRA ROSCADA 8 MM (UD.)|4.39^CADENA TRANSPORTADORA MONRO 60 MM "MIK" (CAJA X 50MT.)|8.95^PLETINA DE FIERRO 3/16" 60 CM. X 5 CM. (UD.)|1.0^PANELES DE GESTACION CON ACCESORIOS "WEIHAI GAOSAI" (UD.)|162.0^PERFIL DE ESQUINA 500 X 35 "MIK"(UD.)|21.5^PUNTA PARA PIPETA ELECTRONICA MINITUBE  1000 ÎœL (PAQUETE X 250 UDS.)|25.0^DIVISION PLASTICA PVC 2.50 MT. 500 X 35 "MIK" (UD.)|74.32^POSTE ESQUINA 500 X 35 "MIK" (UD.)|16.4^TOALLITAS DE LIMPIEZA LIBRE DE PELUSA KIMWIPES "KIMBERLY CLARK" (CAJA X 280 UDS.)|4.09^CAMARA DE RECUENTO DE 20 ÎœM MINITUBE (CAJA X 25 UDS.)|180.0^RESORTE PARA NIPLE  1/2"  (UD.)|1.4^PAPEL ABSORBENTE BROILERROLL "INTEC"(ROLLO)|22.0^PISO PLASTICO SWING TITAN PARA MARRANA 600 X 800 MM. "MIK" (UD.)|30.45^CONECTOR DE TUBO GALVANIZADO, PARA TUBO TRANSPORTADOR DE 60 MM  "MIK" (UD.)|5.34^ANCOR PED "SOMVITAL" (SACO X 5 KG.)|16.6^POLEA 90MM, ACERO/NYLON, 7MM, 180KG, MIK101179 "MIK" (UD.)|8.2^MARCADOR DE GANADO SIN REGULADOR  ROJO "LA-CO" (UD.)|0.96^PERFIL T 500 X 35 "MIK" (UD.)|42.0^PLETINA DE FIBRA DE VIDRIO 15 CM. ALTO X  60 CM "MIK"  (UD.)|6.88^FILTRO DE AGUA "RUSCO" (UD.)|117.35^TUBO TELESCOPICO TRANSPARENTE 80 / 85 MM X 1 MT DE LARGO "VVM TECH TRADE" (UD.)|12.33^TUBO GALVANIZADO VVM 80 X 1.5 MM. 6 MT. DE LARGO "VVM TECH TRADE" (UD.)|8.34^PERFIL U  500 X 35  "MIK" (UD.)|13.46^ALFA GUARD VILPRO "GOOD NUTRITION" (SACO X 5 KG.)|5.55^ANCLAJE PISO GRANDE "MIK" (UD.)|15.45^MARCADOR DE GANADO SIN REGULADOR  VERDE "LA-CO" (UD.)|0.96^COMEDERO HEMBRA COMFORT SOW 6.8KG., ACERO INOX. S4-15 "CRYSTAL SPRING" (UD.)|355.0^PLETINA DE FIBRA DE VIDRIO DUO 3.20 MT. "MIK"  (UD.)|36.42^Punta para pipeta MINITUBE 10 μl (paquete x 500 uds.)|50.0^CUBIERTA TRANSPARENTE VVM  60 MM. "VVM TECH TRADE" (UD.)|24.48^DUFLOSAN 50% "VETERQUIMICA" (ENVASE X 1 KG)|100.0^NOVICOX "VETERQUIMICA" (FRASCO X 1 LT)|36.0^PORTAOBJETOS 22 X 22  MM. (PAQUETE X 50 UDS.)|3.35^FRASCO ACORDEON  100 ML. "IMV" (UD.)|1.26^ABRAZADERA GALVANIZADA U-BOLT 80 MM. "VVM TECH TRADE" (UD.)|2.57^COBERTURA DE PVC 3.71 X 0.97 M "ONDULINE " (UD.)|25.15^TUBO PARA SOPORTE DE PLETINA 2.00 MT. "MIK" (UD.)|17.5^ABRAZADERA DE MANGUERA W4, 70-90 MM "MIK" (UD.)|1.27^POSTE DE PARED 500 X 35 "MIK" (UD.)|13.32^ANCLAJES PARA CONCRETO (JAULA VERRACO) "WEIHAI GAOSAI" (UD.)|1.15^RESORTE PARA NIPLE  3/8" (UD.)|1.4^PLETINA DE FIERRO 3/16" 121 CM. X 5 CM. (UD.)|2.17^MANIJA DE VALVULA WATER SPACE "CRYSTAL SPRING" (UD.)|6.7^TORNILLO M8  8X65  TORX ACERO INOX. "MIK"(UD.)|2.75^POSTE DE PARED 1100 X 35 (RANURADO) "MIK" (UD.)|20.14^ABRAZADERA DE CABLE 7.8 X 370 MM  (PRECINTO) "VVM TECH TRADE" (UD.)|0.72^ETIQUETAS PARA IDA/IDEE/IDENT 30 X 50 MM. "MINITUBE" (ROLLO X 1000UDS.)|33.5^TORNILLO DE SUJECION PARA CABLE COLGANTE "MIK" (UD.)|0.7^CODO PVC 75 MM 30Â° "MIK" (UD.)|3.5^INTERRUPTOR DE SEGURIDAD DE ROTURA DE CADENA|36.12^INTERRUPTOR DE SEGURIDAD DE TAPA DE LA ESTAC. TRANSP|25.3^VETERBLOCK SUPER MAGNESIO "VETERQUIMICA" (CAJA X 10KG)|2.1^TIGANIL 450 "VETERQUIMICA" (CAJA 10 X 810 GR)|389.5^AI BUDDIES - FOR BOTTLES & TUBES "QC SUPPLY" (UND.)|64.9^FOGGERSAN FORTE "SOMVITAL" (SPRAY X 100 ML.)|10.9^ABRAZADERA P/ CABLE 4MM, MIK101174 "MIK" (UD.)|2.2^MUELLE DE RETORNO P/ GATILLO DOSIFICADOR, MIK102464 "MIK" (UD.)|726.16^PIPETA DESCARTABLE DE PLASTICO 5 ML "IMV" ( CJA X 500 UND )|86.0^DISPENSADOR DE ALIMENTOS CAPACIDAD 9 LITROS "VVM TECH TRADE" (UD.)|23.55^COMEDERO MOD. WF2-348,  SECO HUMEDO, DESTETE VENTA, ACERO INOXIDABLE, DOBLE LADO, TRES ESPACIOS/LADO, 16" POR BOCA, PARA 90 A 100 CERDOS DE 4 A 130 KG "CRYSTAL SPRING"(UD.)|1420.75^BOTAS PLASTICAS DESCARTABLES (PAQUETE X 25 PARES)|25.3^CONTACTOR  DE ENCENDIDO 24 -A "MIK" (UD.)|25.6^COMEDERO DESTETE VENTA, 2 BOCAS, DOBLE LADO. 15" POR BOCA, SECO HUMEDO, WF2-230 "CRYSTAL SPRING" (UD.)|1420.75^CUBRE OBJETOS (CAJA X 100 UDS.)|3.9^PERFIL T 750 X 35 "MIK" (UD.)|42.0^REGULADOR DE ALTURA DE CHUPONES 02 SALIDAS (UD.)|25.9^PISO PLASTICO CHESS PARA RECRIA   800 X 600 MM. "MIK" (UD.)|25.53^SET PERFIL DE PUERTA 1100 X 35 (RANURADO) "MIK"(UD.)|37.0^ESQUINA DE TRANSF 90°, P/ TUBO 60MM, CD MIK101126 "MIK" (UD.)|63.0^CHUPON RECRIA FLUJO CENTRAL MONOFLO 1/2  " (UD.)|15.45^CAJA PROTECTORA  PARA MODULOS TR-D "MIK"|135.881667^BOMBA DOSIFICADORA MODELO TPG-603 SEKO "SOMVITAL" (UND.)|302.0^JUEGO DE LETRAS DE A  - Z PARA TATUAR "STONE" (UD.)|151.0^CATETER PARA INSEMINACION ARTIFICAL SOFTGILT MINITUBE (CAJA X 100 UD.)|36.64^FOTOMETRO 1.0 POOL LAB "SOMVITAL" (UND.)|241.8^RUEDA MOTRIZ P CADENA, 71,5MM, 38MM, MIK102592 "MIK" (UD.)|112.5^BOLSA DE COLECCION DE SEMEN CON FILTRO CAP. 3.5LT. C/DOSIFICADOR "MINITUBE" (PAQUETE X 100UDS.)|86.0^HERRAMIENTA PARA CRD STS SW (UD.)|1.96^DITRAL ONE "VETERQUIMICA" (FRASCO X 100 ML)|9.54^CONEXION GALVANIZADA 60 MM X 200 MM "VVM TECH TRADE" (UD.)|4.27^TERMO DE COLECCION DE SEMEN AZUL 1 LT. "MINITUBE" (UD.)|31.5^PUNTA PARA PIPETA VOL : 10/20 UL "MINITUBE" (CAJA X 96UDS.)|20.0^TORNILLOS J (UD.)|0.62^SET DE REPUESTOS CABLE CALEFACTOR PARA THERMO E 400/500/600 x 1200 mm "MIK" UND.|79.83^PIPETA DE VIDRIO 1 ML. (UD.)|3.35^CONTOMETRO MANUAL (UD.)|8.5^POSTE INTERMEDIO 1100 X 35 (RANURADO) "MIK" (UD.)|27.0^LINEA DE AGUA DE TRES CHUPONES (UD.)|11.0^PERFIL DELTA 1000 X 35 "MIK" (UD.)|44.25^CERVIX ARTIFICIAL MINITUBE (PAQUETE X 50 UDS.)|138.0^JUEGO DE NUMEROS 0 - 9 PARA TATUADOR 3/8" (UD.)|48.0^SENSOR 230 V "VVM TECH TRADE (UD.)|92.14^TACOS PARA TORNILLOS (UD.)|0.2^GANCHOS PARA TECHO GALVANIZADOS "VVM TECH TRADE" (UD.)|1.75^PISO PARA BROILER 914 X 609 "MIK" (UD)|53.6125^PUNTA PARA PIPETA ELECTRONICA MINITUBE  1000 ÎœL (PAQUETE X 1000 UDS.)|41.0^LANZA ESPUMA LS10 "VETERQUIMICA" (UNIDAD)|133.0^TUBO TRANSPARENTE DE BAJADA 0.75 MM. X  1 MT. DE LARGO "VVM TECH TRADE" (UD.)|3.52^PUNTA PARA PIPETA ELECTRONICA VOL: 1000/1200 UL  "MINITUBE" (CAJA X 96UDS.)|14.5^PLACA TERMICA SIN SENSOR 500 X 1200 "MIK" (UD.)|238.0^KIT DE EQUIPAMIENTO PARA PLACA TERMICA 1-15 "MIK" (UD.)|1.17^CHUPON 1/2"  "WEIHAI" (UD.)|4.5^MEDIDOR  DE CONDUCTIVIDAD Y TEMPERATURA RESISTENTE AL AGUA COM-100  "HM DIGITAL" (UD.)|94.0^TUBO FLEX AUGER 75 X 3.25 MM "VVM TECH TRADE" (UD.)|20.94^BOLSA PARA TANQUE DE CALENTAMIENTO CAP. 100 LT. "MINITUBE" (PAQUETE  X 25UDS.)|234.96^RUEDA DE DEFLEXION PARA TENSION, MIK101269 "MIK" (UD.)|50.2^CHUPON GORRINO EDSTROM 1/2 " (UD.)|7.03^CHUPON RECRIA FLUJO CENTRAL L-70 LIXIT 1/2" (UD.)|9.5^AGUJAS  PARA ENVASADORA MRA - PAVO "IMV" (UD.)|32.3^REMOVEDOR DE ARETES "ALLFLEX" (UD.)|7.2^MOTOR REDUCTOR VVM 1.5 KW "VVM TECH TRADE" (UD.)|441.0^BLOQUE CON FILTRO Y TAPADERA "IMV" (UD.)|99.0^CAMARA NEUBAUER CON ESPEJO (UD.)|116.54^BZ-20 "VETERQUIMICA" (ENVASE X 1 LT)|29.6^ETIQUETAS PARA IMPRESORA IMALE, BLANCAS 18001/0210 "MINITUBE" (UD.)|19.11^PLACA TERMICA SIN SENSOR 400 X 600 MM. "MIK" (UD.)|170.6^CONEXION DE ABASTO PARA VALVULA  WATER SPACE "CRYSTAL SPRING"  (UD.)|10.0^JUEGO DE REPUESTOS PARA SELLADORA MANUAL DE 3 TUBOS "MINITUBE" (13228/0001) (UD.)|75.77^OJAL DE REFUERZO DE ACERO INOX PARA CABLE 4 MM "VVM TECH TRADE" (UD.)|1.89^CABLE CON ENCHUFE TIPO B Y C 13 "MINITUBE" (UD.)|19.9^ADAPTADOR PARA CABLE DE ALIMENTACION AL ENCHUFE TIPO B 250V/10A  "MINITUBE" (UD.)|17.62^CLIMA KIT, CONTROLADOR 14160/9001 PARA REFRIGERADOR, 230V "MINITUBE" (UD.)|420.65^ESQUINA DE TRANSF 45°, P/ TUBO 60MM, CD MIK101128 "MIK" (UD.)|74.5^WINCHE H1200 B, 550KG, MIK101183 "MIK" (UD.)|77.8^CONSOLA P/ WINCHE, MIK101184 "MIK" (UD.)|10.0^POLEA MARCO GALVANIZ P/ CABLES DE HASTA 5MM, MIK101177 "MIK" (UD.)|11.2^PLACA DE OJAL DE 2 AGUJEROS, GALVANIZADA, MIK101182 "MIK" (UD.)|14.7^PROTECTOR DE REGISTRADOR LOGTAG (UD.)|11.5^REGISTRADOR DE TEMPERATURA HUMEDAD Y LUMINOSIDAD HO80 (UD.)|98.0^ALFOMBRA  DE JEBE 26 X 26 (UD.)|46.95^ALFOMBRA  DE JEBE 26 X 42 (UD.)|48.93^BAGUETA DE VIDRIO (UD.)|0.38^JERINGA SOCOREX X 0.50 ML. "INTERVET" (UD.)|127.83^MINI VENTILADOR 12V 5 CM X 5 CM (UD.)|6.5^BALANZA DIGITAL  SR-20 "AWS" 20 KG (UD.)|22.0^BALANZA DE 5 KG. "SOEHNLE" (UD.)|51.0^COCHETTE PARA ENVASADO DE SEMEN ROLLO X 500 "IMV" (ROLLOS)|135.0^SOPORTE  DE SENSOR "VVM TECH TRADE" (UD.)|8.58^BOLSA DE DILUCION CAP.10 LT.  MINITUBE (PAQUETE X 100 UDS.)|75.74^78/278 MODULO DE RESPALDO 4 AH "SKOV" (UD.)|56.11^MOTOR VVM 2.2 KW "VVM TECH TRADE" (UD.)|279.16^CURVA 45 GRADOS FLEX AUGER 75 X 4 MM LARGO RADIO 1.500 MM|16.25^CONTROL DIGITAL DE TEMPERATURA TR-D "MIK" (UD.)|177.0^PEDILUVIO PORTATIL 90X60 "VETERQUIMICA"|90.85^DROYOPEZ "DROGAVET" (LT)|23.9^MOTORREDUCTOR P/ UNID DE TRANSF, 1.50kW B5 4p 3ph 230/460V 60Hz, MIK102592 "MIK" (UD.)|656.0^PISO PLASTICO RUBIN PARA LECHON 200 X 300 MM. "MIK" (UD.)|3.6^CHUPON MARRANA AQUAGLOBE (UD.)|29.8^MATRAZ 150  ML. "DOROSIL" (UD.)|7.5^KIT DE REPUESTO (02 AROS + 01 PIEZA PLASTICA) "DOSMATIC" (UD.)|12.0^CAJA PROTECTORA  PARA MODULOS TR-A "MIK"|61.6^TERMOMETRO AMBIENTAL (UD.)|5.2^ARETE DE IDENTIFICACION PARA CERDOS NÂ° 1 AL 100 "ALLFLEX" (PAQUETE X 25 UDS.)|37.0^ERLENMEYER DE 2 LT. (UD.)|15.93^PERFIL U 1000 X 35 "MIK" (UD.)|16.87^PANEL DE CONTROL EASY VVM TRONIC. - INCLUYE ACCESORIOS "VVM TECH TRADE" (UD.)|595.36^RESORTE VVM DE RETORNO "VVM TECH TRADE" (UD.)|6.95^PLACA DE ELEVACION  VVM CON  OJALES "VVM TECH TRADE" (UD.)|45.885769^MALACATE MANUAL (FUERZA DE ELEVACION 550 KG.) "VVM TECH TRADE" (UD.)|45.7^CONSOLA DE MALACATE "VVM TECH TRADE" (UD.)|12.2^MOTOR REDUCTOR VVM 0.75 KW. 230/400 V. "VVM TECH TRADE" (UD.)|367.0^KIT DE LIMPIEZA PARA MICROSCOPIOS "MINITUBE" (UD.)|60.5^CAJA DE CONTROL PARA MOTOR ESPIRAL "VVM TECH TRADE" (UD.)|123.0^DA 74 C MOTOR CON TABLERO DE CIRCUITO "SKOV" (UD.)|56.11^DOL 67/99 B CELDA DE CARGA "SKOV" (UD.)|56.11^INYECTORES VENTURI "MINITUBE"(UD.)|99.17^USB LOGTAG INTERFASE INCLUYE SOFTWARE (UD.)|102.0^REGISTRADOR DE TEMPERATURA LOGTAG(UD.)|59.5^PISO MARRANA MATERNIDAD 600X800 MM (UD.)|69.519364^ACOPLE DE TUBO FLEXIBLE 75 MM, DE PVC "MIK" (UD.)|4.37^CAMARA EFLOW, CAMARA DE FLUJO CONTINUO PARA ANALISIS DE SEMEN 4112510/0020 "MINITUBE" (UD.)|2376.54^ACCUPOINT ADVANCED SURFACE "NEOGEN" (PAQUETE X 25 UDS.)|95.0^MINI COMEDERO DE TRANSICION PARA LECHONES BPF9 "BAKER FEEDERS" (UD.)|2.05^CHUPON COMEDERO HUMEDO TROJAN 65 1/2 " (UD.)|5.5^CHUPON GORRINO SUEVIA  1/2 " (UD.)|4.54^CLAMP DE ENVASADO "IMV" (UD.)|20.2^PLACA TERMICA CON SENSOR 400 X 600 MM. "MIK" (UD.)|85.5^PIQUETEADOR DE OREJA DE LECHON "STONE" (UD.)|28.0^PERFIL DELTA 1100 MM. 500 X 35 "MIK"(UD.)|48.0^TERMOMETRO AMBIENTAL  GRANDE (UD.)|18.5^MASCARA DESECHABLE (CAJA X 50 UDS.)|13.4^SOPLADOR-ASPIRADOR MOD. 51619  "TORO" (UD.)|175.0^MOTORREDUCTOR_R17 DRS71M4 "VVM TECH TRADE" (UD.)|1656.69^RELAY DE PROTECCION 4 - 6  A  TRES FASES "VVM TECH TRADE" (UD.)|19.8^DA 100 B / 150 B BOMBA 230 V 60 HZ "SKOV" (UD.)|56.11^DA 74 C MOTOR DE ENGRANAJE COMPLETO "SKOV" (UD.)|56.11^DOL 278 A MODULO PRINCIPAL "SKOV" (UD.)|56.11^DOL 16 SENSOR DE LUZ 0-100 / 100 LUX 0-10 V "SKOV" (UD.)|56.11^DOL 90 MEDIDOR DE AGUA 1 IMPULSO / 5 LT. "SKOV" (UD.)|56.11^DOL 94-10 PLATAFORMA DE PESAJE "SKOV" (UD.)|56.11^DOL 99 MOTOR "SKOV" (UD.)|56.11^AMPLIFICADOR DE  PESAJE DE ALIMENTO "SKOV" (UD.)|56.11^DOL 53 X MALETIN DE REPUESTOS "SKOV" (UD.)|56.11^SOPORTE  DE SENSOR TIPO A "VVM TECH TRADE" (UD.)|7.4^DOL 539 CONTROLADOR PARA SISTEMA DE VENTILACION DE AVES "SKOV" (UD.)|1522.0^LENTE DE MICROSCOPIO 10 X 23 MM. M21-1149 "AMERICAN SCOPE INC." (UD.)|16.5^DISPOSITIVO DE BLOQUEO PARA CAJA DE IMPRESION DE MINIBSP "MINITUBE" (UD.)|31.6^LIMITADOR DE UNA VIA M5 "MINITUBE" (UD.)|55.9^ARRANCADOR SUAVE HASTA 3 KW "VVM TECH TRADE" (UD.)|337.88^INTERRUPTOR DE SEGURIDAD (ON /OFF) "VVM TECH TRADE" (UD.)|137.5^TERMOMETRO DIGITAL, PARA NEVERA "MINITUBE" (UD.)|33.37^SOPLADOR /ASPIRADOR INALAMBRICO MARCA "GREENWORKS" G-MAX (UD.)|299.7^CONEXION PARA TUBO FLEX AUGER "VVM TECH TRADE" (UD.)|49.09^TOLVA PARA ESPIRAL 75 MM "VVM TECH TRADE" (UD.)|188.0^PANEL DE CONTROL EASY 2 (INCLUYE ACCESORIOS) "VVM TECH TRADE" (UD.)|1023.19^SET TRANSFERENCIA CON OBTURADOR  "VVM TECH TRADE" (UD.)|63.51^ADAPTADOR DE SILO 440 MM  "VVM TECH TRADE" (UD.)|43.93^PANEL DE CONTROL EASY 3 - 2.2KW - 0.75KW  VVM TECH TRADE UD|1408.53^TRANSFORMADOR 12V/AC 100-240V|179.15^CAMARA DE TRANSPORTE CLIMATIZADA 8L 12V TEMPERATURA AJUSTABLE "MINITUBE" (UD.)|1185.22^ANDROSCOPE EQUIPO PORTATIL PARA ANALISIS DE CONCENTRACION Y MOTILIDAD EN SEMEN "MINITUBE" (UD.)|4634.49^BOLA AGITADORA DE HIERRO FUNDIDO "MIK" (UD.)|23.21^UNIDAD DE CONTROL COMPLETAMENTE REMACHADA "MIK" (UD.)|98.36^TRANSICION DE FLEX AUGER DE 75 A 60 MM "MIK" (UD.)|343.89^DRIVE UNIT 1,5 KW STANDARD "MIK" (UD.)|1502.76^SOPORTE DE PARED EN ACERO INOXIDABLE PARA MOTOR  "MIK" (UD.)|97.4^SENSOR VC12RTM2410M "MIK" (UD.)|83.33^SOPORTE DE SENSOR PARA VISOR "MIK" (UD.)|6.63^ABRAZADERA DE MANGUERA 12 MM, 25-40 MM, PARA SOPORTE SENSOR A/B "MIK" (UD.)|0.86^IMALE LECTOR RFID PARA CROTALES ELECTRONICOS 18001/0000 "MINITUBE" (UD.)|2694.96^IMPRESORA DE ETIQUETAS A USAR CON LECTOR IMALE 18001/0200 "MINITUBE" (UD.)|1881.1^BOLSA PROTECTORA PARA IMPRESORA DE ETIQUETAS 18001/0290 "MINITUBE" (UD.)|251.9^MALETIN DE TRANSPORTE PARA LECTOR IMALE Y ACCESORIOS 18001/0900 "MINITUBE" (UD.)|231.53^TENAZAS PARA COLOCAR ARETE ELECTRONICO 18000/0065 "MINITUBE" (UD.)|166.7^TORRE EFLOW, UNIDAD DE CONTROL PARA SISTEMA EFLOW PARA ANDROVISION® 4112510/0010 "MINITUBE" (UD.)|6449.32^UNIDAD PORTATIL PARA CALENTAR 6 VIALES, 1 PORTAOBJETOS, 12057/6000 "MINITUBE" (UD.)|664.3^DILUYENTE S100 PARA NUCLEOCOUNTER SP-100 "MINITUBE" (UD.)|1080.0^PROFIT KIT CATETERS PCAI "MINITUBE" (PAQUETE X 50 UDS.)|8.81^PROFIT KIT CATETERS TRADICIONALES "MINITUBE" (PAQUETE X 200 UDS.)|8.81^NOBILIS RHINO CV X 5000 DS. "INTERVET" (UD.)|113.35^NOBILIS SG 9R X 1000 DS. "INTERVET" (UD.)|91.06^NOBILIS RT + IB MULTI + ND + EDS X 1000 DS. "INTERVET" (UD.)|215.64^DOXICICLINA (KG.)|78.5^NOBILIS ND C2 X 5000 DS. "INTERVET" (UD.)|25.1^COCCIVAC D X 1000  DS."INTERVET" (UD.)|58.45^COCCIVAC D X 5000 DS. "INTERVET" (UD.)|220.0^NOBILIS IB MA5 X 5000 DS. "INTERVET" (UD.)|14.7^NOBILIS RISMAVAC X1000 DS. "INTERVET" (UD.)|41.75^CAMARA DE CONSERVACION DE SEMEN CON TEMPERATURA PROGRAMABLE 5Â° C -  40Â° C, PARA 250  TUBOS/BOTELLAS|985.0^MICROSCOPIO BINOCULAR 40 X - 1000 X   M10-1108 "AMERICAN SCOPE" (UD.)|440.0^CONMUTADOR DE ALIMENTACION 12V "VVM TECH TRADE" (UD.)|475.0^ESTAC DE TRANS 2.2 KW PARA TRANSPORTADOR DE CADENA DE 60 MM (MOTOR Y MORREDUCTOR ) "VVM TECH TRADE"|1742.0^SET TUBO DE CONEXION PARA FLEX AUGER ,PARA MONTAJE DE MOTOR 19 MM + 22 MM  "VVM TECH TRADE" (UD.)|47.8^FONDO BASE PARA COMEDERO COMFORT SOW SERIE S4 EN ACERO INOXIDABLE|4.372338^AVIGUARD X 2000 DS|62.78^SUCRAM C-150 "PANCOSMA" (BOLSA X 5 KG.)|33.0^LACTOGUR SOMVITAL SACO X 12 KG|29.0^FRA LECIMAX DRY FRAMELCO SACO X 25 KG|29.0^FRA LECIMAX DRY FRAMELCO BIG BAG X 1000 KG|29.0^MEVIBACTER SOMVITAL GARRAFA X 5 LT|29.0^HIDROPEROX SOMVITAL  BIDON 250 KG|29.0^HIDROPEROX SOMVITAL  BIDON 1195 KG|29.0^GRASS SOMVITAL BARRIL 200 KG|29.0^GRASS SOMVITAL ISOTANQUE 1000 KG|29.0^XTRACT ALLIUM XL  PANCOSM (SACO X 25 KG)|5.07^OVOFORTE "VETERQUIMICA" (SACO X 25KG)|3.85^VETERSAL GANADO ESPECIAL "VETERQUIMICA" (BALDE X 1KG)|1.6^PORTAPEDILUVIO PORTATIL 90X60 #PLASTICO "VETERQUIMICA"|48.46^DACLOR "VETERQUIMICA" (BALDE X 15 KG)|25.46^DETERGENTE VQ-3500 "VETERQUIMICA" (BIDON X 60LT)|2.58^DETERGENTE VQ-2000 "VETERQUIMICA" (BIDON X 20LT)|2.42^DETERGENTE VQ-30 "VETERQUIMICA" (BIDON X 20 LT)|6.25^DETERGENTE VQ-510 "VETERQUIMICA" (BIDON X 60LT)|2.87^DUFLOSAN 30 "VETERQUIMICA" (FRASCO X 100 ML)|12.0^IPEVAC INMERSION "VETERQUIMICA" (FRASCO X 1 LT)|153.5^LICIMOCIN 44 "VETERQUIMICA" (SACO X 25 KG)|5.6^NEUMOTONA "VETERQUIMICA" (DOYPACK X 1 KG)|34.0^SINGEN-SQ10 "VETERQUIMICA" (BIDON X 20 LT)|2.8^TERRIVET 80% "VETERQUIMICA" (CAJA X 20 KG)|34.73^YODIGEN DIPPING  7000 "VETERQUIMICA" (BIDON X 20 LT)|2.5^YODIGEN DIPPING  7000 "VETERQUIMICA" (BIDON X 60 LT)|2.42^VETERSAL LECHERIA "VETERQUIMICA" (SACO X 25KG)|1.12^VETERVIT ADE "VETERQUIMICA" (FRASCO X 100 ML)|12.08^TERMOMETRO INFRARROJO PARA MEDIR TÂ° SIN CONTACTO  "MINITUBE" (UD.)|285.33^ARETE DE IDENTIFICACION PARA CERDOS AZUL “ALLFLEX - AM” (CAJA X 25 UDS.)|40.0^TIGANIL 450 "VETERQUIMICA" (BOLSA X 810 GR)|38.9^EGG TESTER ULTIMATE|2530.0^QOMO, BUNDLEBOARD SERIES 75" 4K INTERACTIVE LED SCREEN ANDROID 11|2530.0^PREG-ALERT PRO|2530.0^TERMOMETRO INFRARROJO "FLUKE" (UD.)|149.0^REGISTRADOR DE TEMPERATURA  Y HUMEDAD (UD.)|135.0^PISO PLASTICO TRAPPER PARA ENGORDE 800 X 400 MM. "MIK" (UD.)|15.2^PLETINA  DE FIBRA DE VIDRIO  DUO XL  3.00 MT.  "MIK"  (UD.)|34.17^ARETE DE IDENTIFICACION PARA CERDOS AMARILLO "ALLFLEX" (PAQUETE X 25UD.)|40.0^BALANZA ELECTRONICA DE 25KG. "SALTER" (UD.)|152.0^CHUPON GORRINO TROJAN 75 1/2 " (UD.)|4.79^GUANTE DE COLECCION (PAQUETE X 100 UD.)|12.5^MARCADOR INDELEBLE DE ARETES "ALLFLEX" (UD.)|12.83^TENAZA ARETADORA " ALLFLEX" (UD.)|43.5^TENAZA DE TATUAR 2520 "STONE" (UD.)|97.0^FRASCO CON TAPA PARA DOSIS DE SEMEN "IMV" (UD.)|0.33^GEL LUBRICANTE PARA INSEMINACION ARTIFICIAL NO ESTERIL  "PRIORITY CARE" (GALON X 4LTS.)|17.65^MANGUERA DE LLENADO DE COCHETTE "IMV" (PAQUETE X 5 UDS.)|9.76^TINTA PARA TATUAR NEGRA "STONE" FRASCO X 03 OZ. (UD.)|21.0^PANBONIS AL 15% (BOLSAS X 5KG.)|10.41^VIOLETA DE GENCIANA (TAMBOR X 25 KG.)|18.72^LAPI - RACTO  "LAPISA" (SACO X 10 KG.)|26.5^MINOXEL 8GR. "LAPISA" (FRASCO X 8GR.)|38.18^MINOXEL PLUS "LAPISA" (FRASCO X 100 ML.)|28.5^CLEAN UP ACIDO "ENKEL" (BIDON X 20 KG.)|2.73^PG 600 X 1 DOSIS + SOLVENTE "INTERVET" (CAJA X 5UD.)|55.63^MINOXEL  4GR."LAPISA" (FRASCO X 4GR.)|32.65^DETECTOR DE PREÃ‘EZ PARA CERDOS PREG-TONE II PLUS  "RENCO" (UD.)|387.0^COMEDERO ENGORDE ACERO TRES BOCAS POR LADO SECO-HUMEDO F1-336 "CRYSTAL SPRING"(UD.)|1100.0^BOLSA PARA ENVASADO DE SEMEN DE CERDO "MAGAPOR" (UD.)|0.12^ARETE DE IDENTIFICACION PARA CERDOS ROSADO "ALLFLEX" (PAQUETE X 25 UDS.)|42.11^OVEROL  DESCARTABLE (UD.)|3.2^REGULADOR DE ALTA PRESION DE AGUA, MOD.970, 10-25PSI, 3/4" MPT X 3/4" MPT (UD.)|151.5^ARETE DE IDENTIFICACION PARA CERDOS AZUL "ALLFLEX" (PAQUETE X 25 UDS.)|40.0^LAMINAS PORTA OBJETO (CAJA X 50 UDS.)|3.35^PREMEZCLA RECRIA"DSM" (SACO X 25 KG.)|6.3^PREMEZCLA REPRODUCCION"DSM" (SACO X 25 KG.)|5.95^PREMEZCLA ENGORDE DSM" (SACO X 25 KG.)|3.8^AGUA DESTILADA X 1LT. (BOTELLA)|4.0^CLINAFARM SPRAY 1 LITRO "INTERVET" (UD.)|178.0^INNOVAX ILT - SB X 2000 DS. "INTERVET" (UD.)|125.0^NOBILIS DILUENT CA X 400 ML. PARA 2000 DS. "INTERVET" (UD.)|12.94^NOBILIS COR4+IB+ND+EDS X 1000 DS. "INTERVET" (UD.)|238.79^NOBILIS GUMBORO D78 X 1000 DS. "INTERVET" (UD.)|10.7^NOBILIS MA5 + CLONE 30 X 1000 DS. "INTERVET" (UD.)|11.54^SOLVENS OCULO / NASAL 36 ML. PARA 1000 DS. "INTERVET" (UD.)|2.97^NOBILIS MG 6/85 X 1000 DS. "INTERVET" (UD.)|83.93^NOBILIS CORYZA (SAPONINA) X 1000 DS. "INTERVET" (UD.)|87.96^NOBILIS RHINO CV X 1000 DS. "INTERVET" (UD.)|62.5^CIRCUMVENT PCV 1 X 100 ML. "INTERVET" (UD.)|49.87^PLETINA DE FIBRA DE VIDRIO DUO XL  2.00 MT. "MIK"  (UD.)|32.88^INNOVAX ILT X 2000 DS. "INTERVET" (UD.)|192.45^ENTEROVAX X 1000 DS "INTERVET" (UD.)|26.7^CHUPON COMEDERO HUMEDERO STINGY 1/2" (UD.)|21.0^DIVISION PLASTICA PVC 1.756 MM "MIK" (UD.)|24.31^REGISTRADOR PARA CONECTAR  MICROLIT "FOURIER"(UD.)|165.0^COMEDERO DE LECHON REDONDO DE ACERO INOXIDABLE  25 CM (UD.)|35.9^PLETINA DE FIBRA DE VIDRIO DUO XL  1.60 MT. "MIK"  (UD.)|18.34^COMEDERO RECRIA 5 BOCAS DOBLE LADO N2-536 "CRYSTAL SPRING" (UD.)|945.0^COMEDERO DESTETE VENTA 2 BOCAS DOBLE LADO SECO-HUMEDO WF9-224  "CRYSTAL SPRING"(UD.)|960.0^COMEDERO ENGORDE 2 BOCAS DOBLE LADO SECO-HUMEDO F1-224 "CRYSTAL SPRING"(UD.)|1253.84^M + PAC X 100 ML. "INTERVET" (UD.)|59.55^CATETER ESPIRAL "MAGAPOR" (UD.)|0.35^STERILE DYE FRASCO X 30 ML. "INTERVET" (UD.)|0.35^BOMBA DOSIFICADORA  MOD. CH-900 - AV2 "CHEMILIZER" (UD.)|772.67^COMEDERO RECRIA  3 BOCAS POR LADO 10" WATER SPACE, ACERO INOX. N2-330 "CRYSTAL SPRING" (UD.)|865.0^ARETE DE IDENTIFICACION PARA CERDOS NARANJA "ALLFLEX" (PAQUETE X 25 UDS.)|40.0^DIVISION PLASTICA PVC 6.00 MT. 1000 X 35 "MIK" (UD.)|269.92^SET DE TORNILLO M8  8X55  (ARANDELA, TORNILLO Y TUERCA) "MIK"(UD.)|0.6^COMEDERO RECRIA 3 BOCAS 24" DOBLE LADO " WATER SPACE " N2-324 "CRYSTAL SPRING"(UD.)|825.0^CONFORT DRY ABSORBENTE "INTEC" (SACOS X 20KG.)|2.5^COMEDERO DESTETE 4 BOCAS DOBLE LADO SECO-HUMEDO  WF9-448 "CRYSTAL SPRING" (UD.)|1610.0^MICROSCOPIO MONOCULAR C/ PLATINA MECANIZADA 40 X 1000 LED M-200 (UD.)|288.0^CIRCUMVENT PCV - M  "INTERVET" (UD.)|72.0^DIVISION PLASTICA PVC 3.60 MT. (500 X 35) "MIK" (UD.)|108.11^SUCRAM C-150 "PANCOSMA" (SACO X 25 KG.)|34.0^SET DE PERFIL DE PUERTA 500 X 35 "MIK" (UD.)|24.3^REGULADOR DE BAJA PRESION DE AGUA, MOD.6003, 1.5-13PSI, 1/2" NPT X 3/4" NPT (UD.)|198.0^JAULA MATERNIDAD TUBO GALVANIZADO "WEIHAI GAOSAI" (UD.)|268.0^CATETER PARA INSEMINACION ARTIFICIAL SAFE BLUE SOFTGILT "MINITUBE" (CAJA X 100UDS.)|0.66^DIVISION PLASTICA 1.80 MT. (500 X 35) "MIK" (UD.)|39.98^EASY CULT PARA ANALISIS BACTERIOLOGICO MINITUBE (CAJA X 20 UDS.)|111.0^ESQUINA  DE TRANSFERENCIA 90 DE FIBRA DE VIDRIO REFORZADO CON PLASTICO "VVM TECH TRADE" (UD.)|59.98^TUBO DE SILICONA PARA SMARTDISPENSER 2.8 M "MINITUBE" (UD.)|41.77^ETIQUETAS PARA MINIBSP C/LOGO PIC  IMPRESO ROLLO "MINITUBE"  (ROLLO X 2000UDS.)|25.57^JAULA MATERNIDAD FRONTAL PARA COMEDERO CRYSTAL "WEIHAI GAOSAI" (UD.)|270.0^AJUSTE DE ALTURA  P/LINEA DE AGUA W3 PARA JAULA DE MATERNIDAD "CRYSTAL SPRING"  (UD.)|82.14^PORCILIS GLASSER "INTERVET" (UD.)|18.3^NOBILIS MA5 + CLONE 30 X 2500 DS. "INTERVET" (UD.)|11.35^ZUPREVO X 100 ML INTERVET UD|55.6^TUBOS CONECTORES DE FRASCO "INTERVET" (CAJA X 10UD.)|2.31^XTRACT 6930 "PANCOSMA" (CAJA X 25KG.)|23.53^SISTEMA WATER SPACE (CON ACCESORIOS) "CRYSTAL SPRING"  (UD.)|1.7^ARETE DE IDENTIFICACION PARA CERDOS MAGENTA "ALLFLEX"  (PAQUETE X 25UDS.)|35.6^ARETE DE IDENTIFICACION PARA CERDOS MORADO "ALLFLEX" (PAQUETE X 25UDS.)|35.6^HERBAL E-50 POWDER "INDIAN HERBS" (SACO X 25KG.)|13.5^PLACA TERMICA CON SENSOR 500 X 1200 "MIK" (UD.)|259.0^OPTIMETHIONE"INDIAN HERBS" (SACO X 25KG.)|4.08^OJAL - EMPAQUETADURA PARA CABLE DE LA ESTACION DE LLENADO DE MINI BSP "MINITUBE" (UD.)|1.95^MINI BSP TAMPON DE GOMA  PARA BALANZA "MINITUBE" (UD.)|8.8^BARRA CONECTORA PARA CADENA DE CIERRE PARA MINI BSP "MINITUBE" (UD.)|53.94^MUELLE DE AJUSTE DIM 6885 -A PARA UNIDAD DE TRANSPORTE MINI BSP 5X5X20 MM. "MINITUBE" (UD.)|0.65^TUBO DE LLENADO PARA MINI BSP "MINITUBE" (UD.)|41.41^ESQUINA  DE TRANSFERENCIA 45 Â° DE FIBRA DE VIDRIO REFORZADO CON PLASTICO "VVM TECH TRADE" (UD.)|84.84^TUBO CAPILAR X 100 UND. (UD.)|4.9^REGUMATE PORCINE 1 X 540 ML. "INTERVET" (UD.)|164.5^XTRACT NATURE "PANCOSMA" (CAJA X 25KG.)|30.86^ARNES PARA INSEMINACION ARTIFICIAL (UD.)|44.0^PLETINA  DE FIBRA DE VIDRIO  DUO XL  3.60 MT.  "MIK"  (UD.)|41.0^DIVISION PLASTICA 3.00 MT. (500 X 35) "MIK" (UD.)|44.83^PECOZYME PHYTASE 5000 U/G "CHALLENGE" (SACO X 25 KG.)|4.25^PECOZYME THERMOSTABLE PHYTASE 5000 U/G "CHALLENGE" (SACO X 25 KG.)|8.3^FOOTCONFORT "INTEC" (BALDE X 5 KG.)|17.8^DIVISION PLASTICA 3.00 MT. (1000X 35) "MIK" (UD.)|83.7^NOBILIS RISMAVAC X 2000 DS. "INTERVET" (UD.)|175.7^TUBO MAGNELIS VVM 60 X 1.25 MM  6MT. DE LARGO "VVM TECH TRADE" (UD.)|7.53^DIVISION PLASTICA 3.00 MT. (750 X 35) "MIK" (UD.)|68.47^DIVISION PLASTICA 3.60 MT. (1000 X 35) "MIK" (UD.)|110.73^PORCILIS PCV 50 DS. "INTERVET" (UD.)|92.2^COMEDERO RECRIA BISTRO W100P CON TOLVA DE PLASTICO "MIK" (UD.)|578.0^COMEDERO ENGORDE BISTRO W100F CON TOLVA DE PLASTICO "MIK" (UD.)|578.0^PORCILIS PCV - MHYO  50 DS. "INTERVET" (UD.)|147.8^COMEDERO DESTETE VENTA 3 BOCAS 16", DOBLE LADO WATER SPACE WF8 348 "CRYSTAL SPRING" (UD.)|1485.0^COBERTURA DE PVC 2.49 X 0.97 M "ONDULINE "(UD.)|16.9^PROTACID OX - P "HIGIENIZO"  (BIDON X 25 KG.)|81.74^PROTACID RX - P "HIGIENIZO"  (BIDON X 25 KG.)|75.25^PORCILIS COLI CLOS X 50 ML. "INTERVET" (UD.)|48.0^NOBILIS ND CLONE 30 X 1000 DS. "INTERVET" (UD.)|4.5^NOBILIS GUMBORO D78 X 5000 DS. "INTERVET" (UD.)|36.25^ESTERA DE GOMA PARA MANIQUI 1.5 M X 1M 23MM ESPESOR "MINITUBE" (UD.)|389.55^PERNO M8 X 60 CON TUERCA Y ARANDELA (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|0.435243^CONEXION 25 X 25 X 2.5 PARA TUBO CUADRADO X 6 MT â€œWEIHAI GAOSAIâ€  (UD.)|5.1^PARTE T/TUERCA M 10 (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|4.8^ABRAZADERA M8 PARA TUBO DE COMEDERO (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|1.03^ABRAZADERA M8 PARA TUBO DE AGUA (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|1.5^COMEDERO DESTETE  2 BOCAS 15" DOBLE LADO SECO HUMEDO WF9-230 "CRYSTAL SPRING" (UD.)|960.0^PUERTA FRONTAL (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|26.84^PUERTA POSTERIOR (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|36.265652^TUBO DE AGUA (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|9.008152^PANEL 2.4 M (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|173.425326^COMEDERO (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|126.511414^CODO PARA NIPLE (JAULA DE VERRACOS) â€œWEIHAI GAOSAIâ€  (UD.)|2.578478^TUBO PARA COMEDERO (JAULA DE VERRACOS) â€œWEIHAI GAOSAIâ€  (UD.)|15.604456^COMEDERO DESTETE RECRIA 5 BOCAS POR LADO 14.4" WATER SPACE, ACERO INOX. WF8-572 "CRYSTAL SPRING"|2500.0^PANEL FINAL DE 2.4 M (JAULA DE VERRACO) â€œWEIHAI GAOSAIâ€  (UD.)|173.4325^INCUBADORA PARA 300 TUBOS MANDO ELECTRONICO TEMPERATURA: +5Â°C A +40Â°C "MINITUBE" (UD.)|6654.31^COMEDERO DESTETE  VENTA 3 BOCAS DOBLE LADO SECO-HUMEDO WF9-348 "CRYSTAL SPRING" (UD.)|1485.0^CONSERVADORA 40 LITROS "MINITUBE" (UD.)|960.0^PIN DE REPUESTO PARA TENAZA ARETADORA "ALLFLEX" (UD.)|5.7^PREMEZCLA ENGORDE CON MINERALES ORGANICOS "DSM" (SACO X 25 KG.)|9.1^PREMEZCLA RECRIA CON MINERALES ORGANICOS "DSM" (SACO X 25 KG.)|12.6^PREMEZCLA REPRODUCCION CON MINERALES ORGANICOS "DSM" (SACO X 25 KG.)|12.9^CAMARA CLIMATIZADA 544L, 700 TUBOS, C/ TC200, 14160/0352 "MINITUBE" (UD.)|7140.55^DIVISION PLASTICA PVC 2.47 MT. 500 X 35 "MIK" (UD.)|34.19^PLACA TERMICA SIN SENSOR 400 X 1200 "MIK" (UD.)|221.72^PLACA TERMICA MIK SIN SENSOR 400X1200|498.928^ANDROVISION:PROGRAMA CASA CON PC|48309.77^MODULO ANDROVISION - MORFOLOGIA Y MORFOMETRIA|18191.97^MODULO PARA ANDROVISION - CONEXION SOFTWARE LABORATORIO|2021.33^MODULO ANDROVISION - CONTROL DE CALIDAD|3638.39^SOFTWARE ANDROVISION - MODULO AUTOMORPH|17325.69^CAMARA A COLOR PARA ANDROVISION - USB 3.0 ALTA VELOCIDAD, ALTA RESOLUCION|12572.69^MICROSCOPIO ZEISS AXIOLAB A1 CON CONSTRASTE DE FASES|13890.59^CABLE CON ENCHUFE ESPECIFICO PAIS TIPO B Y C13 EN EL LUGAR DEL DISPOSITOV,125V/10A (LARGO 1,8M)|9.13^OBJETIVO ZEISS 10X/0.25X - CONTRASTE DE FASE NEGATIVO|5396.97^OBJETIVO DE FASE ACROMATICO PH40X|2041.54^ADAPTADOR DE CAMARA 1,0X PARA ZEISS|452.77^PLATINA CALEFACTADA PARA MICROSCOPIO ZEISS AXIOLAB.A1|2890.5^UNIDAD DE CONTROL HT 200 PARA SISTEMA DE CALEFACCION|3116.89^IDEE STANDARD PROGRAMA DE GESTION PARA LABORATORIO DE SEMEN PORCINO|31128.46^ORDENADOR PARA IDA/IDEE/IDENT CON TARJETA MOXA|5975.03^MONITOR PLANO 24 INCH (58 CM) PARA ANDROVISION|1180.45^SOPORTE DE PARED GALVANIZADO PARA MOTOR VVM 450 X 600 MM|133.49^EMBUDO DE CONEXION DE SILOS DE FIBRA DE VIDRIO CON BORDE VERTICAL|200.0^TOLVA CON BORDE VERTICAL PARA SISTEMA DE TRANSPORTE DE 60 MM|247.0^PORCILIS EPL  25 DS. X 50ML.  "INTERVET" (UD.)|58.3^PISO PLASTICO RUBIN GR  500 X 600 MM. "MIK" (UD.)|36.286156^MINAZEL "PATENT CO" (BIG BAG X 1000 KG.)|1.21^PINZA OBSTETRICA|755.113333^PIPETA 0,5 - 10|1299.58^PIPETA ELECTRONICA 100  - 1 ML|1475.71^SISTEMA DE ALIMENTACION AUTOMATICA 4 "MIK"|10099.8^TUERCA ˜8MM ACERO INOXIDABLE A4 "MIK" (UD.)|0.14^ARANDELA M8X15MM ACERO INOXIDABLE "MIK" (UD.)|0.11^MEVIPOW "SOMVITAL"(BIDON X 1 KG.)|15.74^AVIGUARD X 5000 DS|151.8^INNOVAX ND-ILT X 2000 DS|104.0^FRA C12 DRY "FRAMELCO"(SACO X 20 KG.)|7.3^POSTE DE PARED 1000 X 35 "MIK" (UD.)|20.66^PERFIL DE PUERTA DERECHO 1000X35   "MIK" (UD.)|24.66^ARANDELA R88104MM ACERO INOXIDABLE "MIK" (UD.)|0.16^ANCLAJE PARA PISO PLASTICO M8X50  "MIK" (UD)|1.27^POSTE INTERMEDIO 1000 X 35 "MIK"(UD.)|50.08^PERFIL DE PUERTA IZQUIERDO 1000X35  "MIK" (UD.)|21.14^PERNO M8X16 A2 DIN933 "MIK"|0.32^ANCLAJE BC PARA CONCRETO "MIK" (UD)|12.16^SISTEMA DE ALIMENTACION AUTOMATICA 1 "MIK"|12052.9^SISTEMA DE ALIMENTACION AUTOMATICA 2 "MIK"|26299.51^SISTEMA DE ALIMENTACION AUTOMATICA 3 "MIK"|57705.88^NOBILIS AE + POX X 1000 DOSIS|64.97^PROTACID OX - P "HIGIENIZO"  (BIDON X 25 KG.)|4.7^SUCRAM 5S HYDRO PANCOSMA SACO 15 KG|29.0^NOBILIS REO 2177 X 1000 DS INTERVET|29.12^NOBILIS ND CLONE 30 X 5000 DOSIS|16.82^REGUMATE PORCINE X 1 LITRO|276.85^FRA LECIMAX DRY FRAMELCO SACO X 20 KG|10.55^MEVIBACTER SOMVITAL GARRAFA X 25 LT|3.52^HIDROPEROX SOMVITAL  BIDON 28 KG|2.75^ARETE DE IDENTIFICACION PARA CERDOS ROJO ALLFLEX  PQT X 25 UDS|40.0^ARETE DE IDENTIFICACION PARA CERDOS VERDE ALLFLEX  PQT X 25 UDS|40.0^CALIPER|257.0^PORCILIS ILEITIS 50 DOSIS|81.6^BREEDERVAC IV PLUS X 1000 DOSIS|279.0^GRASS SOMVITAL BIDON 25 KG|3.49^NOBILIS CAV P4  X 1000 DOSIS|167.7^AFTERMAST C SOMVITAL SACO X 20 KG|2.89^BREEDERVAC REO PLUS X 1000 DOSIS|179.8^ESTAC DE TRANS. 1.5KW DE CADENA DE 60 MM MOTOR Y MORREDUCTOR  VVM TECH TRADE|1374.56^TOLVA CON BORDE VERTICAL PARA SISTEMA DE TRANSPORTE DE 60 MM CON TORNILLO DOSIFICADOR|754.61^UNIDAD TRANSPORTADORA PARA TUBO TRANSPORTADOR DE  60 MM  VVM TECH TRADE UD|58.82^CODO HT DN75, INCLINACION 30Â°|3.33^CODO HT DN75 INCLINACION 45|3.33^UNIDAD DE CONTROL HT 10 230 V 50 HZ|753.0^PLATINA TERMICA PARA HT 10 120X120X5MM APERTURA 25MM|560.0^ARNES PARA INSEMINACION ARTIFICIAL MARRANA MINITUBE|118.5^ARNES PARA INSEMINACION ARTIFICIAL CHANCHILLA MINITUBE|118.5^CAMPANA CALEFACTORA ELECTRICA|577.45^MINOXEL L.A. LAPISA  FCO 100 ML|79.9^EM-DROG P   DROGAVET  (SACO x 15 kg.)|6.15^EM-DROG  DROGAVET   FCO X 1 LT|6.15^XTRACT ALLIUM XL  PANCOSMA SACO X 25 KG|81.59^PROTACID RX - P  HIGIENIZO  (IBC X 1090 KG.)|4.87^DIVISION PLASTICA PVC 0.29 MT. 1000 X 35  MIK UD|13.05^DIVISION PLASTICA PVC 1.20 MT. 1000 X 35  MIK UD|53.98^DIVISION PLASTICA PVC 4.05 MT 1000 X 35  MIK  UD|182.19^DIVISION PLASTICA PVC 4.74 MT. 1000 X 35  MIK  UD|213.23^DIVISION PLASTICA PVC 5.00 MT. 1000 X 35  MIK UD|224.94^DIVISION PLASTICA PVC 5.38 MT. 1000 X 35  MIK  UD|242.03^DIVISION PLASTICA PVC 5.70 MT. 1000 X 35  MIK UD|256.42^DIVISION PLASTICA PVC 8.04 MT. 1000 X 35  MIK  UD|361.69^DIVISION PLASTICA PVC 7.72 MT. 1000 X 35 MIK UD|347.3^MANIJA PARA PUERTA  MIK|6.44^TORNILLO M8  8X90  TORX ACERO INOX MIK  UD|1.4^FRA BUTYRIN ULTRA DRY FRAMELCO  SACO X 25 KG|5.05^FRA GUT BALANCE DRY FRAMELCO  SACO x 25 KG|8.4^COLORANTE PARA DILUYENTE DE SEMEN AMARILLO X 20ML "MINITUBE" (UD.)|11.7^COLORANTE PARA DILUYENTE DE SEMEN AZUL X 20ML "MINITUBE" (UD.)|11.7^COLORANTE PARA DILUYENTE DE SEMEN ROJO X 20ML "MINITUBE" (UD.)|11.7^COLORANTE PARA DILUYENTE DE SEMEN VERDE X 20ML "MINITUBE" (UD.)|11.7^HEMOGLOBINA  DE PORCINO  SACO X 20 KG|2.21^PORCILIS PCV ID INTERVET 1 X 20ML|210.0^PORCILIS M HYO ID ONCE INTERVET X 20 ML 100 DS|124.0^PREMEZCLA RECRIA SOLVET ALTA GENETICA (SACO X 25 KG)|6.32^PREMEZCLA CRECIMIENTO SOLVET ALTA GENETICA (SACO X 25 KG)|7.54^PREMEZCLA REPRODUCCION SOLVET ALTA GENETICA (SACO X 25 KG)|11.18^CALIPER "MBL" (FCO X 1 LT)|12.11^CALIPER "MBL" (BIDON X 20 LT)|8.65^VITAPLANT AMINO "MBL" (FCO X 1 LT)|7.0^VITAPLANT AMINO "MBL" (BIDON X 20 LT)|4.59^VITAPLANT KELP "MBL" (FCO X 1 LT)|14.95^VITAPLANT KELP "MBL" (BIDON X 20 LT)|9.71^COBRE GLUCONATO "MBL" (FCO X 1 LT)|23.68^COBRE GLUCONATO "MBL" (BIDON X 20 LT)|16.91^NUTRITOP CALCIO-B "MBL" (FCO X 1 LT)|5.69^NUTRITOP CALCIO-B "MBL" (BIDON X 20 LT)|3.64^NUTRITOP POTASIO 36 "MBL" (FCO X 1 LT)|8.31^NUTRITOP POTASIO 36 "MBL" (BIDON X 20 LT)|5.78^NUTRITOP ZN "MBL" (FCO X 1 LT)|8.54^NUTRITOP ZN "MBL" (BIDON X 20 LT)|4.98^NUTRITOP FE-EDDHAS "MBL" (FCO X 1 LT)|15.78^NUTRITOP FE-EDDHAS "MBL" (BIDON X 20 LT)|11.55^NUTRITOP HF-80 "MBL"|9.85^INDUCTOR H-1 "MBL" (FCO X 1 LT)|37.84^INDUCTOR H-3 "MBL" (FCO X 1 LT)|30.36^BIO-IMPROVER PGP "MBL" (FCO X 1 LT)|26.93^ANTOX SE LIQUIDO "VETERQUIMICA" (BIDON X 20LT)|9.32^BONICOX "VETERQUIMICA" (SACO X 25 KG)|1.74^VETERSAL GANADO ESPECIAL "VETERQUIMICA" (SACO X 25KG)|1.16^BACTOLIM C-15 "VETERQUIMICA" (BIDON X 20KG)|5.7^CLORODOS PLUS "VETERQUIMICA" (BIDON X 20LT)|4.5^DETERGENTE VQ-3500 "VETERQUIMICA" (CILINDRO X 220LT)|2.41^DUPLALIM "VETERQUIMICA" (BIDON X 60 LT)|5.51^DUPLALIM "VETERQUIMICA" (CILINDRO X 220 LT)|5.3^DUPLALIM "VETERQUIMICA" (FRASCO X 1 LT)|7.97^TONADRAX "VETERQUIMICA" (BIDON X 20 LT)|3.64^TREVINNE "VETERQUIMICA" (BIDON X 18 LT)|3.09^YODIGEN 30 Y PLUS "VETERQUIMICA" (BIDON X 60 LT)|8.4^DUFLOSAN 50% "VETERQUIMICA" (CAJA X 20 KG)|100.0^DITRAL 24 "VETERQUIMICA" (FRASCO X 100 CC)|9.75^FLOXINOLONA 20% "VETERQUIMICA" (INYECTABLE 100ML)|9.5^VACUNA FLAVOMUNE "VETERQUIMICA" (FRASCO X 1 LT)|78.5^VACUNA IPE VAC "VETERQUIMICA" (FRASCO X 1 LT)|153.5^AQUA YODO "VETERQUIMICA" (BIDON X 5 LT)|19.2^ACID PORC "VETERQUIMICA" (SACO X 25 KG)|4.32^TERCIDON (FRASCO X 100 CC)|8.0^DIVISION PLASTICA PVC 1.92 MT. 500 X 35 "MIK" (UD.)|57.08^CILINDRO TRANSPARENTE DE DISPENSADOR DE ALIMENTOS 9 LITROS, CON ESTABILIZADOR UV "VVM TECH TRADE" (UD.)|12.72^DIVISION PLASTICA PVC 3.0 MT. 500 X 35 "MIK" (UD.)|89.18^IDAL RISING FLUID|0.22^FLAVOMYCIN 80 "HUVEPHARMA" (SACO X 20 KG)|12.94^SENSOR PARA THERMO E 400/500/600 x 1200mm "MIK" (UD)|15.91^PLACA TERMICA PARA LABORATORIO CON TEMPERATURA AJUSTADA +37°C "MINITUBE" (UD.)|2978.0^CABLE CON ENCHUFE ESPECIFICO PAIS TIPO A Y C7 EN EL LUGAR DEL DISPOSITOV,125V/10A (LARGO 1,8M) "MINITUBE" (UD.)|14.15^COMEDERO ENGORDE 2 BOCAS, DOBLE LADO. 15" POR BOCA, SECO HUMEDO, F1-230 "CRYSTAL SPRING" (UD.)|1290.88^CALIPER PLUS "MBL" (BIDON X 20 LT)|13.27^INDUCTOR H-3 "MBL" (GALONERA X 5 LT)|26.98^MOTOR DE TRANSMISION PARA AGITADOR DEL TANQUE DE DILUYENTE DE 100 Y 200 LITROS "MINITUBE" (UD.)|721.34^CONTROLADOR DE TEMPERATURA PARA TC200 "MINITUBE" (UD.)|285.33^UNIDAD DE CONTROL TC200 PARA INCUBADORA 230/115 V  "MINITUBE" (UD.)|1049.45^MONIMAX "HUVEPHARMA" (SACO X 20 KG)|11.92^CARGADOR EN ACERO INOXIDABLE PARA 6 TUBOS DE SEMEN PORCINO 95 ML "MINITUBE" (UD.)|203.87^CILINDRO PARA MEZCLAR Y DISPENSAR SEMEN PORCINO 5.5L "MINITUBE" (UD.)|339.0^DISPENSADOR MANUAL PARA ENVASAR SEMEN PORCINO  "MINITUBE" (UD.)|5225.95^MEDIDOR DE GRASA DORSAL EN CERDOS "MINITUBE" (UD.)|1362.53^MICROSCOPIO DE CONTRASTE DE FASES MBL 2000 PLATINA CALEFACCIONADA Hti 50 "MINITUBE" (UD.)|5550.27^PIPETA ELECTRONICA 100 ÎœL - 1 ML. "MINITUBE" (UD.)|2099.0^SELLADORA MANUAL DE 6 TUBOS ANCHO DE SELLADO 4MM 220V  "MINITUBE" (UD.)|5427.6^ARETE DE IDENTIFICACION PARA CERDOS AMARILLO “ALLFLEX - AM” (CAJA X 25 UDS.)|40.0^ARETE DE IDENTIFICACION PARA CERDOS NARANJA “ALLFLEX - AM” (CAJA X 25 UDS.)|40.0^ARETE DE IDENTIFICACION PARA CERDOS ROJO “ALLFLEX - AM” (CAJA X 25 UDS.)|40.0^ARETE DE IDENTIFICACION PARA CERDOS VERDE “ALLFLEX - AM” (CAJA X 25 UDS.)|40.0^INDUCTOR-H1 "MBL" (GALONERA X 5 LT)|33.86^PARTNER FLY "MBL" (BIDON X 10 LT)|18.38^BANDEJA S4 COMFORT SOW "CRYSTAL SPRING"(UD.)|89.18^PARTNER FLY "MBL" (GALONERA X 5 LT)|20.92^CALIPER 3.0 "MARK KNAUER" (UND.)|180.71^EXTENSION 30'' PARA CALIPER "MARK KNAUER" (UND.)|94.66^NORMOPIREX "SOMVITAL" (BOTELLA X 1 LT.)|25.86^TANICID "SOMVITAL" (BOTELLA X 1 LT.)|0.01^MENTOR α "SOMVITAL" (BOTELLA X 250ML)|9.37^ARVITAL SE "SOMVITAL" (GARRAFA X 1 KG.)|0.01^DETERGENTE VQ-3500 "VETERQUIMICA" (CILINDRO X 200LT)|2.18^SORBER MAX "MBL" (BIDON X 20 LT)|13.84^BRIO 440 "MBL" (BIDON X 10 LT)|14.6^AVIVO "MBL" (FCO X 1 LT)|22.05^ZELENA "BH TERRA" (FCO X 1 LT.)|57.28^KAPU TERRA "BH TERRA" (FCO X 1 LT.)|14.12^BH WHITER "BH TERRA" (FCO X 1 LT.)|9.07^STRIX GREEN "BH TERRA" (BOLSA X 5 KG.)|15.48^BROTOTEC "BH TERRA" (GALONERA X 5 LT.)|7.92^TRABUCO "BH TERRA" (FCO X 1 LT.)|14.08^CAPTION "BH TERRA" (FCO X 1 LT.)|273.35^CERRADURA DE CADENA PARA CADENA TRANSPORTADORA, PASO DE DISCO 71 MM "MIK" (UD.)|5.8^CYRIL PREMIUM "BH TERRA" (FCO X 1 LT)|20.35^CUBIERTA DE PLASTICO PARA MANIQUI DE VERRACO 11" "MINITUBE" (UD.)|699.5^VITAPLANT ALGAE "MBL" (BIDON X 20 LT)|5.54^VITAPLANT KELP  PLUS "MBL" (BIDON X 20 LT)|9.73^DROYOPEZ "DROGAVET" (GALON X 5 LT)|21.9^OPTIPHOS PLUS 10000 CT "HUVEPHARMA" (SACO X 20 KG)|16.47^TIRAS INDICADORAS DE AMONIO CUATERNARIO LAMOTTE "ARSA" (PAQUETE X 100 UDS.)|14.62^CABANIN CSD "R2 AGRO" (SACO X 25 KG.)|21.18^SULFADROG "DROGAVET" (FRASCO X 1 LT.)|24.45^ARETE ELECTRONICO BRO SIN PARTE MACHO, AMARILLO 18000/0063 "MINITUBE" (UD.)|12.89^CAMARA CLIMATIZADA PARA 300 TUBOS, CONTROLADOR TC 200, TEMPERATURA AJUSTABLE 14160/0300 "MINITUBE" (UD.)|3107.8^KIT DE LIMPIEZA PARA CAMARA EFLOW 12510/0104 "MINITUBE" (UD.)|217.26^TERMINAL DE INTERFASES PARA PRISM10, 12535/0014 "MINITUBE" (UD.)|616.74^COLORANTE PARA DILUYENTE DE SEMEN, ROJO, 100 ML 13900/0720 "MINITUBE" (UD.)|40.38^HISOPO DE MICROFIBRA, LARGO DE 70 MM, 100/BOLSA 12510/0105 "MINITUBE" (UD.)|0.39^LECTOR DE CODIGO DE BARRAS, DISPOSITIVO ESTATICO, 13211/0100 "MINITUBE" (UD.)|561.18^MODULO PARA ANDROVISIONÂ®: CONEXION CON SISTEMA EFLOW 12500/2000 "MINITUBE" (UD.)|8334.38^SCANSTAGE PARA EFLOW, PLATINA AUTOMATICA PARA MICROSCOPIO, 12048/0035 "MINITUBE" (UD.)|9140.03^BASE DE SOPORTE PARA SCANSTAGE ANDROVISION PARA ZEISS AXIOLAB 12048/0005 "MINITUBE" (UD.)|154.83^UNIDAD DE CONTROL HTI 400 12057/0400 "MINITUBE" (UD.)|2029.14^TANQUE DE CALENTAMIENTO PARA DILUYENTE 3 L, CON HTI 50, 13201/0503 "MINITUBE" (UD.)|1944.82^MULTIPETTEÂ® E3 PARA EFLOW, PARA LA DOSIFICACION SECUENCIAL 12427/5065 "MINITUBE" (UD.)|2037.29^SOPORTE PARA 5 X CONTENEDOR DE MUESTRAS EFLOW 12510/0200 "MINITUBE" (UD.)|201.0^PLACA DE CALEFACCION, 245 X 200 MM 12057/0510 "MINITUBE" (UD.)|939.01^PIPETA ELECTRONICA, 200 ÂµL - 2 ML 12050/0517 "MINITUBE" (UD.)|1713.18^PESO EN ACERO INOXIDABLE PARA TUBO DE SILICONA 3X1MM 5013000/0190 "MINITUBE" (UD.)|25.47^PARTE MACHO CON ESPINA LARGA PARA AUTOCROTAL LW 18000/0062 "MINITUBE" (UD.)|0.99^DISPENSADOR MANUAL PARA ENVASAR SEMEN PORCINO 13203/0000 "MINITUBE" (UD.)|3793.07^SELLADORA DE 6 TUBOS HPL 450 ANCHO DE SELLADO 4 MM, 240 V 13225/0000 "MINITUBE" (UD.)|4365.36^CARGADOR EN ACERO INOXIDABLE PARA 6 TUBOS DE SEMEN PORCINO, 95 ML 13204/9006 "MINITUBE" (UD.)|124.25^BOQUILLA PARA SISTEMA MANUAL DE ENVASADO 13203/0012 "MINITUBE" (UD.)|7.42^CILINDRO PARA MEZCLAR Y DISPENSAR SEMEN PORCINO, 3,5 L 13203/0001 "MINITUBE" (UD.)|190.79^ANILLO DE INSERCION PARA CILINDRO 3,5L, 13203/0005 "MINITUBE" (UD.)|70.38^CILINDRO PARA MEZCLAR Y DISPENSAR SEMEN PORCINO, 5,5 L 13210/0030 "MINITUBE" (UD.)|196.53^ANILLO DE INSERCION PARA CILINDRO 5,5 L 13210/0035 "MINITUBE" (UD.)|80.57^RIEL DE ADAPTACION TUBOS 60 ML PARA CARGADOR 13225/0060 "MINITUBE" (UD.)|146.32^IMPRESORA DE ETIQUETAS PARA TUBOS DE SEMEN, 18800/0002 "MINITUBE" (UD.)|2222.5^ETIQUETA AUTOADHESIVA, 30 X 50 MM, BLANCA, ROLLO CON 1000 13210/4829 "MINITUBE" (UD.)|9.23^VIAL EFLOW PARA MUESTRAS DE SEMEN, 100/BOLSA 12510/0100 "MINITUBE" (UD.)|0.89^TAPA PARA CONTENEDOR DE MUESTRAS PARA EFLOW, REUTILIZABLE 12510/0101 "MINITUBE" (UD.)|0.78^TUBO PARA BOMBA DE EFLOW TOWER 12510/0150 "MINITUBE" (UD.)|39.83^PUNTA PARA PIPETA ELECTRONICA HASTA 2000 ÂµL, 60/RACK 12050/0555 "MINITUBE" (UD.)|0.35^AGENTE TENSOACTIVO PARA MEDIO EFLOW, 100 ML 13900/0800 "MINITUBE" (UD.)|33.8^MEDIO EFLOW PARA 3 L (150 GR) 13525/2003 "MINITUBE" (UD.)|6.71^SET DE TUBOS DE SILICONA PARA EFLOW, 12510/0095 "MINITUBE" (UD.)|2.55^SET DE TUBOS PARA EFLOW 12510/0090 "MINITUBE" (UD.)|1.49^BOLSA PARA DILUIR Y DISPENSAR SEMEN PORCINO, 3,5 L, 100/PAQUETE 13203/4001 "MINITUBE" (UD.)|0.7^HISOPO DE MICROFIBRA, LARGO DE 124 MM 100/PAQUETE 12510/0106 "MINITUBE" (UD.)|0.91^ALCOHOL ULTRA PURO 80 %, PARA LIMPIEZA DE CAMARA EFLOW 12510/0108 "MINITUBE" (UD.)|11.42^ERROR CODIGO DUPLICADO - COMBITIP® PARA MULTIPETTE® 500 µL - 50 ML, 25 PUNTAS POR CAJA 12427/5066 "MINITUBE" (UD.)|8.43^JUEGO DE REPUESTOS PARA SELLADORA DE 6 TUBOS 13228/0004 "MINITUBE" (UD.)|71.31^SP1-CASSETTE PARA NUCLEOCOUNTER SP-100 "MINITUBE" (UD.)|7.68^IRON GLYCINATE (SACO X 25 KG)|9.95^ALCOHOL ETILICO ABSOLUTO "SCHARLAU" (FRASCO X 5 LT.)|74.5^PACK PESTIFFA X 50 DS. "BOEHRINGER INGELHEIM" (UND.)|23.53^MICRO TUBO DE REACCION 2.0 ML. CON TAPA, 250/PAQ, 14602/0904 "MINITUBE" (UD.)|0.49^COXIDIN 200 "HUVEPHARMA" (SACO X 20 KG.)|7.24^MAQUINA DE LLENADO SEMIAUTOMATICA MRA AIGLONNE 100 ÎœL, 007157 "IMV" (UD.)|10558.45^KIT DE MOTORIZACION PARA MAQUINA DE LLENADO MRA, 019250 "IMV" (UD.)|4984.0^NUTRITOP FE-EDDHAS "MBL" (BIDON X 5 LT)|11.55^L-CARNITINA "VETERQUIMICA" (SACO X 25 KG.)|52.2^PROT-AEL - M "TVT NUTRITION" (SACO X 25 KG.)|1.78^KINGZYME LIPA 100T (HEAT STABLE LIPASE) "KDN" (SACO X 25 KG.)|62.35^KINGZYME LIPA 100T (HEAT STABLE LIPASE) "KDN" (BOLSA X 1 KG.)|64.0^BIO IMPROVER "MBL" (BIDON X 10 LT)|23.66^VITAPLANT ALGAE "MBL" (BIDON X 20 LT)|1.43^KINGZYME LIPA 100T (HEAT STABLE LIPASE) "KDN" (SACO X 25 KG.)|62.35^BLINDADO 3 "MBL" (FRASCO X 1 LT)|2.93^BLINDADO 5 "MBL" (FRASCO X 1 LT)|2.93`; 
+    
     const rawDataClientes = `GRUPO ANIMAL NUTRITION S.A.C.|C20603072902^CANDIA NUTRIMENTOS E.I.R.L.|C20601846561^NUTRIMENTOS TECHNOLOGI SRL|C20604105324^DACHPIG S E.I.R.L.|C20548669767^DON POLLO TROPICAL S.A.C|C20450497950^AGROINDUSTRIA EL COMEDERO SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA|C20510844034^EL COMEDERO S.R.L.|C20389715060^SALAZAR ORTIZ DE EDUARDO DANITZA C.|C10082047447^GENETICA ANIMAL S.A|C20119041148^REDONDOS S.A.|C20221084684^GRANJAS AMAZONICAS S.A.C|C20136241789^GRANJA LOS HUARANGOS S.A.C.|C20338244917^AGROPECUARIA HUERTOS DEL SUR E.I.R.L.|C20474584985^AGROPECUARIA NILEVA S.R.L.|C20602550673^GRUPO ISAMISA S.A.C.|C20602674488^INNOVACIONES IZLA E.I.R.L.|C20556250261^AGRO INVERSIONES LOS ABEDULES S.A.C.|C20554924337^GRANJA HUERTO SAN MARTIN DE PORRES S.A.C|C20506322708^PECUARIA SAN FRANCISCO S.A.C.|C20600728688^AGROPECUARIA PLUMA BLANCA S.A.C.|C20520521811^R & R SAN ISIDRO S.A.C|C20494090954^AVICOLA PUNGURUME S.A.C.|C20529533242^CHIMU AGROPECUARIA S.A.|C20132373958^GRANJA RINCONADA DEL SUR S.A.|C20419158462^SAN FERNANDO S.A.|C20100154308^GRUPO SANTA ELENA S.A.|C20155261570^CORPORACION E INVERSIONES LA TORRE BLANCA S.A.C.|C20556909441^SUPER PIG S  S.A.C.|C20454435584^AGROPECUARIA WONG S.A.C|C20419208583^ADISENS SOCIEDAD ANONIMA CERRADA-ADISENS S.A.C.|C20468261082^ALZAMORA FLORES DANY PAUL|C42943514^ANCHIRAICO CORAL ALFREDO MANUEL|C15588124^2C SERVICIOS GENERALES E.I.R.L.|C20600384199^ABRAHAM SUAREZ GERONIMO|C46319567^AGRO INDUSTRIA AUCALLAMA S.R.L.|C20108917521^CAMACHO TERRONES ROLANDO|C08238546^CAMPOS CARRILLO CINTHIA DEL PILAR|C45187441^CARRILLO VIDAURRE ALICIA ELIZABETH|C41331231^AGROCORPORACION SAN DIEGO S.A.C.|C20555931914^AGROINDUSTRIA CAMPOY S.R.L|C20108918099^CHINCHAY LEJABO JULIO CESAR|C45270905^CHUCAS CARGO S.A.C.|C20549177329^AGRO-INDUSTRIAS CLAPISER E.I.R.L.|C20528291784^CONSTRUCCIONES PECUARIAS E INDUSTRIALES S.A.C.|C20549479252^AGROPECUARIA  SUN-MI  S.A.C.|C20517889661^AGROPECUARIA AWARA S.A.C.|C20600225210^AGROPECUARIA BUJIRO YONEZAWA S.A.C.|C20320658218^AGROPECUARIA CAMPO REAL SOCIEDAD ANONIMA CERRADA|C20600417046^AGROPECUARIA DOÑA SILVIA S.R.L.|C20320731314^AGROPECUARIA LA PROVIDENCIA S.A.C|C20534068582^CRUZ HUANCAS YOVANY ELIZABETH|C43849590^CUEVA  MELGAREJO ELBA OLGA|C25867214^AGROPECUARIA LOCK S.A|C20189421941^AGROPECUARIA PAMPA FLORES S.A.|C20379346741^DE-MONTREUIL ALEXANDER WILLIAMS EDUARDO|C07451106^AGROPECUARIA ROXANA SOCIEDAD ANONIMA CERRADA|C20511826005^AGROPECUARIA S&M SOCIEDAD ANONIMA CERRADA|C20541487124^AGROPECUARIA UPB WORD S.A.C.|C20547194340^DOS TORRES CONTRATISTA GENERALES S.A.C.|C20553416303^ALVA RITUAY APOLINAR|C47009018^AGRIMEC VETERINARIA E.I.R.L. - AGRIMEC VET E.I.R.L.|C20601861772^AGRO INDUSTRIAS LEO S.A.C.|C20512432931^AGROPECUARIA CAMOTE E.I.R.L.|C20535116866^AGROSANTA S.R.L|C20260935110^ALVARADO IHUARAQUI CARMEN ALICIA DE LA TRINIDAD|C41879989^ASR PECUARIA S.A.C. - ASRP S.A.C.|C20602565786^GARCIA LA TORRE CRISTINA NORMA|C43012484^AVES DE LAS AMERICAS EIRL|C20494979978^AVICOLA CRESTA ROJA EIRL.|C20494006678^AVICOLA JAPI S.R.L.|C20393226332^AVICOLA LA PONDEROSA S.A.C.|C20509477931^AVICOLA OROBRANCH S.A.C.|C20602348785^AVICOLA QUIROZ E.I.R.L.|C20393969394^AVICOLA SANTA ROSA DE MANCHAY S.A.C|C20507889621^DSM NUTRITIONAL PRODUCTS PERU S.A.|C20504299628^AVICOLANDIA S.A.C.|C20546619835^AVILA RIVERA ALEJANDRO NEMESIO|C10069495953^BIO SAFE S.A.C.|C20555873531^BIONOVA S.A.C.|C20504458521^CACERES MONTOYA CARLOS RAUL|C10100588264^GUARDIA RAZO ALEXIS ALFONSO|C10325823^CENTRO INDUSTRIAL Y COMERCIAL PORCINO S.A.C.|C20128451626^HERRERA DIAZ DAVID|C10387680^CERDOS SUR PERÚ S.A. - CERSUR S.A.|C20563407426^COMERCIALIZADORA DE CARNES Y AFINES A Y L S.A.C.|C20523515706^CORPORACION AGROINDUSTRIAL SAN BERNARDO SAC|C20392847155^CORPORACION AVICOLA CHICKENBABY S.A.C|C20546013520^CORPORACION CHARACATO PIG SAC|C20602222285^CORPORACION DE GRANJAS DEL PERU SAC|C20506741930^CORPORACION OROPEZA E.I.R.L.|C20600778561^DEL CASTILLO RACACHA ALEJANDRO|C47367071^DIAZ PEREZ EDGARD FRANCISCO|C25766873^DISTRIBUCIONES QUINTANA S.A.C.|C20263565712^DISTRIBUCIONES RAIO E.I.R.L.|C20550542821^DISTRIBUIDORA Y COMERCIALIZADORA EL ENSUEÑO S.A.C|C20513415037^EMCOL S.A.C.|C20536612204^G & H SERVICIOS INDUSTRIALES S.A.C.|C20550756031^AVICOLA CASUARINAS DEL SUR E.I.R.L. AVICASUR E.I.R.L.|C20566350417^AVICOLA GRAN HUEVO S.A.C|C20600194144^GALPOMAYO SOCIEDAD ANONIMA CERRADA|C20602465781^AVICOLA LA VIÑA EIRL|C20570668651^GRANJA AVICOLA CAYO E.I.R.L.|C20393269732^GRANJA AVICOLA LAS VEGAS S.A.C.|C20119996385^LINDER CARGO LOGISTIC S.A.C.|C20511536007^AVICOLA SANTA CLARITA SAC|C20516472899^LUDEÑA RAMIREZ WILLIAM|C10636451^GRANJA AVICOLA SAN JUAN S.A.C.|C20505307799^GRANJA AVICOLA SEIKEN S.A.C.|C20392846850^MIK INTERNATIONAL GmbH & Co.|DE813132327^GRANJA AVICOLA SYM S.A.|C20390221500^AVIVEL SAC|C20524088810^GRANJA EL SOLITARIO S.A.C.|C20602816568^GRANJA PACAYALES E.I.R.LTDA.|C20364598085^GRANJAS ORIHUELA S.A.C|C20486319161^MORALES PIMENTEL LUIS RICARDO|C45154957^GRAVISO S.A.C.|C20475485948^H & D AGROPECUARIA S.R.L|C20601787491^AYBAR GARAVITO WILLIAM|C40384843^HIGA OKUHAMA JUAN ALBERTO|C10102490555^NOVAGRI S.A.|CE995053403^HIGA OSHIRO JUAN|C10065658157^NUPROXA SWITZERLAND LTD.|CHE112156595^ILENDER PERU S.A|C20100331285^BATTILANA NUTRICION S.A.C.|C20109333159^BEDOCE PERU S.A.C.|C20516775361^INVERSIONES MAMAY E.I.R.L.|C20509897043^HORIZONTE ARROCERO E.I.R.L.|C20559788598^HUALLPARUCA SOBERANES JHANN CARLOS|C04718922^INDUSTRIA AVIWAL SOCIEDAD ANONIMA CERRADA - INDUSTRIA AVIWAL S.A.C.|C20603936699^INDUSTRIAL INSUMOS QUIMICOS S.A.|C20112272365^CORPORACION ADC SOCIEDAD ANONIMA CERRADA|C20119546851^INGENIERIA Y SOLUCIONES MEDICA VJK SOCIEDAD ANONIMA CERRADA - INSOMED VJK SAC|C20601168287^INNOVACION GANADERA S.A.C.|C20557098403^INVERSIONES AGROINDUSTRIALES EL TAHUAMPAL E.I.R.L.|C20600888626^INVERSIONES AGROPECUARIAS HC S.A.C|C20509902730^PRESTADORA DE SERVICIOS PECUARIOS PSP S.A.C.|C20601257280^INVERSIONES AVICOLA ALRISI E.I.R.L.|C20600450957^QUISPE SANZ JULIO CESAR|C09460420^INVERSIONES COCOROCO S.A.|C20393719100^INVERSIONES FEIZA E.I.R.L.|C20601622956^LA CALERA S.A.C|C20452614767^EMPRESA COMERCIALIZADORA Y SERVICIOS MULTIPLES JOSELIN E.I.R.L.|C20600186141^JOSE LUIS LLERENA GARCIA|C10178076201^KUN ASTUDILLO CESAR JAMIL|C15602073391^LEIGH DEL CAMPO JOHN EDWARD|C02777339^FARMEX S A|C20100141583^LUZA QUISPE DE PALOMINO DORA BERTHA|C10093596108^M.B GALEB S.A.C.|C20514150789^SCOTIABANK PERU SAA|C20100043140^MINAYA ANGELES MERCEDES ZOILA|C10414511321^MOLINO SAN JUDAS E.I.R.L.|C20601381754^MOLINOS EL PUENTE S.A.C.|C20514555843^MOLINOS FIGUEROA EIRL|C20514866091^MULTIGRANJAS SERLAN S.A.C|C20393514630^NEGOCIACION PECUARIA SANTA PATRICIA S.A.|C20109753018^NEGOCIOS E INVERSIONES AGROPECUARIAS S.A.C.|C20508029731^NEXXT SAC|C20549455078^FERTILES S.A.C.|C20504606229^NUÑEZ QUISPE LUCIO|C43561388^UBALDO HUAMAN MONICA|C10095070481^PEÑA MORALES OSCAR LINCOLN|C10408953974^VELA FALCÓN EDITH ROSA|C09488853^VELASCO DREXLER DEIDRE|C41818070^VELASQUEZ CHILET PEDRO MANUEL|C09383098^FUNDO VILLA ESMERALDA E.I.R.L.|C20601830818^GHCORP SOCIEDAD ANONIMA CERRADA|C20601694981^PERALTA QUINTANILLA CESAR|C10255622621^ZUASNABAR GONZALES GIANCARLO GUSTAVO|C76929034^INVERSIONES RIO BRAVO SOCIEDAD ANONIMA CERRADA|C20541363158^PERU PORK S.A.C.|C20602299580^PHARMA CHEM S.A.C.|C20507444939^JMA AGRONEGOCIOS S.A.C.|C20557340034^PICHO ACEVEDO RENSO|C40094962^PONEDORAS S.A.C|C20516083647^KEIRAN S.R.L.|C20342043730^PREIMP SAC|C20601858941^PREMEZCLAS LATINOAMERICANAS S.A.|C20522445445^LT CONSORCIO GANADERO EIRL|C20604375658^PROTEIN GROUP S.A.C.|C20603019343^MOLIGRANJAS S.A.C.|C20515119648^R.A.M. INDUSTRIES S.A.C.|C20518634373^RUIZ VALLES ELMER CHRISTIAN|C42521264^S.J.W. S.R.L.|C20506204683^NEGOCIOS SEÑOR DE LUREN S.A.C.|C20523397827^SAAVEDRA ALAN ELIAS RODRIGO|C10431452265^OLMOS VILCAPUMA LUCIO OLIVER|C10218866455^OVOTEC S.A.C.|C20514501671^SANRAN S.A.C.|C20509090697^PHARMA INGENIEROS S.A.C.|C20502923553^SANTO MARTIN S.A.C|C20506768030^SELECTOS PRODUCTOS ORIGINALES PERUANOS SOCIEDAD ANONIMA CERRADA - SELECPOP S.A.C|C20602238572^REPRESENTACIONES AGRICOLAS, GANADERAS Y AFINES E.I.R.L.|C20478160764^TELLO VASQUEZ JUAN ORLANDO|C09643510^SIGA IMPORT S.A.C.|C20555738839^SLEE PEÑA JOEL ARTHUR|C42833309^VETERINARIA MILU E.I.R.L.|C20602571794^SOLUCIONES CORPORATIVAS A & L S.A.C|P20553344043^STAR PIG E.I.R.L.|C20553259950^WAALA INDUSTRIAS NUTRICIONAL Y COSMETICA S.A.C|C20537133865^STARVET S.A.C|C20513408251^SUPER POLLO E.I.R.L|C20351998297^TAMAORO S.A.C.|C20514622893^TORREJON MORI ENRIQUE|C10424237448^UBILLUS TOLENTINO SASKIA|C09872248^ZACARIAS PAPUICO ALFREDO ROY|C10421096568^AGROPECUARIA LA ENCANTADA S.A.C.|C20602319807^AGROPORC AL & PA  S.A.C.|C20539812751^AVICOLA TONY S.A.C|C20440182501^AVES Y PORCINOS S.A.C.|C20533334271^CORPORACIÓN RICO S.A.C.|C20506421781^FUNDO SANTA CRUZ S.A.C.|C20392516124^AVICOLA YUGOSLAVIA S.A.C|C20132100552^TOP COMPANY S.A.C.|C20455823537^AVINOR JAEN SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA|C20529699728^COMERCIALIZADORA ALTO CHICAMA 3ABC E.I.R.L.|C20561154393^INDUSTRIAS HANCAR SOCIEDAD ANONIMA CERRADA|C20557328921^GLOBONORTE S.A.C.|C20559600467^GRANJA LAS CASUARINAS S.A.C.|C20133823019^GRANJA MOCHICA S.A.C.|C20601050171^INVERAGRO SAN MARTIN DE PORRAS S.A.C.|C20479862738^MOLINO LA PERLA S.A.C.|C20131589086^MOLINORTE S.A.C.|C20481608598^PRODUCTOS AVICOLAS CHICAMA SOCIEDAD ANONIMA CERRADA|C20440324224^PUPUCHE BUSTAMANTE ELMER WILLIAM|C10277413936^TECNICA AVICOLA S.A.|C20505120702^MONTANA S.A.|C20100182263^NUTRIPRODUCTOS SANTA ANA SAC|C20600109881^NUTRITIONAL TECHNOLOGIES S.A.C|C20530611681^CLIENTES VARIOS|C99999999^AVICOLA NADINNE EIRL|C20534979429^SAKIHARA SAKIHARA DE TOYAMA CECILIA HATS|C10065815856^JALLAVET S.A.C.|C20548621489^DISTRIBUIDORA Y VENTAS DEL SUR E.I.R.L.|C20543497267^DANIEL MAMANI CRUZ|C00044680293^JOSE LUIS OSHIRO FUKUHARA|C00009931077^MAYRA BLANCO PACHAS|C000047576607^WALDIR ESTRELLA TODELANO|C00009884739^NUPROXA ECUADOR S.A|C1792952980001^AGRO MOLINO S.A.C.|C20550726808^ALLIN PERU  SAC|CU20547656220^TAYPE MENDOZA MARCELINO|C10102101991^GRANJA LOS HUARANGOS|CU20338244917^INVERSIONES AGRO-PECUARIAS SANTA ANA S.A.C.|CU20548715548^EL ROCIO .S.A|CU20204844381^CORPORACION HODELPE S.A.C.|C20523904273^NEGOCIOS SAN DIEGO E.I.R.L.|C20522805166^AVICOLA GMJM S.A.C.|c20602825605^FUNDO AVICOLA TORRE BLANCA SAC|C20605302654^MIGUEL ANGEL DE LA CRUZ SAYRITUPAC|44457309^JOSE LUIS SANTIAGO GUISADO|C10481270087^REVOREDO MEZA LUIS|C10338195333^ÑAÑEZ YATACO JORGE LUIS|cu10154018846^JUDITH BETSABE AQUINO SILVA|CU10158641076^CORPORACION AGRICOLA VIRGEN DE GUADALUPE S.|CU20504913741^BANCO DE CREDITO DEL PERU|CU20100047218^BANCO BBVA PERU|CU20100130204^AGROINDUSTRIA VILLA DEL SOL S.A.C.|CU20509649147^CARLOS HUMBERTO PATRICIO PEREZ|8678914^EL AGUILA CARGO EXPRESS S.A.C|cu20602612911^DEMVET PERU S.A.C.|cu20605355227^ZOOELIFE S.A.C|CU20551968180^NUTRICORP PERU S.A|CU20466569110^Central Agrícola Nuñez S.A.C.|CU20605389024^NEGOCIOS AGROINDUSTRIALES SOFY S.A.C.|CU20546085512^PRODUCCION Y COMERCIALIZACCION AGROPECUARIA DOÑA GALLINA E.I.R.L.|CU 20603119640^ITERA S.A.C.|CU20521209420^VITAPRO S.A.|C20555271566^LINA PAOLA SANCHEZ ALVAREZ|CU42751055^JRC INDUSTRIAS ALIMENTARIAS S.A.C.|CU20601942055^VICTOR ZAMORA OLIVARES|CU6584274^Tecnologica de Alimentos SA|CU20100971772^CEVA SALUD ANIMAL S.A.C.|CU20505434804^YEPEZ ABRILL PAVEL CLEMENTE|CU40299957^WEIHAI GAOSAI METAL PRODUCT CO., LTD.|CE0000000019^GRANJA LA VIÑA EIRL|CU20604245941^EDUARDO CARDENAS CAMPOS|CU15397097^FELICIANO FLORES LUIS ENRRIQUE|CU10414392461^INVERSIONES AGROPECUARIAS DON MARIANO S.A.C. - INADOMA S.A.C.|CU20605951237^NUTRISERVICIOS PECUARIOS MATSANTI E.I.R.L.|C20603042612^PECUARIA LA MOLINA E.I.R.L.|C20506543976^ALIMENTOS BALANCEADOS DEL PERU S.A.C.|C20498513833^GRANOS DORADOS DEL PERU S.A.C.|C20601543991^MULTIPECUARIA AVIPOR SOCIEDAD ANONIMA|C20490494392^MIGUEL ALBA CASTILLO|C15719970^ECO - ACUICOLA SOCIEDAD ANONIMA CERRADA|C20483894814^SUYLLO CCOLOMA MARCO ANTONIO|C47143483^HERRERA LOBATÓN ROLANDO FREDDY|C15863418^ONSIHUAY PAUCAR DOMINGO ELIAS|C09842104^VALENZUELA CHUCALLA FRANK DEIVIS|C46234899^NEGOCIOS FAROX SOCIEDAD ANONIMA|C20409273875^WILMAN DELGADO ORTIZ|C43002421^GRUPO GRANJERITO S.A.C|C20603295502^DÁVILA GARCÍA EYDER|C10744063839^MOLINOS NUTRIPEÑA E.I.R.L.-NUTRIPEÑA E.I.R.L.|C20605658572^SOLPEC GROUP E.I.R.L.|C20557504835^TORO CARRANZA HERMINIO|C10336744640^INVERSIONES CESAR & NEYMAR E.I.R.L.|C20603444893^PORCICOLA EL EDEN E.I.R.L.|C20603908270^ELIZABETH HURTADO HUAMAN|C43150289^EGAMILK E.I.R.L.|C20491290251^VITAPRO S.A.|CU20555271566^BALCAZAR RODRIGUEZ MANUEL FRANCISCO|C10218037742^CASTAÑEDA ZUÑIGA DARWIN ROBERTO|C10028802906^NUTRILAR PERU S.R.L.|C20600050975^CALDERON ESPINOZA LUIS ALBERTO|C10081506723^AGROINDUSTRIAS SUMAC PACHA S.A.C.|C20537334330^AVIKAMAN E.I.R.L|C20557367404^CAMAN DAMACEN CELIA DOLORES|C10334218720^VARGAS OTERO DANIEL|C10472146047^INVERSIONES VEGUI S.A.C.|C20603049986^BALANCEADOS AVIPOR E.I.R.L.|C20393956144^ACUATROUT S.A.C.|C20518347714^CCOPA HUAYHUAS FREDDY SANTOS|C 10414120054^TUGRANJA S.A.C.|C20554351205^Power Alimentos  Balanceados SAC -POALBA SAC|C20602730531^DIAZ MEDINA SHIRLEI CANDELARIA|C41273351^SALAS ZAMALLOA PAUL FERNANDO|C10088903302^RABSA INGENIERIA Y CONSTRUCCION S.A.C.|C20559605850^J & M ANIMAL NUTRITION S.A.C.|C20605788964^OPERADOR LOGISTICO ZORGUIMAR & AGENTES DE ADUANA SOCIEDAD ANONIMA CERRADA|C20448211844^NUTRIALIMENTOS DEL SUR S.A.C.|C 20605084134^RICARDO ARMANDO ROMERO GASPAR|C45770352^EL GRANO DE ORO J Y L E.I.R.L.|C20603040512^AVICOLA DYPOLLO E.I.R.L|C20489488630^SERVICIOS FALCONERY S.A.C|C20602348823^AGROSERVICE LTDA|CE765240107^CORPORACION IZLA E.I.R.L.|C20604376069^AVICOLA SUPER FRESQUITOS S.A.C.|C20455708193^RUIZ TORRES JOSE ROLANDO|C10080531422^GOMEZ MARIN GERMANY YUSEP|C10435735130^Jhann Carlos Huallparuca Soberanes|C47189822^LA CHAPOSITA SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA|C20534632232^LUIS ALBERTO AQUINO SUSANIBAR|C42857469^AVECUY E.I.R.L.|C20603429550^OVOFRES S.A.C.|C20430998766^PMERINO SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA|C20454381981^SALGUERO MELENDEZ DE SOLOGUREN DIANA MARISOL|C10409605406^TERESA ISABEL PUERTAS CARRERA|C47021903^VENTURA CALLACONDO TERESA YOLANDA|C10004873268^CONSTRUCTORA DOSAKA|C20527308217^GRUPO MILKAM S.A.C.|C20605405968^DISAMAR EIRL|C20408035725^AVICOLA BARI E.I.R.L.|C20603474903^PISCIFACTORIAS DE LOS ANDES S.A|C20129561263^CAMAL CONCHUCOS S.A.|C20101292810^CORPORACION SOLFAB SAC|C20522730212^JAYPA S.A.C.|C20607801534^PEDRO AGUILAR CRUZ|C45794354^CONSTRUCTORA NEXXT S.A.C.|C20553220743^CONSORCIO AGROPECUARIO A Y F S.A.C.|C20601110564^SOLDADURA, ESTRUCTURAS, ABASTECIMIENTO Y SERVICIOS GENERALES E.I.R.L.|C20542148391^HUEVOS S.A.C.|C20538241378^AVIPECUARIA LANFER E.I.R.L.|C20601908701^MEGA ALIMENTOS E INSUMOS EL DORADO S.A.C.|C20606646004^MAFERZA S.A.C.|C20600629086^GRUPO NATANAEL E.I.R.L.|C20606328550^AGROPECUARIA VALLECITO S.A.|C20203252324^DON GOYO S.A.|C20135541703^INVERSIONES Y NEGOCIACIONES VCP S.A.C|C20556611468^Fernando Agustin Zapata Parada|C43115042^STEFAN EDGAR CARDENAS CABELLO|C10106158598^AYDA YSABEL DELGADO ESCOBEDO|C33418757^FUNDACION PARA EL DESARROLLO AGRARIO|C20101259014^Romina Gandolfo Castañeda|C45082931^FIGUEROA ARROYO RAFAEL ANGEL|C10708700725^MILAGORCHA S.A.C.|C20601310598^CESAR NINA LOPE|C42205342^ZARINA MELINA URQUIZO YACILA|C45335892^DONAVE SAC|C20606970600^ALIMENTOS PROCESADOS SA|C20100226902^MMS INVERSIONES SRL|C20602149723^AGRONEGOCIACIONES APURIMAC E.I.R.L.|C20601174180^SOLUCIONES NUTRICIONALES EN GANADERIA EIRL|C20565555791^AGRONEGOCIOS DE GUATEMALA, S.A.|CE90497139^PROVEEDORES PARA LA INDUSTRIA PORCINA E.I.R.L.|C20608486039^CENTRO DE ACOPIO & ALIMENTOS EL SALVADOR EIRL|C20500964911^DM AVICOLA S.A.C.|C20495005217^INVERSIONES AMJJ E.I.R.L.|C20608601458^ANIMAL PHARM S.A.|C20601644640^SAN BARTOLITO S.A.C.|C20511632146^AGROCARTUJA SAC|C20602369294^ASOCIACION DE PRODUCTORES DE PORCINOS PIG MASTER - AYARPONGO|C20607300471^MONTELIRIO SAC|C20538424880^AGROVETERINARIA AGROSOLUCION S.R.L.|C20600375360^LUIS ALBERTO DEL CASTILLO HERNANDEZ|C08752609^MARCELO ALFREDO PERCA  SOTO|C30836732^ENRIQUE DAVID BERNALES GRANDA|C9545035^TINKOS CAR E.I.R.L.|C20603067259^HUEVOS Y HUEVOS SAC|C20417595181^COSME GARCILAZO ROBERTO PABLO|C10410257608^A Y F REPRESENTACIONES PERU SAC|C20492729524^Fiorella Mercedes Zapata Parada|C70450725^MINITÜB GMBH|CDE182191255^INNOVA TRANSPORT SAC|C20605989374^EL MOLINO LURIN S.A.C|C20546115446^EDWALDO VILLANUEVA PEDRAZA|C80643585^SANTA GABRIELA S.A.C.|C20498542264^DON POLLO LORETO S.A.C.|C20451060393^AGROPECUARIA SARAVIA S.R.Ltda|C20367775247^ROYAL TROUT SAC|C20605213147^CARRANZA VALLES LIZ AMPARO|C10452099476^BANCO INTERNACIONAL DEL PERU-INTERBANK|C20100053455^P&M GENETICS S.A.C.|C20608960148^CARGOCORP S.A.C.|C20556594512^AQUAPRO PERU S.A.C.|C20607987662^FERNANDEZ PEREZ WALTER|E43108063^LLAQUE CUADROS MARIANA|E46339723^SOL GENETICA E.I.R.L|C20608985094^Corporación Avicola Cristhian Sac|C20604998973^MULTISERVICIOS SAUL ANTONIO E.I.R.L|C20601664497^SERVICIOS EMPRESARIALES HERMANOS ALOR S.A.C|C20571550513^RAMIREZ AGUILAR LILIANA ISAURA|C80288435^INTEROC S.A.|C20514184331^PARIONA HERNANDEZ PIERRE|C74229101^ROMERO CALDAS ROY EMERSON|C45555097^MARCOS WILLIAMS POMA AGUILA|C43161288^YAGUAR PERU GROUP SRL|C20608100432^AVICOLA LAS PIEDRITAS SOCIEDAD ANONIMA CERRADA|C20609301121^GRANJA MARCO ANTONIO EIRL|C20178182529^MATADERO FRIGORIFICO INDUSTRIAL OXAPAMPA S.A.|C20486024284^MAR ANDINO PERU S.A.C.|C20553621659^PERUVIAN ANDEAN TROUT S.A.C.|C20568513216^DICAPNA CATO S.A.C|C20604249202^FM AQUASUR E.I.R.L.|C20604064211^LA GRANJA SERVICIOS VETERINARIOS E.I.R.L.|C20455924724^COMPANIA AGRICOLA GANADERA PUCALLPA S.A|C20351400341^ALIMENCORP SAC|C20557543571^AVICOLA DON QUIJOTE EIRL|C20600678397^FUNDO DON QUIJOTE E.I.R.L.|C20497811211^FARMACIA VETERINARIA EL ESTABLO S.A.C.|C20571474159^RED AGROVETERINARIA SOCIEDAD ANONIMA CERRADA|C20608203231^AQUACENTRO PERU S.A.C.|C20609358221^AQP MILK S.A.C.|C20434894884^BIOGENESIS PERU E.I.R.L.|C20498472622^PRODUCTOS ORGÁNICOS LADORADA S.A.C.|C20602286267^ACUACULTURA Y PESCA S.A.C|C20136740351^ROSA YSABEL PEREZ MARTINA|C08449929^GELVONIO SABRERA ALFREDO ISAAC|C10445336152^AGRO ESTABLO SAN MARTIN E.I.R.L.|C20456027700^CORIAL AREQUIPA E.I.R.L.|C20559152456^FUNDO MONTECRUZ E.I.R.L.|C20498459952^PURISELVA S.A.C.|C20542299763^SACO SHIPPING S.A.C.|C20517966089^GERARDO MENDOZA ORTIZ|C70038087^LANGOSTINERA LA BOCANA S.A.C.|C20324203118^PRODUCTOS LACTEOS DEL NORTE SAC|C20440465049^INVERSIONES Y NEGOCIACIONES PLUMIFERO E.I.R.L.|C20600272200^PROPESCO SAN MARTIN E.I.R.L.|C20600856261^LAIVE S.A.|C20100095450^ESTABLO SAN JOSE SAC|C20481382093^KIME E.I.R.L.|C20479456667^PROAQUA PERU S.A.C.|C20603022492^RODOAGRO S.A.C.|C20609650193^DISTRIBUIDORA GARCIA S.A.|C20100197538^ESTABLO FIOMAR E.I.R.L.|C20558737124^PEDRO ELEUTERIO FLORES NARCISO|C45365949^IMPORTACIONES NUTRI SELVA E.I.R.L.|C20609113660^DISTRIBUCIONES E INSUMOS TATIANA E.I.R.L.|C20455478333^ALIMENTO TRUCHA ANDINA PERU S.A.C.|C20604320268^AGROAVÍCOLA ESCALERA S.A.C.|C20608122231^DIPROSUR E.I.R.L.|C20232273985^ACUISOLUTIONS S.A.C.|C20602451900^MARIO WALTER HILARIO REYES|C18142996^GRUPO PECUARIO DEL NORTE S.R.L.|C20480479123^AGROPECUARIA RIO BRAVO HNOS S.A.C.|C20104508023^AGRICOLA PAMPA BAJA S.A.C.|C20411808972^JEHOVA SHALOM SOCIEDAD ANONIMA CERRADA|C20514042897^NEG. AGRI. GANADERA EL NAZARENO S.C.R.L.|C20370382370^ACUICULTURA E INNOVACION VETERINARIA S.A.C.|C20609486300^CORPORACION AGRICOLA VIÑASOL S.A.C.|C20543521401^NOVAFARMA S.A.C.|C20481460159^ORVET S.A.C.|C20561153745^PAREDES ESTRADA TERESA|C10293037669^AGROPECUARIA SAN MIGUEL S.R.L.|C20132292109^ALIMENTOS BALANCEADOS SAN FRANCISCO E.I.R.L.|C20540030562^IMSAVET IMPORTADORA SALUD VETERINARIA EIRL|C20606340525^SERVICIOS OZA S.A.C.|C20608736256^PERUVIAN CORPORATION AQUA ALEVINES SOCIEDAD ANONIMA CERRADA|C20600765095^CASA AGROPECUARIA E&A SOCIEDAD ANONIMA CERRADA|C20603583907^AGRO MACATHON S.A.C.|C20530716431^ANIMAL MARKET PERU S.A.C.|C20605834354^IMPORTACIONES & SERVICIOS GENERALES CERCADO E.I.R.L.|C20609097273^LUZ MARINA CRUZ CHAMPI|C40696137^AGRONEGOCIOS L & S S.A.C.|C20601314674^EMPORIO VIRGEN DE CHAPI S.A.C.|C20481297576^SUMAQ CHASKA S.A.C.|C20602827659^TRINIDAD QUISPE OTTO ELADIO|C07893292^SEA LAB S.A.C.|C20601786738^CORPORACION AGROVETERINARIA DANYEL Y ASOCIADOS S.A.C.|C20393851989^DON POLLO LA LIBERTAD SAC|C20439320126^AVICOLA J.B.SOCIEDAD ANONIMA CERRADA|C20440126341^DISTRIBUCIONES Y ALIMENTOS BALANCEADOS J CARRASCO Y BLANCA LUZ S.A.C.|C20607473235^PAJUELO MEDRANO CYNTHIA DAYANNE|C76880113^ESPRES E.I.R.L.|C20601239699^AVICOLA GANADERA Y SERVICIOS DE SANEAMIENTO AMBIENTAL AGSSA S.A.C.|C20481839565^GRANJA VITOBAMBA S.A.C.|C20609066394^AGROINDUSTRIAS MOLINOS DEL SUR E.I.R.L.|C20601317266^SUMINISTROS AGROVETERINARIOS DEL PERU S.R.L.|C20607023957^ANYDE S.R.L.|C20411082157^NOBIPOR S.A.C.|C20604617830^CORPORACION BROCHA'S S.A.C.|C20604155143^DEMETRIOS CHICKEN S.A.C.|C20494022797^ENMA GUDELIA INFANTE MONTAÑEZ|C10323803345^JOSE MARCOS ROQUE CALDERON|C28112324^NUTRIMENTOS FLORIDA S.A.C.|C20482535047^ACEVEDO GUEVARA DIEGO ALONSO|C10700671297^AGROPECUARIA DOÑA FRANCISCA S.A.C.|C20481361762^CORPORATION AV PRODUCTS S.A.C.|C20603954263^VIKING TROUT E.I.R.L|C20600380924^LACTEA S.A.|C20481231559^GROT DEL PERU SOCIEDAD ANONIMA CERRADA|C20601547687^AGROSEED DEL PERU S.A.C.|C20548284547^AVICOLA ARIANNA EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20608321391^CORPORACION LA CRUZ DEL SUR SOCIEDAD ANONIMA CERRADA|C20603200617^AGROINDUSTRIAS AIB S.A.|C20104420282^MOLISERVICE EL CHOTANO EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20600612671^INVERSIONES D´CAFIO S.A.C.|C20608795988^PEZBIOTEC S.A.C.|C20604409986^DIAMOND ANDEAN TROUT S.A.|C20607730211^ZAMANTHA ZEA ABARCA|C10444550410^GRUPO NUTRY MAX S.A.C.|C20600249411^REPRESENTACIONES ANIMALS PETS E.I.R.L.|C20605256491^ASOCIACION DE GANADEROS MARIA SANTISIMA|C20542080061^PATRICIA KIREY PAREDES CARRASCO|C70004319^DCP INVERSIONES S.A.C.|C20553426791^CRECERDO SAC|C20609653516^CENTRAL AGROPECUARIA EL MOLINO S.A.C.|C20546118461^MANUELA MAXIMINA CABOS VERGARA|C19322302^UNIVERSIDAD NACIONAL AGRARIA LA MOLINA|C20147897406^MONSANTO PERU S.A.|C20376641466^AGROPECUARIA AVILA E.I.R.L.|C20571611326^INDUSTRIA HALLEY E.I.R.LTDA.|C20351316471^AGROPECUARIA CHACHANI S.A.C. EN LIQUIDACION|C20481694907^JUVENAL DAVILA OLIVERA|C27385958^JUAN PABLO SANCHEZ MALPICA|C45221376^ERIKA MONTES RODRIGUEZ|C43931772^NUTRIMAX ICA E.I.R.L.|C20494676304^AGROGANADO LA ABRIL E.I.R.L.|C20558107961^AGROCORPORACIÓN GONTI E.I.R.L.|C20608382187^KUNTUR COMERCIAL EIRL|C20293242551^RICHARD MARTINEZ TABOADA|C46670823^SEMILLAS & GENETICA SOCIEDAD ANONIMA CERRADA|C20604115079^AVICOLA EL PORTAL EIRLTDA|C20396462266^HERBONIS ANIMAL HEALTH GMBH|CE0000000006^AGRO NEGOCIOS J&K E.I.R.L.|C20602955291^AGROINVERSIONES MARIO SOCIEDAD ANONIMA CERRADA|C20542356317^AGROPECUARIA INDUSTRIAL VASQUEZ SAC|C20494181836^CONSORCIO AGROVETERINARIO LAS VIOLETAS S.A.|C20366725874^AGRONEGOCIOS Y SERVICIOS CANBA S.R.L.|C20608504169^AGROPECUARIA RIO S.A.C.|C20607517747^AGROPECUARIA AVIPORC S.A.C.|C20540079227^AGROPECUARIA YOIS S.R.L.|C20440365095^AGROSERVICIOS OLMOS E.I.R.L.|C20602691129^JORGE LUIS ALFARO PERALTA|C40257309^DANIEL CULQUI HUAMAN|C10803018397^SUPERGEN S.A.|C20552543549^GABRIELA ALICIA LUIS ASIS|C48227347^INVERSIONES AVÍCOLAS NUEVOS VIENTOS S.R.L.|C20603131101^SHILICORP S.A.C.|C20601650992^INVERSIONES MESAJU E.I.R.L.|C20495085903^MOLIGRANJEROS S.A.C.|C20461090231^MIS TRES TESOROS E.I.R.L.|C20454626843^GRAU LOGISTICA EXPRESS S.A.|C20600876211^EUSEBIO QUISPE HUANCA|C09224141^MIGUEL ANGEL RODRIGUEZ GUERRA|C10425090297^AQUATIC FISH S.A.C.|C20600956567^FIGUEROA PRODUCTOS VETERINARIOS S.A.C.|C20605676902^CRISTHIAM CRISTOBAL SALDAÑA CHUQUISPUMA|C10769548730^AGROPECUARIA & AVICOLA EL EDEN S.A.C.|C20600689437^BERTHA CARMEN CARDOZA PARI|C46149728^AVICOLA ANDROMEDA E.I.R.L.|C20607414107^CARMEN ROSARIO HUAMANI LLANTOY|C44397911^NEGOCIOS EL MOLINO S.A.C.|C20546114393^AGRONEGOCIOS BEL-TARAPOTO S.A.C.|C20607899089^MARINASOL S.A.|C20513632569^INVERSIONES & ASOCIADOS VILLEGAS S.A.C.|C20608214462^QUISPE ESTRADA RAUL|C10446118248^AGROFISH INGENIEROS SAC|C20607645061^LOJA SAAVEDRA ROMULO DARWIN|C43353564^CONSORCIO AGROPECUARIO ALMIFER S.A.C.|C20606527889^AGROPECUARIA E INDUSTRIAS FAFIO S.A.|C20519666601^CRIADORES TRADING S.A.C.|C20513713569^ALIEM PERU S.A.C.|C20602507433^MATOS FLORES BELKIS BENICIO|C44956221^AGRO INDUSTRIA GLASO E.I.R.L.|C20605643613^GRUPO GLASO S.A.C.|C20605644288^GLOBALVET SAC|C20516343819^EDSON MIGUEL ORDOÑEZ RUMICHE|C46471479^COBB PERU (ANDINA) S.A.C.|C20604400679^MOLINOS Y BALANCEADOS SABINO EIRL|C20606531126^HURTADO FLORES EDWIN JULIAN|C10403021666^FARMACOLOGICOS VETERINARIOS S.A.C.|C20106026883^HURAMA SERVICIOS GENERALES S.A.C.|C20609062089^PRO-PREMIX NUTRICION S.R.L.|C20334218857^PHARMANOVA NUTRICION S.A.C.|C20608205595^BERTILA SOCIEDAD ANONIMA CERRADA|C20573057547^SEABOARD OVERSEAS PERU S.A.|C20255254937^JOSE MARCOS LEVANO SARAVIA|C07412452^PASTRANA ROJAS EDUARDO FABIAN|C70036227^PROPESCO E.I.R.L.|C20572258581^INSUTEC PERU E.I.R.L.|C20566115841^MULTISERVICIOS NUTRICENTRO F&C EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20609400120^AGROPECUARIA DOÑA EDELMIRA S.A.C.|C20609541505^BIOTECDOR S.A.|C0992513659001^CHIHUA DE LA CRUZ WILLY JUNIOR|C71727237^AVICOLA VIRGEN DEL CISNE S.A.C|C20481124981^VIRAZON S A|C20132676004^BARRIOS HUAMANLAZO REBECA|C10224613852^GRUPO EMPRESARIAL CORINA SOCIEDAD ANONIMA CERRADA - G.E. CORINA S.A.C.|C20563732416^AVICOLA LOW PRICE E.I.R.L|C20609553783^AGROINDUSTRIA COMERCIALIZADORA EL MILAGRO SOCIEDAD ANONIMA CERRADA - A.C. EL MILAGRO S.A.C.|C20601614368^ARMANDO MIGUEL LOPEZ ZURITA|C72478400^RICO CERDO F & G S.A.C|C20487627519^COAGROVET E.I.R.L.|C20118383088^AQUINO QUISPE ROBERTO|C10283168749^PROBAC S.A.|C0992319372001^GRUPO MITU S.A.C.|C20605660828^AVICOLA LA YEMITA SAC|C20477585052^PRODUCTOS EL MOLINO S.A.C.|C20556400335^PROVETSUR SOCIEDAD ANONIMA CERRADA|C20514781002^S & J INVERSIONES THALCAR SOCIEDAD ANONIMA CERRADA - THALCAR SAC|C20601173469^AGROINVERSIONES GLAVET EIRL|C20610441573^UNIVERSIDAD NACIONAL MAYOR DE SAN MARCOS|C20148092282^CORPORACION AGROPECUARIA EL PORVENIR S.A.C.|C20600841221^R.H. GLOBAL TRADE E.I.R.L.|C20601723787^TECNOLOGIA E INVERSIONES AGROPECUARIAS SRL|C20131522925^INVERSIONES AVICOLA GENESIS E.I.R.L.|C20560202092^INDUSTRIAS ALIMENTICIAS CUSCO S.A.|C20114759733^AGROPECUARIA NILEVAZ S.R.L.|C20610703241^RWL WATER SOCIEDAD ANONIMA CERRADA - RWL WATER S.A.C.|C20601352959^INVET PERU E.I.R.L.|20601433584^RINTI S A|C20100617332^LOGICCAS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA - LOGICCAS E.I.R.L.|C20556666441^INDUSTRIA ALIMENTARIA TITO SOCIEDAD ANONIMA CERRADA|C20608316788^UMBRELLA BIO E.I.R.L.|C20607349313^MARIA ALEJANDRA OVIEDO SCHWARCK|C0022220995^CLINICA VETERINARIA DR. BLAS E.I.R.L.|C20606192071^JUAN CARLOS RODRIGUEZ PITA|C735276218^RAFAEL TORRES ALABRIN|C16488198^AVICOLA CHILALO E.I.R.L.|C20566403715^ANCHOAS PARACAS E.I.R.L.|C20452551749^GEOSEED SOCIEDAD ANONIMA CERRADA|C20608876392^AVICOLA Y SERVICIOS SAN ANDRES PIURA S.A.C.|C20525805281^AGROPECUARIA AVES DEL CENTRO S.A.C|C20545629772^MARIA DEL PILAR HUAMAN PAUCAR|C41865615^KINGSTORE PERU S.A.C.|C20602537324^SERVICIOS E INSUMOS GAPEVA S.A.C.|C20605465766^AVICOLA PONCE DE LEON E.I.R.L.|C20602551211^INVERSIONES ROL S.A.C.|C20609372380^BHG CORP SOCIEDAD ANONIMA CERRADA - BHG CORP SAC|C20515327321^JULIO CESAR HORNA URIBE|C10068625^LANGOSTINERA TUMBES S.A.C.|C20219178264^CORPORACION INTERANDINA S.A. DESP.ADUAN.|C20421365068^NINA LOPE CESAR|C10422053421^DANY RONALD LAURENTE ZAMORA|C43493546^PATOS HIDALGO E.I.R.L.|C20605923331^ALIMENTOS BALANCEADOS HIDALGO E.I.R.L.|C20608984730^COMERCIAL DISTRIBUIDORA GRANDEZ S.A.C.|C20606237201^CENTENO FLORES MILAGROS|C10773461274^INVERSIONES AVIPECUARIAS S.A.|C20523859464^JEFF LEE CORPORATION E.I.R.L.|C20609701693^HIGIENIZO TECNICAS REUNIDAS S.L.U|CB84838820^RAYO EVANGELISTA NIKER FASAVE|C10463968972^PETRAMAS S.A.C.|C20297566866^MEGASUIND S.A.C.|C20555008946^ESGRIMA S.A.C.|C20494959195^KATERINE ARACELY COSSIOS PAHUACHO|C75753528^NUTRI QUALITY S.A.C.-NQ S.A.C.|C20514945633^MENDOZA CHUQUILIN CESAR RAMON|C45044545^EL GRANJERITO PEKIN E.I.R.L.|C20610596828^AVIAGEN PERU S.A.C.|C20604602115^APAZA VALERIANO ANDERSON BLADIMIR|C10771472236^EL CAMPERITO EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20480649657^QUISPE APAZA CLAUDIA ROXANA|C10475352471^E & J NORTGLOBAL E.I.R.L.|C20610232184^PESQUERA LA PEQUEÑA ROMA E.I.R.L.|C20542673801^CORPORACION CASUL S.A.C.|C20609023024^PACIFIC DEEP FROZEN S.A.|C20298256968^ALL GENETICS SOCIEDAD ANONIMA CERRADA - ALL GEN S.A.C.|C20600861965^VECOSUR S.A.C.|C20601470161^ALIFEED S.A.C.|C20602808654^CAMPOS PALOMINO VICTOR JAIME|C10406411538^TRUCHON PERU COMPANY SOCIEDAD ANONIMA CERRADA|C20606327588^EDGAR JAVIER MUÑOZ|C46269984^PROYECTO INTEGRAL DE SOLUCIONES GENERALES S.A.C.|C20608763148^CASTILLO ALVAREZ ELIZABETH VICTORIA|C1104862774001^ACUANDES S.A.C.|C20601204208^VERONICA DIANA NAVARRO RODRIGUEZ|C45165127^POCHTECA CHILE S.A|C96959480-3^GRANJA MONTSERRAT E.I.R.L.|C20494311047^SILVER FLORES VILLAR|C20728076^COMERCIAL TATTY N.C.V. E.I.R.L.|C20482728945^GRANJA AVICOLA LA YEMA S.A.C.|C20482469079^FUCALI DEL SUR S.R.L.|C20605325956^PISCICENTRO LOS RETOÑOS E.I.R.L.|C20568176546^INVERSIONES AVICOLA SANTANA E.I.R.L.|C20540745731^EDGARD VASQUEZ DAZA|C08146508^AGRIVET E INVERSIONES S.A.C.|C20600835506^JUAN CARLOS MASHCO HUERTA|C42922541^MOLINOS ALISANS S.A.C.|C20611656689^QUISPE PALACIOS CARLOS ENRIQUE|C71245476^CORPORACION LA CANTUTA S.A.C.|C20611286105^PRODUCCIONES AVICOLA TACNA EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20532452695^CORI ANCA S.A.C.|C20600228111^AGRICOLA GANADERA DON ENRICO SOCIEDAD ANONIMA CERRADA|C20609094894^AVISUR NUTRICION & BALANCEADOS E.I.R.L.|C20607727741^NUVEL S.A.C.|C20507855050^INTEGRA TORRES E.I.R.L.|C20609548054^PORCINOR S.A.C.|C20611774819^SERLIMUT S.A.C.|C20340144938^AMERICAN FOOD INDUSTRIES SOCIEDAD ANÓNIMA CERRADA|C20606334878^CASA DEL BUEN CRIADOR E.I.R.L.|C20498412212^INVERSIONES Y CONTRATISTAS ROMERO MARAVI E.I.R.L.|C20568361441^HUVEPHARMA N.V.|CBE087528306^PESQUERA HAYDUK S.A.|C20136165667^INTEGRACION LUZ SOCIEDAD COMERCIAL DE REPONSABILIDAD LIMITADA|C20193112791^NOVAGRI S.A.|C99505340-5^MISTER DUCK S.A.C.|C20608128868^MISKY CUY CISNEROS E.I.R.L.|C20608909126^MOLIGRAN HURTADO E.I.R.L.|C20603577711^DMJ SOLUCIONES EMPRESARIALES S.A.C.|C20604312389^HUAMAN ROMANI MARINA|C10060332679^MQ HERMANOS SOCIEDAD ANONIMA CERRADA|C20507375198^FARGOLINE SOCIEDAD ANONIMA - FARGOLINE S.A.|C20101520898^VETERQUIMICA PERU S.A.C.|C20432940161 -^DEMAREX E.I.R.L.|C20611746441^BLANCO TORRES PAOLA GRETTA|C10445793057^OCADRI EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA - OCADRI E.I.R.L.|C20604026254^VETERQUIMICA S.A.|C82.524.300-3^TORNERO GUZMAN LUIGUI MARTIN|C46258143^MENDOZA PINGUS YERSON|C25866211^DON SANTIAGO INVERSIONES Y SERVICIOS SOCIEDAD ANONIMA CERRADA|C20607241695^PURIMETRO EIRL.|C20410044448^RODRIGUEZ YUFRA LUZ MARIA|C40612014^AGROPECUARIA LA CHACRA S.R.L.|C20528195475^FRIO ELECTRIC PERU E.I.R.L.|C20601141206^MULTIVET S.R.L.|C20110169109^ASOCIACION DE PRODUCTORES AGROPECUARIOS Y AGROINDUSTRIALES LA ESPERANZA DE CASA BLANCA|C20610101861^MIJAHUANCA VELLASMIN GRIMALDO|C27723042^SANCHEZ ROJAS DICK NICXZON|C10460532782^A.T.C. COMERCIAL S.A.C.|C20449226144^DACH INVERSIONES S.A.C.|C20610195581^URTEAGA RAYGADA RAUL MARTIN|C07885579^FUNDO SANTA MARIA ZEGARRA S.A.C.|C20609298007^INVESTIGACION APLICADA PERU S.A.C|C20503773423^INSEBO S.A.C.|C20611704055^MENDOZA RIVERA OSCAR IVAN|C07495135^MEDINA GIRIBALDI ALDO FERNANDO|C21860466^DISTRIBUIDORA JEHOVA SHAMMAH E.I.R.L.|C20606548011^SULCA UCHARIMA LUCIANO|C10102104418^AVIPECUARIA VAJU E.I.R.L.|C20602148948^LOS 7 POLLITOS INVERSIONES EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20601651336^ALONZO NEYRA RUFINO JAVIER|C10100211^PORCICULTURA WORLD E.I.R.L|C20608102397^FUNDO PECUARIA RICO PIGS S.A.C.|C20607608785^CORPORACION NUTRISAT S.A.C.|C20611459310^AGROINDUSTRIAS ALIMENTARIAS VETERINARIAS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20609502054^CONSULTORA LAAR E.I.R.L.|C20602973850^SMART CONTACT SOCIEDAD ANONIMA CERRADA - SMART CONTACT S.A.C|C20565330447^VILCAHUAMAN DOLORIER JOSE|C20001923^ANDRADE NIÑO DE GUZMAN NEIL MICHAEL|C10076189779^HUAMANI CONSA YOLANDA|C10443500842^AGUILA PECUARIA DEL PERU E.I.R.L.|C20393713322^LANGOSTINERA VICTORIA SRL|C20136247396^CHACON RUIZ LUIS AUGUSTO|C10159826673^PINEDO CARRION CLAUDIA|C46676373^MULTISERVICIOS ALWINEF EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20604725861^INVERSIONES MELSICRUZ S.A.C.|C20607382477^INVERSIONES MOLIPESA E.I.R.L.|C20455778485^NUTRIMENTOS JANA S.A.C.|C20494647622^JEPESA S.A.C.|C20510984553^EMPRESA J & B SOCIEDAD ANONIMA CERRADA|C20606693673^ZURITA CAMIZAN ANGELA|C45667240^SEÑA SONCO RAFAEL|C29668169^COMERCIALIZADORA G & B DEL SUR E.I.R.L|C20604994897^ACUICOLA DEL CENTRO S.A.C.|C20602029175^QUISPE BUITRON JERRY|C47102457^AGRIPEC S.A.C.|C20610621121^ARU LOPEZ LUIS ALBERTO|C40338205^AVICARU S.A.C.|C20608049810^INSUMOS Y FORRAJES VIRGEN DE FATIMA S.A.C.|C20571510724^INVERSIONES AGROINDUSTRIALES Y ALIMENTARIAS DEL SUR S.A.C.|C20609622572^JESUS TOLEDO JUANA ALICIA|C44620754^NUTRELAMB EIRL|C20612022497^CARRANZA RAMIREZ SAIRA LUISA|C72084780^PINO FUENTES WALTER|C10409564335^ALIVIRA SAUDE ANIMAL LTDA|C603711000165^DON BOTA S.A.C.|C20608000004^PIGS SAUL ANTONIO E.I.R.L.|C20612331201^PUBLIRUTS 78 SAC|C20555772859^ALTERNATIVO EIRL|C20608963864^NUPROXA COLOMBIA SAS|C900187365-0^CORPORACION DE PRODUCTOS AVICOLAS DEL SUR SOCIEDAD ANONIMA CERRADA|C20604283788^SALAS CARBAJAL LUIS ALBERTO|C10255019622^PATRICIO PEREZ CARLOS HUMBERTO|C10086789146^AGROINDUSTRIAS LA DESPENSA EIRL|C20539225546^FELIX ESPIRITU NELSON FAUSTO|C10408840819^AVICOLA MONGRI EIRL|C20600483006^MARANDES EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20448743692^GRANJA INTERNACIONAL EIRL|C20610713859^BIOMED PERU E.I.R.L.|C20559659861^VILLA NATURA PERU S.A.C|C20515696017^AGROSUR S Y G S.A.C.|C20559224627^VARGAS AYAMBO MARIBEL|C10487904517^AGROVETERINARIA LINARES E.I.R.L.|C20609584956^AGROINDUSTRIAS CALLPA SAC|C20522222144^YEMA DE ORO S.R.L.|C20315049611^CRISPIN MARTIN FIDENCIO FRANCISCO|C10159967838^AGRO ACUICULA VILMITA E.I.R.L.|C20230731374^CALLIZO AROMAS SOCIEDAD ANONIMA CERRADA - CALLIZO AROMAS S.A.C.|C20505964862^AGROPECUARIA CARPENA EIRL|C20561208400^AGROINDUSTRIAL CORAZON HUANCA EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20608049020^PEÑA DE LA CRUZ JORDAN JOEL|C48263810^GRUPO MI GRANJITA S.A.C.|C20608805240^TODO CAMPO PERU S.A.C|C20392971590^NUTRI TROUT S.A.C.|C20612458261^JALIRI MURILLO VILMA|C43114128^AVICOLA EL BUEN PASTOR E.I.R.L.|C20601087481^GONZALES RODRIGUEZ SAMUEL|C71235278^LAU GROUP EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20611704501^DIVETCA MAJES E.I.R.L.|C20613267329^PURISELVA MOYOBAMBA S.A.C.|C20601357471^POULTRY & INDUSTRIAL SUPPLIERS PERU E.I.R.L.|C20505571119^FRANCO GUEVARA JOSE FRANCISCO|C10077475902^CORPORACIÓN AQUA CHALLWAS S.A.C.S|C20612766054^ESPINOZA HUAMAN FREDY ANIBAL|C10310381166^AGROAVICOLA & ALIMENTOS SILVA S.A.C.|C20612681369^CORPORACION AVICOLA L & B EIRL|C20611049537^ASHLEY MARCIO PEREZ VARGAS|C72528127^AVICOLA NAJAZ E.I.R.L.|C20609373076^GRANJA AVICOLA JOAQUIN E.I.R.L.|C20602983286^MOLINO MESIAS & FLORES E.I.R.L.|C20606864567^INMOBILIARIA & CONSTRUCTORA GRUPO ARTEAGA S.A.C.|C20612551741^LUZ PILAR GORDILLO DAVILA|C09411751^AGROPECUARIA AVICOLA MI LUZ E.I.R.L.|C20605756892^AVICOLA MI LUZ E.I.R.L|C20559680045^HELIOPOTASSE LATAM SOCIEDAD ANONIMA CERRADA|C20609199718^INVERSIONES AVICOLA ROJITAS E.I.R.L.|20609491672^LUZBER SAC|C20525523463^AVICOLA DAVINIR EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20612411043^AGROINDUSTRIAS COSME S.A.C.|C20612705659^AVICOLA MONABEL S.A.C.|C20540729027^AVICOLA TAIMOL E.I.R.L.|C20607635120^COSTAMAR SUDAMERICA S.A.C.|C20613297325^LA POSITIVA VIDA SEGUROSY REASEGUROS S.A.|C20454073143^BELLIDO RODRIGUEZ DAVID|C70337403^DISTRIBUIDORA DON PELLET E.I.R.L.|C20605194738^CONSORCIO LA ALQUERIA S.A.C.|C20608408984^SALDAÑA CHUQUISPUMA JOSE MIGUEL|C48281416^CORPORACION MASERCOME EIRL|C20608703595^PIGS DEL SUR S.A.C.|C20613517562^AVICOLA HUEVOS PERÚ R&M S.A.C.|C20612166740^GRUPO EMPRESARIAL CACENI E.I.R.L.|C20612886327^AGROINDUSTRIA AGROSEL S.R.L.|C20603877994^MENDOZA VALENZUELA JACQUELINE|C41979109^COMERCIALIZADORA LOZANO E.I.R.L.|C20608901320^JUAN CARLOS MEJIA HUARCAYA|C70200191^REPRESENTACIONES EL BUEN SEMBRADOR S.A.C.|C20603148518^TAIPE COLQUEPISCO ROSMERY|C70566733^SARMIENTO MALDONADO YURI NEIL|C10424331011^LABORATORIO VETERINARIO Y SUMINISTROS ORION S.A.C.|C20612647161^CORPORACION J. S.A.C.|C20452734665^INVERSIONES SVAN PERU E.I.R.L.|C20609521369^HUVEPHARMA EOOD|CBG203631745^CONSORCIO GLM S.A.C.|C20517160432^ANVIR CORPORATION SOCIEDAD ANÓNIMA CERRADA|C20611007109^MOLINOS SAN GABRIEL E.I.R.L.|C20610900250^NUTRICION COMPLETA AB E.I.R.L.|C20613065092^MOLINO MANUEL MONGRUT S.A.C.|C20608989715^CORPORACION GRAMOBIER SAC|C20506691908^PORFIRIO WILBERT DIAZ QUISPITUPA|C10483143^SAN EFISIO S.A.C.|C20439837846^ROBERTO TAIPE SOTO|C09768410^TERRAVET E.I.R.L.|C20606055243^ALIMENTOS BALANCEADOS HUACACHINA S.A.C.|C20611941928^RUIZ VALLES ELMER CHRISTIAAN|C10425212643^LABORATORIO QUIMICO VETERINARIO LABET S.A.C. - LABET S.A.C.|C20521698013^RAMOS PAICO LITO IVAN|C10426667393^GRANJA SANTA SARITA E.I.R.LTDA.|C20176902486^MAZA BAUSTISTA EDGAR JAVIER|C76678354^GUEVARA MUNIVE JUAN|C10092851066^CHAMPI CCOPA BERNARDINA BASILIA|C10249954701^CORPORACION LC DISTRIBUCIONES S.A.C.|C20609871181^HUAMAN TAPIA EDILBERTO|C10452895183^ITALCOL DEL PERU S.A.C.|C20609880652^MARAVI ALVARADO MELISSA LISBETH|C10477965348^GRANJA LAS ISLAS E.I.R.L.|C20607097411^SERVICIOS DE CRIANZA LOS ALISOS S.A.C.|C20612155977^CHARITO ORTIZ HILASACA|C10088558^AGROPECUARIA NUTRI MIX S.A.C.|C20517662021^AGRO INVERSIONES BEAS FLORIAN E.I.R.L.|C20491353865^NEGOCIOS AGROINDUSTRIALES LOS FERROLES SOCIEDAD ANONIMA CERRADA|C20510731779^AGROINDUSTRIAS Y SERVICIOS VARGAS E.I.R.L.|C20607541052^GONZALES GRANADOS ADRIANA ZAYURI|C75119258^AGROPECUARIA EL FENIX E.I.R.L.|C20610879277^INVERSIONES ANZULYMAR S.R.L.|C20600592867^VASQUEZ MONTEMAYOR ABELARDO MARTIN|C09882971^GRUPO YET S.A.C.|C20613941968^CORDLAND SOCIEDAD ANONIMA CERRADA - CORDLAND S.A.C.|C20573800711^INVERSIONES Y COMERCIALIZADORA SANTA ROSA S.A.C.|C20608735110^AGRO COMERCIALIZADORA AP E.I.R.L.|C20572267149^AGROPECUARIA APURIMAC JJ E.I.R.L|C20609413388^D'ALGA S.A.C.|C20605344292^GRANJA AVICOLA REC S.A.C.|C20534406496^MHS FERRETERIA Y SERVICIOS INDUSTRIALES S.A.C.|C20565919076^MISKI RUNTU E.I.R.L.|C20606171464^BALANCEADOS MORI EIRL|C20610473645^MULTISERVICIOS KERYO S.A.C.|C20607875350^AGRO INVERSIONES VALHALLA PERU E.I.R.L.|C20610862811^HUAYRA E.I.R.L.|C20454761465^SERVICIOS INTEGRALES LA MAR S.A.C.|C20574787051^BIOPEC PERU SOCIEDAD ANONIMA CERRADA|C20609243571^AVICOLA LA PAMPA EL RANCHO DEL BUEN PASTOR E.I.R.L.|C20606264918^YOSHIZATO ANDAHUA RAQUEL SUSY|C10157479950^PHARMAVET MARKET E.I.R.L.|C20606465921^MOLITALIA S.A|C20100035121^GRANJA SANTA MARCELA S.R.L.|C20275928721^COMERCIALIZADORA VIOLETA E.I.R.L.|C20613545264^AVIKONOR S.A.C.|C20481747521^CHACCA ROQUE EDISON JAVIER|C75000337^GRANJA ESPERANZA AGROPECUARIA E.I.R.L.|C20612739626^HUAYNALAYA SOTO JUAN CARLOS|C10479064^AGROPECUARIA ADAM MOREYRA S.A.C.|C20612277975^COORPORACION LA GRANJA SOCIEDAD ANONIMA CERRADA|C20480773668^PROFEED S.A.C.|C20602774733^CORPORACION DOMAK S.A.C|C20609415097^EDZOGO S.A.C.|C20614341832^INVETMAS S.A.S.|C0190506169001^CARLOS ALFONSO AMORETTI ORTIZ|C21801072^SEABOARD INDUSTRIAL S.A.C.|C20614322293^ALEXIS CHAVEZ VELA|C15727380^PATENT CO.|CPIB103629419^WALTER TAFUR TAFUR|C43046189^AGROPECUARIA VALERIO E.I.R.L.|C20534639245^GIRASOLES S.A.C.|C20409753818^PIGS CALIFORNIA DEL SUR E.I.R.L.|C20612934763^AURIS PARIONA HONORATO PEDRO|C21836704^AURIS QUISPE MAYRA ELIANA|C44734180^QIPO E.I.R.L.|C20607811670^NIETO CADILLO WENDY|C74920464^DIEGO SAMIR CORREA IPANAQUE|C75831884^DANNY MENDOZA PRODUCCIONES S.A.C.|C20550789800^CORPORACION INDUSTRIAL SAN MARTIN S.A.C.|C20614788951^JESUS FRANCISCO HORNA SALDAÑA|C10738873705^LOPEZ ALIMENTOS BALANCEADOS EIRL|C20610677305^INGENIERIA NUTRICION Y NUCLEOS S.A.C.|C20613771990^PRODUCTORA AVICOLA DEL SUR S.A.C.|C20540717959^JUGABI S.A.C.|C20603884036^AVINELLY S.A.C.|C20607423491^AVICOLA Y NEGOCIOS GENERALES SAN ANTONIO EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20603086784^VALTENA S.A.C.|C20603193572^FUNDO AGRICOLA CASA BLANCA E.I.R.L.|C20600601386^AGRONEGOCIOS EL PROGRESO S.A.C.|C20545035392^PORCICOLA PAPA PIG S.A.C.|C20606943815^SHIMAKU SCIENTIFIC S.A.C.|C20525082742^CICLO DE VIDA AVICOLA S.A.C.|C20614737493^ARFISH S.A.C|C20606941511^PORCIVET E.I.R.L|C20610013113^RECICLA LURIN S.A.C.|C20601315191^JYGA CONCEPT INC|C139136980^NUTRI ANIMAL FOOD S.A.C.|C20613337564^DIAZ QUISPITUPA WALTER ALFREDO|C09579220^CONSORCIO PECUARIO LARAN S.A.C.|C20534771607^AVICOLA DEL VALLE NORTE RENZOCOR E.I.R.L.|C20612336416^GRANJA AVICOLA HUEVOS DEL NORTE S.A.C.|C20612350869^GRANJA AVICOLA YEMA PERFECTA E.I.R.L.|C20610055380^GRANJAS AVICOLAS EL POLLERON S.A.C.|C20612349682^PROMUNE S.A.C|C20556804932^NEGOCIACIONES PECUARIAS MASTER PIG S.A.C.|C20612808938^NAVARRO ARHUATA JULIO HERNAN|C41724031^MANRIQUE DE LA COLINA EDGAR ROBERTO|C10238509047^AGROMAN SRL|C20427407722^SUCESIÓN INDIVISA FLORIAN LESCANO MODESTO MARCELINO|C10188333597^AVICOLA DOS LEONES S.A.C.|C20609209136^PERUVIAN PET INDUSTRIES S.A.C.|C20614243555^GRANJAS DON SANTIAGO S.A.C.|C20612445231^INVERSIONES NOLBERTO CASTILLO SAC|C20613366092^M & C INVERSIONES TACNA SOCIEDAD ANONIMA CERRADA - M & C INVERTAC S.A.C.|C20603863951^DON VALENTIN DEL VALLE S.A.C.|C20605062670^INTERNATIONAL LOGISTIC GROUP PERU S.A.C.|C20448822304^SUMINISTROS AVICOLAS S.A.C.|C20426138868^INTEGRACION LDCH SOCIEDAD ANONIMA CERRADA - ILDCH S.A.C.|C20558566567^STOBELPA E.I.R.L.|C20607393908^NUTRI ORIENTE HALLEY E.I.R.L.|C20615575080^NATURAL AGRO CORPORATION S.A.C.|C20490481576^DELVADI E.I.R.L.|C20510824432^WEILL DIAZ PAUL YORDANO MARTIN|C10461621321^EXAFAN S.A.U.|CESA50182203^MARQUEZ CHAVEZ MANUEL DE JESUS|C47760108^AR TROUT S.A.C|C20614500221^AGROFEED SOLUCIONES AGROINDUSTRIALES S.A.S.|C 900.44820-6^GRANJA DOÑA ALEJANDRINA E.I.R.L.|C20602475086^PHARTEC S.A.C.|C20503496161^A Z CHEMICAL EIRL|C20303179047^PESQUERA PROVASTRU, EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA|C20602087159`;
+
     // ==============================================================
     // LÓGICA DE LA APLICACIÓN
     // ==============================================================
-    const catalogo = rawDataProductos.split('^').map(item => {
-      const [desc, precio] = item.split('|');
-      return { desc: desc, precio: parseFloat(precio) || 0 };
-    });
+    
+    let catalogo = [];
+    try {
+      if (typeof rawDataProductos === 'string' && rawDataProductos.includes('|')) {
+        catalogo = rawDataProductos.split('^').map(item => {
+          const [desc, precio] = item.split('|');
+          return { desc: desc, precio: parseFloat(precio) || 0 };
+        });
+      }
+    } catch(e) { console.error("Error al cargar productos", e); }
 
-    const catalogoClientes = rawDataClientes.split('^').map(item => {
-      const [nombre, ruc] = item.split('|');
-      return { nombre: nombre, ruc: ruc };
-    });
+    let catalogoClientes = [];
+    try {
+      if (typeof rawDataClientes === 'string' && rawDataClientes.includes('|')) {
+        catalogoClientes = rawDataClientes.split('^').map(item => {
+          const [nombre, ruc] = item.split('|');
+          return { nombre: nombre, ruc: ruc };
+        });
+      }
+    } catch(e) { console.error("Error al cargar clientes", e); }
 
     let filaId = 0;
 
@@ -1009,15 +418,15 @@
     function actualizarCorrelativoUI() {
       const vendedor = localStorage.getItem('solvet_vendedor') || '';
       const iniciales = obtenerIniciales(vendedor);
-
+      
       const ahora = new Date();
       const yy = String(ahora.getFullYear()).slice(-2);
       const mm = String(ahora.getMonth() + 1).padStart(2, '0');
       const dd = String(ahora.getDate()).padStart(2, '0');
       const hh = String(ahora.getHours()).padStart(2, '0');
       const min = String(ahora.getMinutes()).padStart(2, '0');
-
-      // Formato: RM-260505-1019
+      
+      // Formato seguro de colisiones: RM-260505-1019
       const correlativo = `${iniciales}-${yy}${mm}${dd}-${hh}${min}`;
       document.getElementById('numero-cotizacion').textContent = correlativo;
     }
@@ -1173,10 +582,10 @@
       document.getElementById('cliente').value = '';
       document.getElementById('ruc').value = '';
       document.getElementById('comentarios').value = '';
-
+      
       // Actualizamos el código único al limpiar
       actualizarCorrelativoUI();
-
+      
       window.scrollTo(0, 0);
     }
 
@@ -1187,7 +596,7 @@
       if (!com.value.trim()) {
         bloque.style.display = 'none';
       } else {
-        com.style.border = 'none';
+        com.style.border = 'none'; 
       }
     });
     window.addEventListener('afterprint', () => {

@@ -55,7 +55,7 @@
     .btn-ingresar{background:var(--verde);color:#fff;border:none;padding:11px 20px;width:100%;border-radius:5px;font-weight:700;font-size:13px;cursor:pointer;transition:background .2s;}
     .btn-ingresar:hover{background:var(--verde-oscuro);}
 
-    /* ── HOJA ── */
+    /* ── HOJA UNIFICADA ── */
     .hoja{max-width:900px;margin:0 auto;background:var(--blanco);box-shadow:0 4px 24px rgba(0,0,0,.15);border-radius:2px;border-top:4px solid var(--verde);}
 
     /* ── CABECERA ── */
@@ -74,16 +74,11 @@
     .meta{display:grid;grid-template-columns:repeat(6,1fr);align-items:stretch;}
     .meta-campo{padding:9px 12px 9px 0;border-right:1px solid var(--borde); position:relative;}
     
-    /* Fila 1: Cliente y RUC */
     .meta-campo:nth-child(1){grid-column:span 4;padding-left:0;border-bottom:1px solid var(--borde);}
     .meta-campo:nth-child(2){grid-column:span 2;padding-right:0;border-right:none;border-bottom:1px solid var(--borde);padding-left:12px;}
-    
-    /* Fila 2: Nro Contacto, Dirección, Distrito */
     .meta-campo:nth-child(3){grid-column:span 2;padding-left:0;border-bottom:1px solid var(--borde);}
     .meta-campo:nth-child(4){grid-column:span 2;padding-left:12px;padding-right:12px;border-bottom:1px solid var(--borde);}
     .meta-campo:nth-child(5){grid-column:span 2;padding-right:0;border-right:none;border-bottom:1px solid var(--borde);padding-left:12px;}
-    
-    /* Fila 3: Fechas y Ejecutivo */
     .meta-campo:nth-child(6){grid-column:span 2;padding-left:0;}
     .meta-campo:nth-child(7){grid-column:span 2;padding-left:12px;padding-right:12px;}
     .meta-campo:nth-child(8){grid-column:span 2;padding-right:0;border-right:none;padding-left:12px;}
@@ -94,13 +89,13 @@
     .meta-input:focus{border-bottom-color:var(--verde);}
     .meta-input::placeholder{font-weight:400;color:var(--texto-claro);opacity:0.6;}
 
-    /* AUTOCOMPLETE */
+    /* AUTOCOMPLETE Y Z-INDEX FIX */
     .autocomplete { position: relative; width: 100%; }
-    .autocomplete-list { position: absolute; top: 100%; left: 0; right: 0; background: var(--blanco); border: 1px solid var(--verde); border-radius: 5px; z-index: 9999; max-height: 220px; overflow-y: auto; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25); margin-top: 2px; }
-    .autocomplete-item { padding: 8px 12px; border-bottom: 1px solid var(--gris-fondo); font-size: 11px; cursor: pointer; line-height: 1.4; transition: background 0.15s; color: var(--texto); }
+    .autocomplete-list { position: absolute; top: 100%; left: 0; right: 0; background: #ffffff; border: 1px solid var(--verde); border-radius: 5px; z-index: 99999; max-height: 220px; overflow-y: auto; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4); margin-top: 2px; }
+    .autocomplete-item { padding: 8px 12px; border-bottom: 1px solid var(--gris-fondo); font-size: 11px; cursor: pointer; line-height: 1.4; transition: background 0.15s; color: #1a1a2e; }
     .autocomplete-item:last-child { border-bottom: none; }
-    .autocomplete-item:hover { background: var(--verde-claro); }
-    .autocomplete-item strong { display: block; color: var(--texto); font-weight: 700; font-size: 11.5px; }
+    .autocomplete-item:hover { background: #e8f5ee; }
+    .autocomplete-item strong { display: block; color: #1a1a2e; font-weight: 700; font-size: 11.5px; }
 
     /* ── ELEMENTOS DE REEMPLAZO PARA IMPRESIÓN CORREGIDA ── */
     .print-value, .print-value-table { display: none; }
@@ -119,8 +114,11 @@
     
     tbody tr{border-bottom:1px solid var(--borde);transition:background .15s;}
     tbody tr:hover{background:var(--gris-fondo);}
+    
+    /* FIX CRÍTICO: La fila enfocada se eleva por encima de todo el resto de la tabla */
+    tbody tr:focus-within { position: relative; z-index: 999; }
+    
     td{padding:4px 4px;vertical-align:middle;}
-
     .td-num { text-align: center; font-size: 10px; color: var(--texto-claro); font-weight: 700; width: 22px; padding-right: 2px; }
     
     .td-desc-input { width: 100%; border: 1px solid transparent; padding: 4px 6px; font-size: 11px; font-family: 'Lato'; resize: none; overflow: hidden; outline: none; transition: border 0.2s, background 0.2s; background: transparent; color: var(--texto); font-weight: 400; border-radius: 3px; line-height: 1.35; }
@@ -165,9 +163,8 @@
     .totales-soles .t-label { color: var(--verde-oscuro); font-size: 10.5px; font-weight: 700; }
     .totales-soles .t-valor { color: var(--verde-oscuro); font-weight: 900; font-size: 14px; }
 
-    /* ── INFO FINAL (segunda página) ── */
-    .segunda-pagina{background:var(--blanco);}
-    .info-final-wrap{border-top:3px solid var(--verde);padding:22px 28px;}
+    /* ── INFO FINAL (Integrada a la misma hoja) ── */
+    .info-final-wrap{border-top:3px solid var(--verde);padding:22px 28px; background:var(--blanco);}
     .fila-condiciones{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--borde);}
     .seccion-titulo{font-size:8.5px;color:var(--verde);text-transform:uppercase;font-weight:900;margin-bottom:10px;letter-spacing:1.5px;display:flex;align-items:center;gap:7px;}
     .seccion-titulo-icon{width:16px;height:16px;border-radius:50%;background:var(--verde);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -208,7 +205,7 @@
     .btn-tema { background: transparent; border: 1.5px solid var(--borde); border-radius: 5px; width: 40px; justify-content: center; padding: 0; color: var(--texto-claro); }
     .btn-tema:hover { background: var(--gris-fondo); color: var(--texto); }
 
-    /* ── PRINT (CON TRUCO PARA QUITAR URL) ── */
+    /* ── PRINT (DINÁMICO Y SIN URL) ── */
     @media print {
       body[data-theme="dark"] {
         --texto: #1a1a2e !important;
@@ -228,16 +225,21 @@
       html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       body { background: #fff !important; padding: 0; font-size: 9pt; }
       
-      .hoja { box-shadow: none; border-radius: 0; max-width: 100%; border-top: 3px solid var(--verde); margin: 10mm 12mm 0mm 12mm !important; }
-      .segunda-pagina { page-break-before: always; break-before: page; padding: 10mm 12mm 12mm 12mm !important; }
+      /* La hoja fluye naturalmente sin page-breaks obligatorios */
+      .hoja { box-shadow: none; border-radius: 0; max-width: 100%; border-top: 3px solid var(--verde); margin: 10mm 12mm 10mm 12mm !important; }
       
+      /* Protegemos los bloques para que no se corten a la mitad entre páginas */
+      .fila-condiciones { break-inside: avoid; page-break-inside: avoid; }
+      .bancos-stack { break-inside: avoid; page-break-inside: avoid; }
+      .banco-bloque { break-inside: avoid; page-break-inside: avoid; }
+      .totales-bloque { break-inside: avoid; page-break-inside: avoid; }
+      tr { break-inside: avoid; page-break-inside: avoid; }
+
       .barra-controles, .btn-agregar-inline, .btn-eliminar, .btn-step, .modal-overlay, .no-print { display: none !important; }
       
-      /* Ocultar inputs nativos para reemplazarlos por los spans de impresión */
       .meta-input, .td-desc-input { display: none !important; }
       .tc-input, .input-cant, .input-pu { border: none !important; background: transparent !important; padding:0; resize:none;}
       
-      /* Mostrar y dar estilo a los Spans de reemplazo */
       .print-value { display: block !important; font-weight: 700 !important; font-size: 11.5px; color: var(--texto); padding: 2px 0; min-height: 20px; word-break: break-word; }
       .print-value strong { font-weight: 900 !important; font-size: 13px; color: var(--texto); }
       
@@ -265,7 +267,7 @@
       .totales-bloque { padding: 4px 18px 12px; }
       .meta-wrap { padding: 0 18px; }
       td { padding: 3px 3px; font-size: 8.5pt; }
-      .info-final-wrap { padding: 16px 18px; }
+      .info-final-wrap { padding: 16px 18px; border-top: 1px solid var(--borde); }
     }
 
     /* ── MÓVIL ── */
@@ -445,11 +447,7 @@
     </div>
   </div>
 
-</div>
-
-<div class="segunda-pagina">
   <div class="info-final-wrap">
-
     <div class="fila-condiciones">
       <div class="condiciones">
         <div class="seccion-titulo">
@@ -501,8 +499,8 @@
         </div>
       </div>
     </div>
-
   </div>
+
 </div>
 
 <div class="barra-controles no-print">
@@ -511,7 +509,7 @@
     <svg id="icon-sol" style="display:none;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
   </button>
   <button class="btn btn-limpiar" onclick="limpiarCotizacion()">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 complement 15a9 9 0 1 0 .49-3.38"></path></svg>
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 .49-3.38"></path></svg>
     Reiniciar
   </button>
   <button class="btn btn-pdf" onclick="imprimirCotizacion()">
@@ -835,12 +833,10 @@ function imprimirCotizacion() {
     const printSpan = document.getElementById('print-' + id);
     if (inputEl && printSpan) {
       const val = inputEl.value.trim();
-      // Si está vacío, le inyectamos un guion largo en negrita estricta
       printSpan.innerHTML = val ? val : '<strong>—</strong>';
     }
   });
 
-  // Reemplazo dinámico también para las descripciones de la tabla si estuvieran vacías
   document.querySelectorAll('.td-desc-input').forEach(textarea => {
     const idAttr = textarea.id;
     const printSpan = document.getElementById('print-' + idAttr);

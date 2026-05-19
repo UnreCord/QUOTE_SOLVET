@@ -783,4 +783,86 @@ function calcular() {
   document.querySelectorAll('[id^="total-fila-"]').forEach(el => {
     subtotal += parseFloat(el.dataset.raw) || 0;
   });
-  const igv = subtotal * 0.1
+  const igv = subtotal * 0.18;
+  const total = subtotal + igv;
+  const tc = parseFloat(document.getElementById('tc').value) || 1;
+  document.getElementById('subtotal').textContent = '$ ' + fmt.format(subtotal);
+  document.getElementById('igv').textContent = '$ ' + fmt.format(igv);
+  document.getElementById('total-usd').textContent = '$ ' + fmt.format(total);
+  document.getElementById('total-soles').textContent = 'S/ ' + fmt.format(total * tc);
+}
+
+function eliminarFila(id) {
+  const tr = document.getElementById('fila-' + id);
+  if (tr) tr.remove();
+  if (document.querySelectorAll('#tbody tr').length === 0) agregarFila();
+  actualizarNumerosFila();
+  calcular();
+}
+
+// ── ACCIONES GLOBALES ──
+function limpiarCotizacion() {
+  if (!confirm('¿Iniciar una nueva cotización? Se generará un nuevo código y se borrarán todos los datos.')) return;
+  document.getElementById('tbody').innerHTML = '';
+  filaId = 0;
+  agregarFila();
+  
+  document.getElementById('cliente').value = '';
+  document.getElementById('ruc').value = '';
+  document.getElementById('contacto').value = '';
+  document.getElementById('direccion').value = '';
+  document.getElementById('distrito').value = '';
+  document.getElementById('comentarios').value = '';
+  
+  actualizarCorrelativoUI();
+  window.scrollTo(0, 0);
+}
+
+function imprimirCotizacion() {
+  const com = document.getElementById('comentarios');
+  const obsPrint = document.getElementById('obs-print-block');
+  const container = document.getElementById('obs-container');
+  if (!com.value.trim()) {
+    container.style.display = 'none';
+  } else {
+    obsPrint.textContent = com.value;
+  }
+  
+  // ── LOGICA PARA REEMPLAZAR CAMPOS VACÍOS POR GUION EN NEGRITA (—) ──
+  const camposMeta = ['cliente', 'ruc', 'contacto', 'direccion', 'distrito', 'fecha-emision', 'fecha-expiracion', 'vendedor-input'];
+  camposMeta.forEach(id => {
+    const inputEl = document.getElementById(id);
+    const printSpan = document.getElementById('print-' + id);
+    if (inputEl && printSpan) {
+      const val = inputEl.value.trim();
+      // Si está vacío, le inyectamos un guion largo en negrita estricta
+      printSpan.innerHTML = val ? val : '<strong>—</strong>';
+    }
+  });
+
+  // Reemplazo dinámico también para las descripciones de la tabla si estuvieran vacías
+  document.querySelectorAll('.td-desc-input').forEach(textarea => {
+    const idAttr = textarea.id;
+    const printSpan = document.getElementById('print-' + idAttr);
+    if (printSpan) {
+      const val = textarea.value.trim();
+      printSpan.innerHTML = val ? val : '<strong>—</strong>';
+    }
+  });
+  
+  // Asegurarnos de que el nombre de archivo es el correlativo
+  const numCotizacion = document.getElementById('numero-cotizacion').textContent;
+  const nuevoTitulo = "Cotizacion_" + numCotizacion;
+  document.title = nuevoTitulo;
+  history.replaceState(null, nuevoTitulo, "#" + nuevoTitulo);
+
+  setTimeout(() => {
+    window.print();
+    setTimeout(() => { 
+      container.style.display = 'block'; 
+    }, 1000);
+  }, 500);
+}
+</script>
+</body>
+</html>

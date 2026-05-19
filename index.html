@@ -109,7 +109,8 @@
 
     /* AUTOCOMPLETE */
     .autocomplete { position: relative; width: 100%; }
-    .autocomplete-list { position: absolute; top: 100%; left: 0; right: 0; background: var(--blanco); border: 1px solid var(--borde); border-radius: 5px; z-index: 100; max-height: 200px; overflow-y: auto; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); margin-top: 2px; }
+    /* Fix: Sombra y z-index corregidos para el dropdown */
+    .autocomplete-list { position: absolute; top: 100%; left: 0; right: 0; background: var(--blanco); border: 1px solid var(--verde); border-radius: 5px; z-index: 9999; max-height: 220px; overflow-y: auto; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25); margin-top: 2px; }
     .autocomplete-item { padding: 8px 12px; border-bottom: 1px solid var(--gris-fondo); font-size: 11px; cursor: pointer; line-height: 1.4; transition: background 0.15s; color: var(--texto); }
     .autocomplete-item:last-child { border-bottom: none; }
     .autocomplete-item:hover { background: var(--verde-claro); }
@@ -119,7 +120,10 @@
     .tabla-wrap{padding:16px 28px 0;}
     .tabla-titulo{font-size:9px;font-weight:700;color:var(--texto-claro);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
     .tabla-titulo::after{content:'';flex:1;height:1px;background:var(--borde);}
-    .tabla-scroll{overflow-x:auto;}
+    
+    /* Fix: Overflow visible para que no corte la lista de autocompletado */
+    .tabla-scroll{overflow:visible;}
+    
     table{width:100%;border-collapse:collapse;min-width:700px; table-layout: fixed;}
     
     thead th{background:var(--gris-fondo);color:var(--texto-claro);font-size:7.5px;text-transform:uppercase;padding:6px 5px;text-align:center;border-bottom:2px solid var(--verde);border-top:1px solid var(--borde);letter-spacing:.8px;font-weight:700;white-space:nowrap;}
@@ -420,7 +424,6 @@
         <input class="meta-input" type="text" id="ruc" placeholder="Documento">
       </div>
       
-      <!-- NUEVOS CAMPOS -->
       <div class="meta-campo">
         <div class="meta-label"><span class="meta-label-dot"></span>Nro. Contacto</div>
         <input class="meta-input" type="text" id="contacto" placeholder="Teléfono o Celular...">
@@ -433,8 +436,6 @@
         <div class="meta-label"><span class="meta-label-dot"></span>Distrito</div>
         <input class="meta-input" type="text" id="distrito" placeholder="Distrito...">
       </div>
-      <!-- FIN NUEVOS CAMPOS -->
-
       <div class="meta-campo">
         <div class="meta-label"><span class="meta-label-dot"></span>Fecha Emisión</div>
         <input class="meta-input" type="date" id="fecha-emision" onchange="actualizarExpiracion()">
@@ -547,7 +548,6 @@
         Cuentas Bancarias Recaudadoras
       </div>
       <div class="bancos-stack">
-        <!-- SOLES -->
         <div class="banco-bloque">
           <div class="banco-header banco-header-soles"><span class="banco-badge badge-soles">Soles (S/)</span></div>
           <div class="banco-col-header"><span>Banco</span><span>Cuenta Bancaria</span><span>CCI</span></div>
@@ -558,7 +558,6 @@
             <div class="banco-item"><strong>SANTANDER</strong><span class="cuenta">0008081530</span><span class="cci">056-001-000008081530-11</span></div>
           </div>
         </div>
-        <!-- USD -->
         <div class="banco-bloque">
           <div class="banco-header banco-header-usd"><span class="banco-badge badge-usd">Dólares (USD)</span></div>
           <div class="banco-col-header"><span>Banco</span><span>Cuenta Bancaria</span><span>CCI</span></div>

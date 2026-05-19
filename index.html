@@ -102,6 +102,9 @@
     .autocomplete-item:hover { background: var(--verde-claro); }
     .autocomplete-item strong { display: block; color: var(--texto); font-weight: 700; font-size: 11.5px; }
 
+    /* ── ELEMENTOS DE REEMPLAZO PARA IMPRESIÓN CORREGIDA ── */
+    .print-value, .print-value-table { display: none; }
+
     /* ── TABLA DINÁMICA ── */
     .tabla-wrap{padding:16px 28px 0;}
     .tabla-titulo{font-size:9px;font-weight:700;color:var(--texto-claro);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
@@ -221,19 +224,26 @@
         --bg-usd: #eef9f3 !important;
       }
       
-      /* IMPORTANTE: Forzamos margen 0 para que el navegador elimine la cabecera y el link inferior */
       @page { size: A4 portrait; margin: 0 !important; }
-      
       html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       body { background: #fff !important; padding: 0; font-size: 9pt; }
       
-      /* Pasamos los márgenes estéticos directamente a las páginas para que no se pegue al borde físico del papel */
       .hoja { box-shadow: none; border-radius: 0; max-width: 100%; border-top: 3px solid var(--verde); margin: 10mm 12mm 0mm 12mm !important; }
       .segunda-pagina { page-break-before: always; break-before: page; padding: 10mm 12mm 12mm 12mm !important; }
       
       .barra-controles, .btn-agregar-inline, .btn-eliminar, .btn-step, .modal-overlay, .no-print { display: none !important; }
       
-      .meta-input, .tc-input, .td-desc-input, .input-cant, .input-pu { border: none !important; background: transparent !important; padding:0; resize:none;}
+      /* Ocultar inputs nativos para reemplazarlos por los spans de impresión */
+      .meta-input, .td-desc-input { display: none !important; }
+      .tc-input, .input-cant, .input-pu { border: none !important; background: transparent !important; padding:0; resize:none;}
+      
+      /* Mostrar y dar estilo a los Spans de reemplazo */
+      .print-value { display: block !important; font-weight: 700 !important; font-size: 11.5px; color: var(--texto); padding: 2px 0; min-height: 20px; word-break: break-word; }
+      .print-value strong { font-weight: 900 !important; font-size: 13px; color: var(--texto); }
+      
+      .print-value-table { display: block !important; font-weight: 400 !important; font-size: 11px; color: var(--texto); padding: 4px 6px; line-height: 1.35; white-space: pre-wrap; word-break: break-word; }
+      .print-value-table strong { font-weight: 900 !important; font-size: 12px; color: var(--texto); }
+
       .stepper { border: none; width: auto; }
       .autocomplete-list { display: none !important; }
       #comentarios { display: none !important; }
@@ -350,36 +360,44 @@
             style="resize:none; overflow:hidden;" oninput="buscarCliente(); autoResize(this)" autocomplete="off"></textarea>
           <div class="autocomplete-list" id="lista-clientes"></div>
         </div>
+        <span class="print-value" id="print-cliente"></span>
       </div>
       <div class="meta-campo">
         <div class="meta-label"><span class="meta-label-dot"></span>RUC / DNI</div>
         <input class="meta-input" type="text" id="ruc" placeholder="Documento">
+        <span class="print-value" id="print-ruc"></span>
       </div>
       
       <div class="meta-campo">
         <div class="meta-label"><span class="meta-label-dot"></span>Nro. Contacto</div>
         <input class="meta-input" type="text" id="contacto" placeholder="Teléfono o Celular...">
+        <span class="print-value" id="print-contacto"></span>
       </div>
       <div class="meta-campo">
         <div class="meta-label"><span class="meta-label-dot"></span>Dirección / Destino</div>
         <input class="meta-input" type="text" id="direccion" placeholder="Dirección de entrega...">
+        <span class="print-value" id="print-direccion"></span>
       </div>
       <div class="meta-campo">
         <div class="meta-label"><span class="meta-label-dot"></span>Distrito</div>
         <input class="meta-input" type="text" id="distrito" placeholder="Distrito...">
+        <span class="print-value" id="print-distrito"></span>
       </div>
 
       <div class="meta-campo">
         <div class="meta-label"><span class="meta-label-dot"></span>Fecha Emisión</div>
         <input class="meta-input" type="date" id="fecha-emision" onchange="actualizarExpiracion()">
+        <span class="print-value" id="print-fecha-emision"></span>
       </div>
       <div class="meta-campo">
         <div class="meta-label"><span class="meta-label-dot"></span>Válido hasta</div>
         <input class="meta-input" type="date" id="fecha-expiracion" readonly style="color:var(--texto-claro);">
+        <span class="print-value" id="print-fecha-expiracion"></span>
       </div>
       <div class="meta-campo">
         <div class="meta-label"><span class="meta-label-dot"></span>Ejecutivo</div>
         <input class="meta-input" type="text" id="vendedor-input" readonly style="cursor:pointer;" onclick="abrirModalVendedor()" title="Clic para cambiar vendedor">
+        <span class="print-value" id="print-vendedor-input"></span>
       </div>
     </div>
   </div>
@@ -683,6 +701,7 @@ function agregarFila() {
           oninput="buscarProducto(${id}); autoResize(this)" autocomplete="off"></textarea>
         <div class="autocomplete-list" id="lista-${id}"></div>
       </div>
+      <span class="print-value-table" id="print-desc-${id}"></span>
     </td>
     <td class="td-cant">
       <div class="stepper">
@@ -764,64 +783,4 @@ function calcular() {
   document.querySelectorAll('[id^="total-fila-"]').forEach(el => {
     subtotal += parseFloat(el.dataset.raw) || 0;
   });
-  const igv = subtotal * 0.18;
-  const total = subtotal + igv;
-  const tc = parseFloat(document.getElementById('tc').value) || 1;
-  document.getElementById('subtotal').textContent = '$ ' + fmt.format(subtotal);
-  document.getElementById('igv').textContent = '$ ' + fmt.format(igv);
-  document.getElementById('total-usd').textContent = '$ ' + fmt.format(total);
-  document.getElementById('total-soles').textContent = 'S/ ' + fmt.format(total * tc);
-}
-
-function eliminarFila(id) {
-  const tr = document.getElementById('fila-' + id);
-  if (tr) tr.remove();
-  if (document.querySelectorAll('#tbody tr').length === 0) agregarFila();
-  actualizarNumerosFila();
-  calcular();
-}
-
-// ── ACCIONES GLOBALES ──
-function limpiarCotizacion() {
-  if (!confirm('¿Iniciar una nueva cotización? Se generará un nuevo código y se borrarán todos los datos.')) return;
-  document.getElementById('tbody').innerHTML = '';
-  filaId = 0;
-  agregarFila();
-  
-  document.getElementById('cliente').value = '';
-  document.getElementById('ruc').value = '';
-  document.getElementById('contacto').value = '';
-  document.getElementById('direccion').value = '';
-  document.getElementById('distrito').value = '';
-  document.getElementById('comentarios').value = '';
-  
-  actualizarCorrelativoUI();
-  window.scrollTo(0, 0);
-}
-
-function imprimirCotizacion() {
-  const com = document.getElementById('comentarios');
-  const obsPrint = document.getElementById('obs-print-block');
-  const container = document.getElementById('obs-container');
-  if (!com.value.trim()) {
-    container.style.display = 'none';
-  } else {
-    obsPrint.textContent = com.value;
-  }
-  
-  // Asegurarnos de que el nombre de archivo es el correlativo
-  const numCotizacion = document.getElementById('numero-cotizacion').textContent;
-  const nuevoTitulo = "Cotizacion_" + numCotizacion;
-  document.title = nuevoTitulo;
-  history.replaceState(null, nuevoTitulo, "#" + nuevoTitulo);
-
-  setTimeout(() => {
-    window.print();
-    setTimeout(() => { 
-      container.style.display = 'block'; 
-    }, 1000);
-  }, 500);
-}
-</script>
-</body>
-</html>
+  const igv = subtotal * 0.1

@@ -76,13 +76,10 @@
     
     .meta-campo:nth-child(1){grid-column:span 4;padding-left:0;border-bottom:1px solid var(--borde);}
     .meta-campo:nth-child(2){grid-column:span 2;padding-right:0;border-right:none;border-bottom:1px solid var(--borde);padding-left:12px;}
-    .meta-campo:nth-child(3){grid-column:span 2;padding-left:0;border-bottom:1px solid var(--borde);}
-    .meta-campo:nth-child(4){grid-column:span 2;padding-left:12px;padding-right:12px;border-bottom:1px solid var(--borde);}
-    .meta-campo:nth-child(5){grid-column:span 2;padding-right:0;border-right:none;border-bottom:1px solid var(--borde);padding-left:12px;}
-    .meta-campo:nth-child(6){grid-column:span 2;padding-left:0;}
-    .meta-campo:nth-child(7){grid-column:span 2;padding-left:12px;padding-right:12px;}
-    .meta-campo:nth-child(8){grid-column:span 2;padding-right:0;border-right:none;padding-left:12px;}
-    
+    .meta-campo:nth-child(3){grid-column:span 2;padding-left:0;}
+    .meta-campo:nth-child(4){grid-column:span 2;padding-left:12px;padding-right:12px;}
+    .meta-campo:nth-child(5){grid-column:span 2;padding-right:0;border-right:none;padding-left:12px;}
+
     .meta-label{font-size:8px;font-weight:700;color:var(--texto-claro);text-transform:uppercase;margin-bottom:3px;letter-spacing:.8px;display:flex;align-items:center;gap:4px;}
     .meta-label-dot{width:4px;height:4px;border-radius:50%;background:var(--verde);display:inline-block;flex-shrink:0;}
     .meta-input{border:none;border-bottom:1.5px solid transparent;font-family:'Lato',sans-serif;font-size:11.5px;color:var(--texto);font-weight:700;padding:2px 0;outline:none;background:transparent;transition:border-color .2s;width:100%;line-height:1.4;}
@@ -92,10 +89,10 @@
     /* AUTOCOMPLETE Y FIX DE BORDES FANTASMAS */
     .autocomplete { position: relative; width: 100%; }
     .autocomplete-list { position: absolute; top: 100%; left: 0; right: 0; background: #ffffff; border: 1px solid var(--verde); border-radius: 5px; z-index: 99999; max-height: 220px; overflow-y: auto; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4); margin-top: 2px; }
-    
+
     /* ¡AQUÍ ESTÁ LA MAGIA! Si la lista está vacía, desaparece por completo */
     .autocomplete-list:empty { display: none !important; border: none; }
-    
+
     .autocomplete-item { padding: 8px 12px; border-bottom: 1px solid var(--gris-fondo); font-size: 11px; cursor: pointer; line-height: 1.4; transition: background 0.15s; color: #1a1a2e; }
     .autocomplete-item:last-child { border-bottom: none; }
     .autocomplete-item:hover { background: #e8f5ee; }
@@ -109,25 +106,25 @@
     .tabla-titulo{font-size:9px;font-weight:700;color:var(--texto-claro);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
     .tabla-titulo::after{content:'';flex:1;height:1px;background:var(--borde);}
     .tabla-scroll{overflow:visible;}
-    
+
     table{width:100%;border-collapse:collapse;min-width:700px; table-layout: fixed;}
-    
+
     thead th{background:var(--gris-fondo);color:var(--texto-claro);font-size:7.5px;text-transform:uppercase;padding:6px 5px;text-align:center;border-bottom:2px solid var(--verde);border-top:1px solid var(--borde);letter-spacing:.8px;font-weight:700;white-space:nowrap;}
     thead th:nth-child(2){text-align:left;}
     thead th:last-child{width:28px;}
-    
+
     tbody tr{border-bottom:1px solid var(--borde);transition:background .15s;}
     tbody tr:hover{background:var(--gris-fondo);}
-    
+
     /* La fila enfocada se eleva para mostrar bien su lista de autocompletado */
     tbody tr:focus-within { position: relative; z-index: 999; }
-    
+
     td{padding:4px 4px;vertical-align:middle;}
     .td-num { text-align: center; font-size: 10px; color: var(--texto-claro); font-weight: 700; width: 22px; padding-right: 2px; }
-    
+
     .td-desc-input { width: 100%; border: 1px solid transparent; padding: 4px 6px; font-size: 11px; font-family: 'Lato'; resize: none; overflow: hidden; outline: none; transition: border 0.2s, background 0.2s; background: transparent; color: var(--texto); font-weight: 400; border-radius: 3px; line-height: 1.35; }
     .td-desc-input:focus { border-color: var(--borde); background: var(--gris-fondo); }
-    
+
     .stepper { display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--borde); border-radius: 4px; overflow: hidden; width: 96px; margin: 0 auto; background: var(--blanco); }
     .btn-step { background: transparent; border: none; width: 22px; height: 24px; font-size: 14px; font-weight: bold; color: var(--texto-claro); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.15s; flex-shrink: 0; }
     .btn-step:hover { color: var(--verde); background: var(--verde-claro); }
@@ -162,7 +159,7 @@
     .total-final{background:var(--verde);padding:10px 12px!important;border-bottom:none!important;}
     .total-final .t-label{color:#ffffff;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;}
     .total-final .t-valor{font-size:16px;color:#fff;font-weight:900;}
-    
+
     .totales-soles { background: var(--verde-claro); padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--borde); border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
     .totales-soles .t-label { color: var(--verde-oscuro); font-size: 10.5px; font-weight: 700; }
     .totales-soles .t-valor { color: var(--verde-oscuro); font-weight: 900; font-size: 14px; }
@@ -224,14 +221,14 @@
         --bg-soles: #fff8e8 !important;
         --bg-usd: #eef9f3 !important;
       }
-      
+
       @page { size: A4 portrait; margin: 0 !important; }
       html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       body { background: #fff !important; padding: 0; font-size: 9pt; }
-      
+
       /* La hoja fluye naturalmente sin page-breaks obligatorios */
       .hoja { box-shadow: none; border-radius: 0; max-width: 100%; border-top: 3px solid var(--verde); margin: 10mm 12mm 10mm 12mm !important; }
-      
+
       /* Protegemos los bloques para que no se corten a la mitad entre páginas */
       .fila-condiciones { break-inside: avoid; page-break-inside: avoid; }
       .bancos-stack { break-inside: avoid; page-break-inside: avoid; }
@@ -240,13 +237,13 @@
       tr { break-inside: avoid; page-break-inside: avoid; }
 
       .barra-controles, .btn-agregar-inline, .btn-eliminar, .btn-step, .modal-overlay, .no-print { display: none !important; }
-      
+
       .meta-input, .td-desc-input { display: none !important; }
       .tc-input, .input-cant, .input-pu { border: none !important; background: transparent !important; padding:0; resize:none;}
-      
+
       .print-value { display: block !important; font-weight: 700 !important; font-size: 11.5px; color: var(--texto); padding: 2px 0; min-height: 20px; word-break: break-word; }
       .print-value strong { font-weight: 900 !important; font-size: 13px; color: var(--texto); }
-      
+
       .print-value-table { display: block !important; font-weight: 400 !important; font-size: 11px; color: var(--texto); padding: 4px 6px; line-height: 1.35; white-space: pre-wrap; word-break: break-word; }
       .print-value-table strong { font-weight: 900 !important; font-size: 12px; color: var(--texto); }
 
@@ -256,7 +253,7 @@
       #obs-print-block { display: block !important; }
       .tabla-scroll { overflow: visible; }
       table { min-width: auto; width: 100%; }
-      
+
       thead th { background: var(--gris-fondo) !important; font-size: 7pt; padding: 4px 4px; }
       .total-final { background: var(--verde) !important; }
       .totales-soles { background: var(--verde-claro) !important; }
@@ -266,7 +263,7 @@
       .banco-header-usd { background: var(--bg-usd) !important; }
       .banco-col-header { background: var(--gris-fondo) !important; }
       .cabecera { background: linear-gradient(135deg, var(--bg-cabecera-1) 0%, var(--bg-cabecera-2) 100%) !important; padding: 12px 18px; }
-      
+
       .tabla-wrap { padding: 10px 18px 0; }
       .totales-bloque { padding: 4px 18px 12px; }
       .meta-wrap { padding: 0 18px; }
@@ -285,7 +282,7 @@
       .meta-campo, .meta-campo:nth-child(n) { grid-column: span 1; border-right: none; border-bottom: 1px solid var(--borde); padding: 11px 0; }
       .meta-campo:last-child { border-bottom: none; }
       .tabla-wrap { padding: 16px 12px 0; }
-      
+
       table, thead, tbody, th, td, tr { display: block; }
       thead { display: none; }
       tbody tr { margin-bottom: 10px; border: 1px solid var(--borde); border-radius: 6px; padding: 10px 12px 8px; background: var(--blanco); position: relative; }
@@ -303,7 +300,7 @@
       .input-prefix { width: 60px; }
       .input-pu { width: 46px; font-size: 11px; }
       td:last-child { position: absolute; top: 8px; right: 8px; }
-      
+
       .totales-bloque { padding: 8px 12px 20px; justify-content: stretch; }
       .totales-tabla { width: 100%; }
       .info-final-wrap { padding: 18px 12px; }
@@ -372,22 +369,6 @@
         <div class="meta-label"><span class="meta-label-dot"></span>RUC / DNI</div>
         <input class="meta-input" type="text" id="ruc" placeholder="Documento">
         <span class="print-value" id="print-ruc"></span>
-      </div>
-      
-      <div class="meta-campo">
-        <div class="meta-label"><span class="meta-label-dot"></span>Nro. Contacto</div>
-        <input class="meta-input" type="text" id="contacto" placeholder="Teléfono o Celular...">
-        <span class="print-value" id="print-contacto"></span>
-      </div>
-      <div class="meta-campo">
-        <div class="meta-label"><span class="meta-label-dot"></span>Dirección / Destino</div>
-        <input class="meta-input" type="text" id="direccion" placeholder="Dirección de entrega...">
-        <span class="print-value" id="print-direccion"></span>
-      </div>
-      <div class="meta-campo">
-        <div class="meta-label"><span class="meta-label-dot"></span>Distrito</div>
-        <input class="meta-input" type="text" id="distrito" placeholder="Distrito...">
-        <span class="print-value" id="print-distrito"></span>
       </div>
 
       <div class="meta-campo">
@@ -628,10 +609,10 @@ function actualizarCorrelativoUI() {
   const dia = String(n.getDate()).padStart(2,'0');
   const hr = String(n.getHours()).padStart(2,'0');
   const min = String(n.getMinutes()).padStart(2,'0');
-  
+
   const correlativo = `${obtenerIniciales(vendedor)}-${yy}${mes}${dia}-${hr}${min}`;
   document.getElementById('numero-cotizacion').textContent = correlativo;
-  
+
   // FORZAR NOMBRE DE ARCHIVO PREDETERMINADO DESDE EL INICIO
   const nuevoTitulo = "Cotizacion_" + correlativo;
   document.title = nuevoTitulo;
@@ -808,14 +789,11 @@ function limpiarCotizacion() {
   document.getElementById('tbody').innerHTML = '';
   filaId = 0;
   agregarFila();
-  
+
   document.getElementById('cliente').value = '';
   document.getElementById('ruc').value = '';
-  document.getElementById('contacto').value = '';
-  document.getElementById('direccion').value = '';
-  document.getElementById('distrito').value = '';
   document.getElementById('comentarios').value = '';
-  
+
   actualizarCorrelativoUI();
   window.scrollTo(0, 0);
 }
@@ -829,9 +807,9 @@ function imprimirCotizacion() {
   } else {
     obsPrint.textContent = com.value;
   }
-  
+
   // ── LOGICA PARA REEMPLAZAR CAMPOS VACÍOS POR GUION EN NEGRITA (—) ──
-  const camposMeta = ['cliente', 'ruc', 'contacto', 'direccion', 'distrito', 'fecha-emision', 'fecha-expiracion', 'vendedor-input'];
+  const camposMeta = ['cliente', 'ruc', 'fecha-emision', 'fecha-expiracion', 'vendedor-input'];
   camposMeta.forEach(id => {
     const inputEl = document.getElementById(id);
     const printSpan = document.getElementById('print-' + id);
@@ -849,7 +827,7 @@ function imprimirCotizacion() {
       printSpan.innerHTML = val ? val : '<strong>—</strong>';
     }
   });
-  
+
   // Asegurarnos de que el nombre de archivo es el correlativo
   const numCotizacion = document.getElementById('numero-cotizacion').textContent;
   const nuevoTitulo = "Cotizacion_" + numCotizacion;
@@ -858,8 +836,8 @@ function imprimirCotizacion() {
 
   setTimeout(() => {
     window.print();
-    setTimeout(() => { 
-      container.style.display = 'block'; 
+    setTimeout(() => {
+      container.style.display = 'block';
     }, 1000);
   }, 500);
 }
